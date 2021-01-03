@@ -20,8 +20,8 @@ def story_create(request):
         #form = forms.CreateStory(request.POST, request.FILES) #use this if you have thumbnails on form
         form = forms.CreateStory(request.POST) #Use if no images on form
         if form.is_valid():
-            #form.save()
-            redirect('home')
+            form.save()
+            #redirect('home')
     else:
         form = forms.CreateStory()
     return render(request, 'stories/story_create.html', {'form':form})

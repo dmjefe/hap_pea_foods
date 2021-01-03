@@ -4,10 +4,10 @@
 
 <div class = "create-story">
   <h2>Create a Story!</h2>
-  <form class="site-form" action="{% url 'stories:create' %}" method="post" enctype="multipart/form-data">
+  <form class="site-form" action="{% url 'stories:create' %}" method="post">  <!--use: enctype="multipart/form-data"   if you upload images -->
     {% csrf_token %}
     {{form}}
-    <input type="submit" name="submit" value="Create Story">
+    <input type="submit" value="Create Story">
   </form>
 </div>
 
