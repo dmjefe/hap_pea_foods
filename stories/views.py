@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required
 from .models import Story
 
 # Create your views here.
@@ -11,3 +12,7 @@ def story_detail(request, slug):
     #return HttpResponse(slug)
     story = Story.objects.get(slug=slug)
     return render(request, 'stories/story_detail.html', {'story':story})
+
+@login_required(login_url="/accounts/login/")
+def story_write(request):
+    return render(request, 'stories/story_create.html')
