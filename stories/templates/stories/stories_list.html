@@ -1,16 +1,17 @@
-{% extends 'base_layout.html '%}
+{% extends 'base_layout.html' %}
 
 {% block content %}
-    <h1>User Stories</h1>
-    <div= "stories">
+  <h1>User Stories</h1>
+    <div class="stories">
       {% for story in stories %}
-        <div class = story>
+        <div class= "story">
           <h2><a href="{% url 'stories:detail' slug=story.slug %}">{{story.title}}</a></h2>
           <p>{{story.snippet}}</p>
           <p> {{story.date}}</p>
-
         </div>
       {% endfor %}
     </div>
+
+
 
 {% endblock %}

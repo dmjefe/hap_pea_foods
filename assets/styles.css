@@ -36,6 +36,18 @@ body {
   color: black;
 }
 
+/* Wrapper */
+.wrapper{
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+div.wrapper h1{
+  text align: center;
+  margin: 100px auto;
+  font-size: 2.4em;
+}
+
 /* Footer */
 .copyright {
   padding: 20px;
