@@ -7,15 +7,26 @@
     <link rel="stylesheet" href="{% static 'styles.css' %}">
   </head>
   <body>
-    <div class = "dev_header">
-      <h1>
-        <a href="{% url 'home' %}">Home</a>
-        <a href="{% url 'stories:stories' %}">Stories</a>
-        <a href="{% url 'stories:create' %}">Add a story</a>
-        <a href="{% url 'accounts:register' %}">Register</a>
-      </h1>
-      <nav>
+
+    <!-- Start Navigation -->
+
+    <div class="topnav">
+      <div id="branding">
+        <img src="media/images/logo.jpg" height="100px" width="200px"><h1> Hap Pea Foods</h1>
+      </div>
+      <nav><h1>
         <ul>
+          <li class="current"><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'donate' %}">Donate</a></li>
+          <li><a href="{% url 'about' %}">About Us</a></li>
+          <li><a href="{% url 'volunteer' %}">Volunteer</a></li>
+          <li><a href="{% url 'partners' %}">Partners</a></li>
+          <li><a href="{% url 'stories:stories' %}">Stories</a></li>
+          <li><a href="{% url 'stories:create' %}">Add a story</a></li> <!--sub cat of stories -->
+          <li><a href="{% url 'accounts:register' %}">Register</a><li>
+          <li><a href="{% url 'find_help' %}">Find Help</a></li>
+        </ul>
+        <ul style="float:right">
           <li>
             <form class="login-link" action="{% url 'accounts:login' %}" method="post">
               {% csrf_token %}
@@ -29,11 +40,24 @@
             </form>
           </li>
         </ul>
-      </nav>
+      </h1></nav>
     </div>
+    <!-- End Navigation -->
+
+    <!-- Start Wrapper -->
     <div class="wrapper">
       {% block content %}
       {% endblock %}
     </div>
-  </body>
+
+    <!-- Start Footer -->
+    <footer>
+      <div class="copyright">
+        <p>Hap Pea Foods, Copyright &copy; 2021</p>
+        <p>Page created by David Boss, Mallory Dodds, and Suzy Kaufman</p>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+      </body>
 </html>

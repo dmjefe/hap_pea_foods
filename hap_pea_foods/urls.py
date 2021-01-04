@@ -23,13 +23,13 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    url('about/', views.about),
-    url('donate/', views.donate),
-    url('find_help/', views.find_help),
-    url('partners/', views.partners),
+    url('about/', views.about, name="about"),
+    url('donate/', views.donate, name="donate"),
+    url('find_help/', views.find_help, name="find_help"),
+    url('partners/', views.partners, name="partners"),
     url('accounts/', include('accounts.urls')),
     url('stories/', include('stories.urls')),
-    url('volunteer/', views.volunteer),
+    url('volunteer/', views.volunteer, name="volunteer"),
     url('', views.homepage, name="home"),
 ]
 
