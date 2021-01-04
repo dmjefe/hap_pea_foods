@@ -1,3 +1,46 @@
 body {
-  background: lightblue url("img_tree.gif") no-repeat fixed center;
+  background: #FBFBFF /* grey */
+  font-family: Arial;
+  padding: 10px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #084F6C; /* bluegreen */
+}
+
+.topnav #branding{
+  float:left;
+}
+
+.topnav li{
+  float: left;
+  display: inline;
+  padding: 0 20px o 20px;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #20BF55; /* lime green */
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #FBFBFF; /* grey */
+  color: black;
+}
+
+/* Footer */
+.copyright {
+  padding: 20px;
+  text-align: center;
+  background: #084F6C; /* bluegreen */
+  color: #FBFBFF; /* grey */
+  margin-top: 20px;
 }
