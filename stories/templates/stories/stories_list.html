@@ -8,6 +8,7 @@
           <h2><a href="{% url 'stories:detail' slug=story.slug %}">{{story.title}}</a></h2>
           <p>{{story.snippet}}</p>
           <p> {{story.date}}</p>
+          <p class="author">added by {{story.author.username}}</p>
         </div>
       {% endfor %}
     </div>

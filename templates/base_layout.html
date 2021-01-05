@@ -14,7 +14,7 @@
       <div id="branding">
         <img src="{{MEDIA_URL}}images/logo.jpg" height="100px" width="200px"><h1> Hap Pea Foods</h1>
       </div>
-      <nav><h1>
+      <nav class="mainnav"><h1>
         <ul>
           <li class="current"><a href="{% url 'home' %}">Home</a></li>
           <li><a href="{% url 'donate' %}">Donate</a></li>
@@ -26,11 +26,13 @@
           <li><a href="{% url 'accounts:register' %}">Register</a><li>
           <li><a href="{% url 'find_help' %}">Find Help</a></li>
         </ul>
-        <ul style="float:right">
-          <li>
+      </nav>
+      <nav class="log-nav">
+        <ul>
+          <li class="log-forms">
             <form class="login-link" action="{% url 'accounts:login' %}" method="post">
               {% csrf_token %}
-              <button type="submit"name="logout">login</button>
+              <button type="submit"name="logout">Login</button>
             </form>
           </li>
           <li>

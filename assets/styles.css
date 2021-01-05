@@ -14,14 +14,14 @@ body {
   float:left;
 }
 
-.topnav li{
+.mainnav li{
   float: left;
   display: inline;
   padding: 0 20px o 20px;
 }
 
 /* Style the topnav links */
-.topnav a {
+.mainnav a {
   float: left;
   display: block;
   color: #20BF55; /* lime green */
@@ -31,22 +31,140 @@ body {
 }
 
 /* Change color on hover */
-.topnav a:hover {
+.mainnav a:hover {
   background-color: #FBFBFF; /* grey */
-  color: black;
+  color: #000;
 }
 
+.log-nav {
+  float: right;
+}
+
+.log-nav li {
+  display: inline-block;
+  margin-left: 5px;
+  margin-right: 20px;
+}
+
+.log-nav button {
+  background: none;
+  color: #BBB;
+  cursor: pointer;
+  border: 0;
+  font-size: 1.5em;
+}
+
+
 /* Wrapper */
-.wrapper{
+.wrapper {
   max-width: 960px;
   margin: 0 auto;
 }
 
-div.wrapper h1{
+div.wrapper h1 {
   text align: center;
   margin: 100px auto;
   font-size: 2.4em;
 }
+
+/* stories_list css */
+.stories {
+  display: grid;
+  grid-template-columns :1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+
+.story {
+  padding: 10px;
+  border: 1px solid #20BF55; /* lime green */
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.story h2 {
+  font-size: 1.2em;
+}
+
+.story .author {
+  padding: 10px;
+  background: #20BF55; /* lime green */
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  color: #FBFBFF; /* grey */
+}
+
+/* story-details css */
+.story-detail .story {
+  padding: 0;
+}
+
+.story-detail .story img {
+  max-width: 100%;
+}
+
+.story-detail .story h1 {
+  text-align: center;
+  margin: 20px auto;
+  font-size: 2em;
+}
+
+.story-detail .story p {
+  text-align: center;
+}
+
+/* stories_create css */
+
+/* site form css */
+.site-form {
+  margin-top: 60px;
+  border: 1px solid #20BF55; /* lime green */
+  padding: 20px;
+}
+
+.site-form input, .site-form textarea {
+  display: block;
+  margin: 20px 0 0 0;
+  padding: 10px;
+}
+
+a.highlight {
+  border: 1px solid #20BF55; /* lime green */
+  padding: 10px;
+  border-radius: 4px;
+  color: #20BF55; /* lime green */
+}
+
+.helptext, .helptext ul {
+  margin: 0 auto 20px;
+  color: #000;
+  font-size: 0.9em;
+  display: block;
+}
+
+.errorlist li {
+  padding: 10px;
+  list-style-type: none;
+  border: 1px solid #E32636; /* Alizarin Crimson */
+  color: #E32636; /* Alizarin Crimson */
+  margin: 10px 0;
+}
+
+.errorlist {
+  padding: 0;
+}
+
+.site-form input[type="submit"] {
+  background: #20BF55; /* lime green */
+  border: 0;
+  color: #000;
+  font-size: 1.2em;
+  border-radius: 4px;
+  margin: 10px 0;
+}
+
+
 
 /* Footer */
 .copyright {
