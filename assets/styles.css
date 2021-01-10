@@ -9,6 +9,7 @@ body {
   overflow: hidden;
   background-color: #084F6C; /* bluegreen */
   border-radius: 25px;
+  float: none;
 }
 
 .topnav #branding{
