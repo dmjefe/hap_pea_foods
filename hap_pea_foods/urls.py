@@ -24,7 +24,7 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     url('about/', views.about, name="about"),
-    url('donate/', views.donate, name="donate"),
+    url('donate/', include('donations.urls')),
     url('find_help/', views.find_help, name="find_help"),
     url('partners/', views.partners, name="partners"),
     url('accounts/', include('accounts.urls')),
