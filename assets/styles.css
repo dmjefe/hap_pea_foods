@@ -1,82 +1,90 @@
+/* --------------------  CSS for base_layout starts here ------------------- */
 body {
-  background: #FBFBFF /* grey */
+  background: #FBFBFF; /* whitish */
   font-family: Arial;
   padding: 10px;
 }
 
-/* Style the top navigation bar */
-.topnav {
-  overflow: hidden;
-  background-color: #084F6C; /* bluegreen */
+/* start head_container */
+.logo {
+  float: left;
+  width: 60%;
 }
 
-.topnav #branding{
+.social {
+  float: right;
+}
+
+/* start nav_container */
+.main_nav {
+  overflow: hidden;
+  background-color: #084F6C; /* blueish */
   float:left;
 }
 
-.mainnav li{
+.main_nav li {
   float: left;
   display: inline;
-  padding: 0 20px o 20px;
+  padding: 0 20px 0 20px;
 }
 
-/* Style the topnav links */
-.mainnav a {
+.main_nav a {
   float: left;
   display: block;
-  color: #20BF55; /* lime green */
+  color: #20BF55; /* greenish */
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 /* Change color on hover */
-.mainnav a:hover {
-  background-color: #FBFBFF; /* grey */
-  color: #000;
+.main_nav a:hover {
+  background-color: #FBFBFF; /* whitish */
+  color: #000; /* black */
 }
 
-.log-nav {
+/* login logout links */
+.login_nav {
   float: right;
 }
 
-.log-nav li {
+.login_nav li {
   display: inline-block;
   margin-left: 5px;
   margin-right: 20px;
 }
 
-.log-nav button {
+.login_nav button {
   background: none;
-  color: #BBB;
+  color: #BBB; /* greyish */
   cursor: pointer;
   border: 0;
   font-size: 1.5em;
 }
 
-
 /* Wrapper */
-.wrapper {
+.wrapper_container {
   max-width: 960px;
   margin: 0 auto;
 }
 
-div.wrapper h1 {
+.wrapper_container h1 {
   text align: center;
   margin: 100px auto;
   font-size: 2.4em;
 }
 
+/* --------------------  CSS for other pages starts here ------------------- */
 /* stories_list css */
 .stories {
   display: grid;
-  grid-template-columns :1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 30px;
 }
 
 .story {
   padding: 10px;
-  border: 1px solid #20BF55; /* lime green */
+  border: 1px solid #20BF55; /* greenish */
   position: relative;
   padding-bottom: 40px;
 }
@@ -87,12 +95,12 @@ div.wrapper h1 {
 
 .story .author {
   padding: 10px;
-  background: #20BF55; /* lime green */
+  background: #20BF55; /* greenish */
   position: absolute;
   right: 0;
   bottom: 0;
   margin: 0;
-  color: #FBFBFF; /* grey */
+  color: #FBFBFF; /* whitish */
 }
 
 /* story-details css */
@@ -119,7 +127,7 @@ div.wrapper h1 {
 /* site form css */
 .site-form {
   margin-top: 60px;
-  border: 1px solid #20BF55; /* lime green */
+  border: 1px solid #20BF55; /* greenish */
   padding: 20px;
 }
 
@@ -130,15 +138,15 @@ div.wrapper h1 {
 }
 
 a.highlight {
-  border: 1px solid #20BF55; /* lime green */
+  border: 1px solid #20BF55;  /* greenish */
   padding: 10px;
   border-radius: 4px;
-  color: #20BF55; /* lime green */
+  color: #20BF55;  /* greenish */
 }
 
 .helptext, .helptext ul {
   margin: 0 auto 20px;
-  color: #000;
+  color: #000; /* black */
   font-size: 0.9em;
   display: block;
 }
@@ -156,7 +164,7 @@ a.highlight {
 }
 
 .site-form input[type="submit"] {
-  background: #20BF55; /* lime green */
+  background: #20BF55; /* greenish */
   border: 0;
   color: #000;
   font-size: 1.2em;
@@ -165,12 +173,31 @@ a.highlight {
 }
 
 
-
-/* Footer */
-.copyright {
+/* --------------------  Continue CSS for base_layout starts here ------------------- */
+/* Footer container */
+footer {   /* overall footer styles */
   padding: 20px;
-  text-align: center;
-  background: #084F6C; /* bluegreen */
-  color: #FBFBFF; /* grey */
+  background: #084F6C; /* blueish */
+  color: #FBFBFF; /* whitish */
   margin-top: 20px;
+}
+
+.f_copyright {
+
+}
+
+.f_links {
+
+}
+
+.f_social {
+
+}
+
+.f_subscribe {
+
+}
+
+.f_address {
+
 }

@@ -5,16 +5,31 @@
     <meta charset="utf-8">
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
 
-    <!-- Start Navigation -->
-
-    <div class="topnav">
-      <div id="branding">
-        <img src="{{MEDIA_URL}}images/logo.jpg" height="100px" width="200px"><h1> Hap Pea Foods</h1>
+    <!-- start head_container -->
+    <div class="head_container">
+      <div class="logo">
+        <img src="{ % static 'logo.jpg' % }" height="100px" width="200px"><h1> Hap Pea Foods</h1>
       </div>
-      <nav class="mainnav"><h1>
+      <div class="social">
+        <a href="https://www.facebook.com/happeafoods" class="icons"><i class="fa fa-facebook" style="font-size:30px;color:blue;"></i></a>
+        <a href="https://www.twitter.com/happeafoods" class="icons"><i class="fa fa-twitter" style="font-size:30px;color:lightblue;"></i></a>
+        <a href="https://www.plus.google.com/happeafoods" class="icons"><i class="fa fa-google-plus" style="font-size:30px;color:green;"></i></a>
+        <a href="https://www.instagram.com/happeafoods" class="icons"><i class="fa fa-instagram" style="font-size:30px;color:purple;"></i></a>
+        <a href="https://www.pintrest.com/happeafoods" class="icons"><i class="fa fa-pintrest" style="font-size:30px;color:black;"></i></a>
+        <a href="https://www.youtube.com.com/happeafoods" class="icons"><i class="fa fa-youtube" style="font-size:30px;color:red;"></i></a>
+      </div>
+    </div>
+    <!-- End head_container  -->
+
+    <!-- Start nav_container -->
+    <div class="nav_container">
+      <!-- Start main navigation -->
+      <nav class="main_nav">
+        <h1>
         <ul>
           <li class="current"><a href="{% url 'home' %}">Home</a></li>
           <li><a href="{% url 'donate' %}">Donate</a></li>
@@ -23,43 +38,94 @@
           <li><a href="{% url 'partners' %}">Partners</a></li>
           <li><a href="{% url 'stories:stories' %}">Stories</a></li>
           <li><a href="{% url 'stories:create' %}">Add a story</a></li> <!--sub cat of stories -->
-          <li><a href="{% url 'accounts:register' %}">Register</a><li>
+          <li><a href="{% url 'accounts:register' %}">Register</a></li>
           <li><a href="{% url 'find_help' %}">Find Help</a></li>
         </ul>
+        </h1>
       </nav>
-      <nav class="log-nav">
+      <!-- End main navigation -->
+      <!-- Start login logout links -->
+      <nav class="login_nav">
+        <h1>
         <ul>
-          <li class="log-forms">
-            <form class="login-link" action="{% url 'accounts:login' %}" method="post">
+          <li class="log_forms">
+            <form class="login_link" action="{% url 'accounts:login' %}" method="post">
               {% csrf_token %}
               <button type="submit"name="logout">Login</button>
             </form>
           </li>
           <li>
-            <form class="logout-link" action="{% url 'accounts:logout' %}" method="post">
+            <form class="logout_link" action="{% url 'accounts:logout' %}" method="post">
               {% csrf_token %}
               <button type="submit"name="logout">Logout</button>
             </form>
           </li>
         </ul>
-      </h1></nav>
+        </h1>
+      </nav>
+      <!-- End login logout links -->
     </div>
-    <!-- End Navigation -->
+    <!-- End nav_container -->
 
     <!-- Start Wrapper -->
-    <div class="wrapper">
+    <div class="wrapper_container">
       {% block content %}
       {% endblock %}
     </div>
+    <!-- End wrapper -->
 
     <!-- Start Footer -->
     <footer>
-      <div class="copyright">
+      <!-- start copyright container  left-->
+      <div class="f_copyright">
         <p>Hap Pea Foods, Copyright &copy; 2021</p>
         <p>Website created by David Boss, Mallory Dodds, and Suzy Kaufman</p>
       </div>
+      <!-- end copyright container -->
+      <!-- start link container 2nd -->
+      <div class="f_link">
+        <ul>
+          <li class="current"><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="{% url 'donate' %}">Donate</a></li>
+          <li><a href="{% url 'about' %}">About Us</a></li>
+          <li><a href="{% url 'volunteer' %}">Volunteer</a></li>
+          <li><a href="{% url 'partners' %}">Partners</a></li>
+          <li><a href="{% url 'stories:stories' %}">Stories</a></li>
+          <li><a href="{% url 'accounts:register' %}">Register</a></li>
+          <li><a href="{% url 'find_help' %}">Find Help</a></li>
+        </ul>
+      </div>
+      <!-- end link container -->
+      <!-- start social container 3rd -->
+      <div class="f_social">
+        <ul>
+          <li><a href="https://www.facebook.com/happeafoods" class="icons"><i class="fa fa-facebook" style="font-size:30px;color:blue;"></i></a></li>
+          <li><a href="https://www.twitter.com/happeafoods" class="icons"><i class="fa fa-twitter" style="font-size:30px;color:lightblue;"></i></a></li>
+          <li><a href="https://www.plus.google.com/happeafoods" class="icons"><i class="fa fa-google-plus" style="font-size:30px;color:green;"></i></a></li>
+          <li><a href="https://www.instagram.com/happeafoods" class="icons"><i class="fa fa-instagram" style="font-size:30px;color:purple;"></i></a></li>
+          <li><a href="https://www.pintrest.com/happeafoods" class="icons"><i class="fa fa-pintrest" style="font-size:30px;color:black;"></i></a></li>
+          <li><a href="https://www.youtube.com.com/happeafoods" class="icons"><i class="fa fa-youtube" style="font-size:30px;color:red;"></i></a></li>
+        </ul>
+      </div>
+      <!-- end social container -->
+      <!-- start subscribe container 4th -->
+      <div class="f_subscribe">
+        <form action="">
+          <p>Subscribe to our newsletter</p>
+          <input type="text" name="email" placeholder="Email Address" />
+          <input type="submit" name="subscribe" value="Subscribe" />
+        </form>
+      </div>
+      <!-- end subscribe container -->
+      <!-- start address container 5th -->
+      <div class="f_address">
+        <p>407 Evergreen Rd. | Roseville, CA 90673<br>
+          +44 345 678 903<br>
+          info@happeafoods.com | www.happeafoods.com</p>
+      </div>
+      <!-- end address container -->
     </footer>
     <!-- End Footer -->
 
-      </body>
+  </body>
 </html>
