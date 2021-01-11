@@ -11,6 +11,8 @@ body {
   width: 60%;
 }
 
+.clear { clear:both; display:block; overflow:hidden; visibility:hidden; height:0px;}
+
 .social {
   float: right;
 }
