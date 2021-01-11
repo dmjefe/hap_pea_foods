@@ -30,6 +30,8 @@ urlpatterns = [
     url('accounts/', include('accounts.urls')),
     url('stories/', include('stories.urls')),
     url('volunteer/', views.volunteer, name="volunteer"),
+    url('portal/', views.portal, name="portal"),
+    url('logoutlanding/', views.portal, name="logoutlanding"),
     url('', views.homepage, name="home"),
 ]
 

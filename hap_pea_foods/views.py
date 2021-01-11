@@ -23,3 +23,9 @@ def stories(request):
 
 def volunteer(request):
     return render(request, 'volunteer.html')
+
+def portal(request):
+    return render(request, 'portal.html')
+
+def loutoutlanding(request):
+    return render(request, 'logoutlanding.html')

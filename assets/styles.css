@@ -67,7 +67,7 @@ body {
   color: #BBB; /* greyish */
   cursor: pointer;
   border: 0;
-  font-size: 1.5em;
+  font-size: 1.2em;
 }
 
 /* Wrapper */
@@ -84,7 +84,21 @@ body {
 
 /* --------------------  CSS for other pages starts here ------------------- */
 /* stories_list css */
+
+.createstory button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 .stories {
+  margin-top: 20px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 30px;

@@ -37,8 +37,6 @@
           <li><a href="{% url 'volunteer' %}">Volunteer</a></li>
           <li><a href="{% url 'partners' %}">Partners</a></li>
           <li><a href="{% url 'stories:stories' %}">Stories</a></li>
-          <li><a href="{% url 'stories:create' %}">Add a story</a></li> <!--sub cat of stories -->
-          <li><a href="{% url 'accounts:register' %}">Register</a></li>
           <li><a href="{% url 'find_help' %}">Find Help</a></li>
         </ul>
         </h1>
@@ -48,16 +46,21 @@
       <nav class="login_nav">
         <h1>
         <ul>
-          <li class="log_forms">
+          <li class="register_form">
+            <form class="register_link" action="{% url 'accounts:register' %}" method="post">
+              {% csrf_token %}
+              <button type="submit" name="register">Register</button>
+            </form>
+          <li class="login_form">
             <form class="login_link" action="{% url 'accounts:login' %}" method="post">
               {% csrf_token %}
-              <button type="submit"name="logout">Login</button>
+              <button type="submit" name="login">Login</button>
             </form>
           </li>
-          <li>
+          <li class="logout_form">
             <form class="logout_link" action="{% url 'accounts:logout' %}" method="post">
               {% csrf_token %}
-              <button type="submit"name="logout">Logout</button>
+              <button type="submit" name="logout">Logout</button>
             </form>
           </li>
         </ul>
@@ -79,7 +82,7 @@
     <footer>
       <!-- start copyright container  left-->
       <div class="f_copyright">
-        <p>Hap Pea Foods, Copyright &copy; 2021</p>
+        <p>&copy; 2021, Hap Pea Foods</p>
         <p>Website created by David Boss, Mallory Dodds, and Suzy Kaufman</p>
       </div>
       <!-- end copyright container -->
