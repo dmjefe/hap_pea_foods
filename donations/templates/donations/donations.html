@@ -3,4 +3,10 @@
 {% block content %}
 <h1><center>Donation Page for Hap-Pea Foods</center></h1><br/>
 <p>Welcome to our donation page.</p>
+
+<form class="site-form" action="{% url 'donations:donations' %}" method="post">  <!--use: enctype="multipart/form-data"   if you upload images -->
+  {% csrf_token %}
+  {{form}}
+  <input type="submit" value="Create Donation">
+</form>
 {% endblock %}
