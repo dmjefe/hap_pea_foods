@@ -26,6 +26,7 @@ body {
 /* start nav_container */
 .main_nav {
   overflow: hidden;
+  border-radius: 25px;
   background-color: #084F6C; /* blueish */
   float:left;
 }
