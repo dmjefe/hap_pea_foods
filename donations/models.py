@@ -2,6 +2,10 @@ from django.db import models
 
 # Create your models here.
 
+class Donation(models.Model):
+    userName = models.CharField(max_length=25,)
+    donationDate = models.DateField()
+
 class Item(models.Model):
     COUNT = 'ct'
     GALLON = 'gal'
@@ -22,3 +26,4 @@ class Item(models.Model):
     itemName = models.CharField(max_length=100)
     number = models.SmallIntegerField()
     typeOfMeasure = models.CharField(max_length=5, choices=TYPE_OF_MEASURE_CHOICES, default=COUNT)
+    donation = models.ForeignKey(Donation, on_delete=models.CASCADE)
