@@ -26,6 +26,7 @@ body {
 /* start nav_container */
 .main_nav {
   overflow: hidden;
+  width: 100%;
   background-color: #084F6C; /* blueish */
   float:left;
 }
@@ -38,7 +39,7 @@ body {
 .main_nav a {
   float: left;
   display: block;
-  color: #20BF55; /* greenish */
+  color:#FBFBFF; /* whitish */
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -46,8 +47,7 @@ body {
 
 /* Change color on hover */
 .main_nav a:hover {
-  background-color: #FBFBFF; /* whitish */
-  color: #000; /* black */
+  color: #20BF55; /* greenish */
 }
 
 /* login logout links */
@@ -62,11 +62,10 @@ body {
 }
 
 .login_nav button {
-  background: none;
+  background: #084F6C; /* blueish */
   color: #BBB; /* greyish */
   cursor: pointer;
-  border: 0;
-  font-size: 1.2em;
+  border-radius: 25px;
 }
 
 /* Wrapper */
