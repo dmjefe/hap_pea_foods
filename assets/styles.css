@@ -26,7 +26,6 @@ body {
 /* start nav_container */
 .main_nav {
   overflow: hidden;
-  border-radius: 25px;
   background-color: #084F6C; /* blueish */
   float:left;
 }
@@ -34,7 +33,6 @@ body {
 .main_nav li {
   float: left;
   display: inline;
-  padding: 0 20px 0 20px;
 }
 
 .main_nav a {
