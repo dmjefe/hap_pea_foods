@@ -1,10 +1,21 @@
 {% extends 'base_layout.html' %}
 {% block title %}Hap Pea Foods | Registration{% endblock %}
 {% block content %}
-  <h1> Register </h1>
-  <form class="site-form" action="accounts/signup" method="post">
-    {% csrf_token %}
-    {{form}}
-    <input type="submit" value="Register">
-  </form>
+
+  <div class="content-section">
+    <h1>New User Registration</h1>
+    <form class="site-form" action="accounts/signup" method="post">
+      <fieldset class="form-group">
+          {% csrf_token %}
+          {{form}}
+      </fieldset>
+      <div class="form-group">
+        <input type="submit" value="Register">
+      </div>
+    </form>
+    <div class="border-top pt-3">
+      <h3>Already Have An Account? <a href="login.html">Sign In</a></h3>
+    </div>
+  </div>
+
 {% endblock %}

@@ -11,9 +11,12 @@
 
     <!-- start head_container -->
     <div class="head_container">
+
       <div class="logo">
-        <img src="{ % static 'logo.jpg' % }" height="100px" width="200px"> Hap-Pea Foods
+        <a href="{% url 'home' %}"><img src="{% static 'logo.jpg' %}" height="100px" width="200px"></a>
       </div>
+
+      <div class="logo_head">Hap-Pea Foods</div>
 
       <div class="social">
         <a href="https://www.facebook.com/happeafoods" class="icons"><i class="fa fa-facebook" style="font-size:30px;color:blue;"></i></a>
@@ -22,6 +25,10 @@
         <a href="https://www.instagram.com/happeafoods" class="icons"><i class="fa fa-instagram" style="font-size:30px;color:purple;"></i></a>
         <a href="https://www.pintrest.com/happeafoods" class="icons"><i class="fa fa-pintrest" style="font-size:30px;color:black;"></i></a>
         <a href="https://www.youtube.com.com/happeafoods" class="icons"><i class="fa fa-youtube" style="font-size:30px;color:red;"></i></a>
+        <form class="search_bar" action="https://www.google.com">
+          <input type="text" placeholder="Search.." name="search">
+          <button type="submit"><i class="fa fa-search"></i></button>
+        </form>
       </div>
     </div>
     <!-- End head_container  -->
@@ -74,6 +81,13 @@
 
     <!-- Start Wrapper -->
     <div class="wrapper_container">
+      {% if messages %}
+        {% for message in messages %}
+        <div class="alert alert-{{ message.tags }}">
+          {{ message }}
+        </div>
+        {% endfor %}
+      {% endif %}
       {% block content %}
       {% endblock %}
     </div>

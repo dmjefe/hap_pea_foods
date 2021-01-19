@@ -1,4 +1,4 @@
-/* --------------------  CSS for base_layout starts here ------------------- */
+/*  CSS for base_layout */
 body {
   background: #FBFBFF; /* whitish */
   font-family: Arial;
@@ -6,9 +6,23 @@ body {
 }
 
 /* start head_container */
+
 .logo {
   float: left;
-  width: 60%;
+  width: 20%;
+}
+
+.logo img {
+  width: auto;
+}
+
+.logo_head {
+  float: left;
+  width: 50%;
+  text-align: center;
+  font-style: bold;
+  font-size: 80px;
+  padding: 30px;
 }
 
 .clear {
@@ -23,6 +37,9 @@ body {
   float: right;
 }
 
+.social .search_bar {
+  margin-top: 15px;
+}
 /* start nav_container */
 .main_nav {
   overflow: hidden;
@@ -80,7 +97,37 @@ body {
   font-size: 2.4em;
 }
 
+/* Footer container */
+footer {   /* overall footer styles */
+  padding: 20px;
+  background: #084F6C; /* blueish */
+  color: #FBFBFF; /* whitish */
+  margin-top: 20px;
+}
+
+.f_copyright {
+
+}
+
+.f_links {
+
+}
+
+.f_social {
+
+}
+
+.f_subscribe {
+
+}
+
+.f_address {
+
+}
+
+
 /* --------------------  CSS for other pages starts here ------------------- */
+
 /* stories_list css */
 
 .createstory button {
@@ -144,7 +191,7 @@ body {
 
 /* stories_create css */
 
-/* site form css */
+/* site-form css */
 .site-form {
   margin-top: 60px;
   border: 1px solid #20BF55; /* greenish */
@@ -192,32 +239,10 @@ a.highlight {
   margin: 10px 0;
 }
 
+/* Partners page CSS */
 
-/* --------------------  Continue CSS for base_layout starts here ------------------- */
-/* Footer container */
-footer {   /* overall footer styles */
-  padding: 20px;
-  background: #084F6C; /* blueish */
-  color: #FBFBFF; /* whitish */
-  margin-top: 20px;
-}
-
-.f_copyright {
-
-}
-
-.f_links {
-
-}
-
-.f_social {
-
-}
-
-.f_subscribe {
-
-}
-
-.f_address {
-
+.portal img{
+  white-space:nowrap;
+  padding-left: 100px;
+  padding-bottom: 100px;
 }

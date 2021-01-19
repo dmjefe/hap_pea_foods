@@ -1,6 +1,16 @@
 {% extends 'base_layout.html '%}
 {% block title %}Hap Pea Foods | Partners{% endblock %}
 {% block content %}
-<h1><center>Partners for Hap-Pea Foods</center></h1><br/>
-<p>Welcome to our partners page.</p>
+{% load static %}
+
+<div class="main">
+  <h1><center>Partners for Hap-Pea Foods</center></h1><br/>
+  <div class="portal">
+    <a href="https://www.feedingamerica.org/"><img src="{% static 'feedingamerica.png' %}"></a>
+    <a href="https://www.starbucks.com/"><img src="{% static 'starbucks.png' %}"></a>
+    <a href="https://midwestfoodbank.org/home"><img src="{% static 'midwest.png' %}"></a>
+    <a href="https://www.firstfoodbank.org/"><img src="{% static 'stmarys.png' %}"></a>
+    <a href="https://www.panerabread.com/en-us/home.html"><img src="{% static 'panera.png' %}"></a>
+  </div>
+</div>
 {% endblock %}
