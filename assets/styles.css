@@ -26,11 +26,11 @@ body {
 }
 
 .clear {
-  clear:both;
-  display:block;
-  overflow:hidden;
-  visibility:hidden;
-  height:0px;
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  height: 0px;
 }
 
 .social {
@@ -87,7 +87,7 @@ body {
 
 /* Wrapper */
 .wrapper_container {
-  max-width: 960px;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -127,6 +127,10 @@ footer {   /* overall footer styles */
 
 
 /* --------------------  CSS for other pages starts here ------------------- */
+
+/* css for homepage */
+
+
 
 /* stories_list css */
 
@@ -242,7 +246,124 @@ a.highlight {
 /* Partners page CSS */
 
 .portal img{
-  white-space:nowrap;
+  white-space: nowrap;
   padding-left: 100px;
   padding-bottom: 100px;
+}
+
+
+/* Image slider home page */
+
+.slide_body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000;
+}
+
+.slider {
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.slides {
+  width: 800%;
+  height: 500px;
+  display: flex;
+}
+
+.slides input{
+  display: none;
+}
+
+.slide {
+  width: 20%;
+  transition: 2s;
+}
+
+.slide img {
+  width: 800px;
+  height: 500px;
+}
+
+/* css for manual slide navigation */
+
+.navigation-manual {
+  position: absolute;
+  width: 800px;
+  margin-top: -40px;
+  display: flex;
+  justify-content: center;
+}
+
+.manual.btn {
+  border: 2px solid #20BF55;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+}
+
+.manual-btn:hover {
+  background: #20BF55;
+}
+
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+  margin-left: -60%;
+}
+
+/* css for automatic navigation */
+.navigation-auto {
+  position: absolute;
+  display: flex;
+  width: 800px;
+  justify-content: center;
+  margin-top:460px;
+}
+
+.navigation-auto div{
+  border: 2px solid #20BF55;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+  background: #20BF55;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+  background: #20BF55;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+  background: #20BF55;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+  background: #20BF55;
 }

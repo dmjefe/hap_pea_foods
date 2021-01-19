@@ -1,78 +1,126 @@
 {% extends 'base_layout.html '%}
 {% block title %}Hap Pea Foods | Home{% endblock %}
 {% block content %}
-<div class="leftblock">
-  <h1>What is a food bank?</h1>
+{% load static %}
 
-  <p>A food bank is a non-profit organization that collects and distributes food to hunger-relief charities. Food banks act as food storage and distribution depots for smaller front line agencies; and usually do not themselves give out food directly to people struggling with hunger.</p>
-
-  <p>Food banks in the U.S. are very diverse – from small operations serving people spread out across large rural areas to very large facilities that store and distribute many millions of pounds of food each year, and everything in between. A variety of factors impact how food banks work, from the size of the facility to the number of staff members.  But, one thing all food banks have in common is that they rely on donors and volunteers to carry out their day-to-day operations. </p>
-
-  <h1>How does the Hap Pea Foods network of food banks work?</h1>
-  <div class="row1">
-    <div class="image-col">
-      <img src="assets/plate.png" alt="plate">
+  <!-- image slider -->
+  <div class="slide_body">
+    <!-- image slider starts -->
+    <div class="slider">
+      <div class="slides">
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <input type="radio" name="radio-btn" id="radio4">
+        <!-- radio buttons ends -->
+        <!-- slide images start -->
+        <div class="slide first">
+          <img src="{% static 'food1.jpg' %}" alt="">
+        </div>
+        <div class="slide">
+          <img src="{% static 'food2.jpg' %}" alt="">
+        </div>
+        <div class="slide">
+          <img src="{% static 'food3.jpg' %}" alt="">
+        </div>
+        <div class="slide">
+          <img src="{% static 'family.jpg' %}" alt="">
+        </div>
+        <!-- slider images end -->
+        <!-- automatic navigation starts -->
+        <div class="navigation-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
+        </div>
+        <!-- automatic navigation end -->
+        <!-- manual navigation starts  -->
+        <div class="navigation-manual">
+          <label for="radio1" class="manuel-btn"></label>
+          <label for="radio2" class="manuel-btn"></label>
+          <label for="radio3" class="manuel-btn"></label>
+          <label for="radio4" class="manuel-btn"></label>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="text">
-    <h3>Securing food</h3>
-    <p>Hap Pea Foods secures donations from national food and grocery manufacturers, retailers, shippers, packers and growers and from government agencies and other organizations. We have staff that work closely with the partners to match excess food with the food banks that most need it.</p>
-  </div>
-  <div class="row2">
-    <div class="image-col">
-      <img src="assets/wheat.png" alt="wheat">
-    </div>
-  </div>
-  <div class="text">
-    <h3>Shipping and Storage</h3>
-    <p>The Hap Pea Foods network of food banks receive and safely stores donated food and grocery products. Feeding America supports member food banks with training, oversight and equipment grants to ensure perishable and non-perishable food is handled and stored properly.</p>
-  </div>
-  <div class="row3">
-    <div class="image-col">
-      <img src="assets/truck.png" alt="truck">
-    </div>
-  </div>
-  <div class="text">
-    <h3>Distributing Food</h3>
-    <p>The food banks distribute food and grocery items through food pantries and meal programs that serve families, children, seniors and individuals at risk of hunger. Last year alone, the Feeding America network distributed more than 3.6 billion meals to people in need.</p>
-  </div>
-  <div class="row4">
-    <div class="image-col">
-      <img src="assets/arrow.png" alt="arrow">
-    </div>
-  </div>
-  <div class="text">
-    <h3>Supporting the people we serve</h3>
-    <p>The Hap Pea Foods nationwide network of food banks also supports programs that improve food security among the people we serve; educates the public about the problem of hunger; and advocates for legislation that protects people from going hungry. Individuals, charities, businesses and government all have a role in ending hunger.</p>
-  </div>
 
-</div>
+  <div class="l_containter">
+    <div class="leftblock">
+      <h1>What is a food bank?</h1>
 
-<div class="calendar">
-  <h1>Calendar</h1> <!-- Module insert here for calendar -->
-  <div class="event">
-    <h3>Event 1</h3>
-    <p>Location: Somewhere</p>
-    <p>Date and Time: 1/1/000  12:00pm est</p>
-    <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus enim euismod vehicula blandit. Aliquam ac sem nisi. Curabitur eget mi quis dui vulputate efficitur. Mauris mi justo, tincidunt aliquet dapibus vitae, tristique sit amet neque. Etiam bibendum eros nec elementum pharetra. Vestibulum eget mi vel velit ultricies ullamcorper. Ut congue at sem eu tincidunt. </p>
-  </div>
-  <div class="event">
-    <h3>Event 2</h3>
-    <p>Location: Somewhere</p>
-    <p>Date and Time: 1/1/000  12:00pm est</p>
-    <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus enim euismod vehicula blandit. Aliquam ac sem nisi. Curabitur eget mi quis dui vulputate efficitur. Mauris mi justo, tincidunt aliquet dapibus vitae, tristique sit amet neque. Etiam bibendum eros nec elementum pharetra. Vestibulum eget mi vel velit ultricies ullamcorper. Ut congue at sem eu tincidunt. </p>
-  </div>
-  <div class="event">
-    <h3>Event 3</h3>
-    <p>Location: Somewhere</p>
-    <p>Date and Time: 1/1/000  12:00pm est</p>
-    <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus enim euismod vehicula blandit. Aliquam ac sem nisi. Curabitur eget mi quis dui vulputate efficitur. Mauris mi justo, tincidunt aliquet dapibus vitae, tristique sit amet neque. Etiam bibendum eros nec elementum pharetra. Vestibulum eget mi vel velit ultricies ullamcorper. Ut congue at sem eu tincidunt. </p>
-  </div>
-  <div class="event">
-    <h3>Event 4</h3>
-    <p>Location: Somewhere</p>
-    <p>Date and Time: 1/1/000  12:00pm est</p>
-    <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus enim euismod vehicula blandit. Aliquam ac sem nisi. Curabitur eget mi quis dui vulputate efficitur. Mauris mi justo, tincidunt aliquet dapibus vitae, tristique sit amet neque. Etiam bibendum eros nec elementum pharetra. Vestibulum eget mi vel velit ultricies ullamcorper. Ut congue at sem eu tincidunt. </p>
-  </div>
-</div>
+      <p>A food bank is a non-profit organization that collects and distributes food to hunger-relief charities. Food banks act as food storage and distribution depots for smaller front line agencies; and usually do not themselves give out food directly to people struggling with hunger.</p>
+
+      <p>Food banks in the U.S. are very diverse – from small operations serving people spread out across large rural areas to very large facilities that store and distribute many millions of pounds of food each year, and everything in between. A variety of factors impact how food banks work, from the size of the facility to the number of staff members.  But, one thing all food banks have in common is that they rely on donors and volunteers to carry out their day-to-day operations. </p>
+
+      <h1>How does the Hap Pea Foods network of food banks work?</h1>
+      <div class="row1">
+        <div class="image-col">
+          <img src="{% static 'plate.png' %}" alt="plate">
+        </div>
+      </div>
+      <div class="text">
+        <h3>Securing food</h3>
+        <p>Hap Pea Foods secures donations from national food and grocery manufacturers, retailers, shippers, packers and growers and from government agencies and other organizations. We have staff that work closely with the partners to match excess food with the food banks that most need it.</p>
+      </div>
+      <div class="row2">
+        <div class="image-col">
+          <img src="{% static 'wheat.png' %}" alt="wheat">
+        </div>
+      </div>
+      <div class="text">
+        <h3>Shipping and Storage</h3>
+        <p>The Hap Pea Foods network of food banks receive and safely stores donated food and grocery products. Feeding America supports member food banks with training, oversight and equipment grants to ensure perishable and non-perishable food is handled and stored properly.</p>
+      </div>
+      <div class="row3">
+        <div class="image-col">
+          <img src="{% static 'truck.png' %}" alt="truck">
+        </div>
+      </div>
+      <div class="text">
+        <h3>Distributing Food</h3>
+        <p>The food banks distribute food and grocery items through food pantries and meal programs that serve families, children, seniors and individuals at risk of hunger. Last year alone, the Feeding America network distributed more than 3.6 billion meals to people in need.</p>
+      </div>
+      <div class="row4">
+        <div class="image-col">
+          <img src="{% static 'arrow.png' %}" alt="arrow">
+        </div>
+      </div>
+      <div class="text">
+        <h3>Supporting the people we serve</h3>
+        <p>The Hap Pea Foods nationwide network of food banks also supports programs that improve food security among the people we serve; educates the public about the problem of hunger; and advocates for legislation that protects people from going hungry. Individuals, charities, businesses and government all have a role in ending hunger.</p>
+      </div>
+    </div> <!-- end leftblock -->
+
+    <div class="calendar">
+      <h1>Calendar</h1> <!-- Module insert here for calendar -->
+      <div class="event">
+        <h3>Event 1</h3>
+        <p>Location: Somewhere</p>
+        <p>Date and Time: 1/1/000  12:00pm est</p>
+        <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus enim euismod vehicula blandit. Aliquam ac sem nisi. Curabitur eget mi quis dui vulputate efficitur. Mauris mi justo, tincidunt aliquet dapibus vitae, tristique sit amet neque. Etiam bibendum eros nec elementum pharetra. Vestibulum eget mi vel velit ultricies ullamcorper. Ut congue at sem eu tincidunt. </p>
+      </div>
+      <div class="event">
+        <h3>Event 2</h3>
+        <p>Location: Somewhere</p>
+        <p>Date and Time: 1/1/000  12:00pm est</p>
+        <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus enim euismod vehicula blandit. Aliquam ac sem nisi. Curabitur eget mi quis dui vulputate efficitur. Mauris mi justo, tincidunt aliquet dapibus vitae, tristique sit amet neque. Etiam bibendum eros nec elementum pharetra. Vestibulum eget mi vel velit ultricies ullamcorper. Ut congue at sem eu tincidunt. </p>
+      </div>
+      <div class="event">
+        <h3>Event 3</h3>
+        <p>Location: Somewhere</p>
+        <p>Date and Time: 1/1/000  12:00pm est</p>
+        <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus enim euismod vehicula blandit. Aliquam ac sem nisi. Curabitur eget mi quis dui vulputate efficitur. Mauris mi justo, tincidunt aliquet dapibus vitae, tristique sit amet neque. Etiam bibendum eros nec elementum pharetra. Vestibulum eget mi vel velit ultricies ullamcorper. Ut congue at sem eu tincidunt. </p>
+      </div>
+      <div class="event">
+        <h3>Event 4</h3>
+        <p>Location: Somewhere</p>
+        <p>Date and Time: 1/1/000  12:00pm est</p>
+        <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus enim euismod vehicula blandit. Aliquam ac sem nisi. Curabitur eget mi quis dui vulputate efficitur. Mauris mi justo, tincidunt aliquet dapibus vitae, tristique sit amet neque. Etiam bibendum eros nec elementum pharetra. Vestibulum eget mi vel velit ultricies ullamcorper. Ut congue at sem eu tincidunt. </p>
+      </div>
+    </div> <!-- end calendar -->
+  </div> <!-- end l_container -->
+
+
 {% endblock %}
