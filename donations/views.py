@@ -6,8 +6,8 @@ from . import forms
 
 # Create your views here.
 def donations(request):
-    #form = forms.CreateDonation()
-    #return render(request, 'donations/donations.html', {'form':form})
+    form = forms.CreateDonation()
+    return render(request, 'donations/donations.html', {'form':form})
 
     template_name = 'donation/donations.html'
     if request.method == 'GET':
