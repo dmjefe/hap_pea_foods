@@ -1,34 +1,35 @@
 from django import forms
+#from django.forms import ModelForm
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
+from . import models
 
 class UserRegisterForm(UserCreationForm):
-    email = forms.EmailField()
-    first_name = forms.CharField(max_length=100)
-    middle_name = forms.CharField(max_length=100)
-    last_name = forms.CharField(max_length=100)
-    dob = forms.DateField()
-    phone = forms.CharField(max_length=100)
-    address = forms.CharField(max_length=100)
-    city = forms.CharField(max_length=100)
-    state = forms.CharField(max_length=2)
-    zip = forms.CharField(max_length=9)
+    #email = forms.EmailField()
+    #first_name = forms.CharField(max_length=100)
+    #last_name = forms.CharField(max_length=100)
 
 
     class Meta:
         model = User
         #field order on the form
         fields = (
-        'first_name',
-        'middle_name',
-        'last_name',
+         'email',
+         'first_name',
+         'last_name',
+         'username',
+         'password1',
+         'password2'
+    )
+
+class Profile(forms.ModelForm):
+
+    class Meta:
+        model = models.Profile
+        #field order on the form
+        fields = (
         'dob',
-        'phone',
         'address',
         'city',
         'state',
-        'zip',
-        'email',
-        'username',
-        'password1',
-        'password2')
+    )
