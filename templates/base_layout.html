@@ -23,7 +23,7 @@
         <a href="https://www.twitter.com/happeafoods" class="icons"><i class="fa fa-twitter" style="font-size:30px;color:lightblue;"></i></a>
         <a href="https://www.plus.google.com/happeafoods" class="icons"><i class="fa fa-google-plus" style="font-size:30px;color:green;"></i></a>
         <a href="https://www.instagram.com/happeafoods" class="icons"><i class="fa fa-instagram" style="font-size:30px;color:purple;"></i></a>
-        <a href="https://www.pintrest.com/happeafoods" class="icons"><i class="fa fa-pintrest" style="font-size:30px;color:black;"></i></a>
+        <a href="https://www.pintrest.com/happeafoods" class="icons"><i class="fa fa-pinterest" style="font-size:30px;color:black;"></i></a>
         <a href="https://www.youtube.com.com/happeafoods" class="icons"><i class="fa fa-youtube" style="font-size:30px;color:red;"></i></a>
         <form class="search_bar" action="https://www.google.com">
           <input type="text" placeholder="Search.." name="search">
@@ -95,53 +95,59 @@
 
     <!-- Start Footer -->
     <footer>
-      <!-- start copyright container  left-->
-      <div class="f_copyright">
-        <p>&copy; 2021, Hap Pea Foods</p>
-        <p>Website created by David Boss, Mallory Dodds, and Suzy Kaufman</p>
-      </div>
-      <!-- end copyright container -->
-      <!-- start link container 2nd -->
-      <div class="f_link">
-        <ul>
-          <li class="current"><a href="{% url 'home' %}">Home</a></li>
-          <li><a href="{% url 'donations:donations' %}">Donate</a></li>
-          <li><a href="{% url 'about' %}">About Us</a></li>
-          <li><a href="{% url 'volunteer' %}">Volunteer</a></li>
-          <li><a href="{% url 'partners' %}">Partners</a></li>
-          <li><a href="{% url 'stories:stories' %}">Stories</a></li>
-          <li><a href="{% url 'accounts:register' %}">Register</a></li>
-          <li><a href="{% url 'find_help' %}">Find Help</a></li>
-        </ul>
-      </div>
-      <!-- end link container -->
-      <!-- start social container 3rd -->
-      <div class="f_social">
-        <ul>
-          <li><a href="https://www.facebook.com/happeafoods" class="icons"><i class="fa fa-facebook" style="font-size:30px;color:blue;"></i></a></li>
-          <li><a href="https://www.twitter.com/happeafoods" class="icons"><i class="fa fa-twitter" style="font-size:30px;color:lightblue;"></i></a></li>
-          <li><a href="https://www.plus.google.com/happeafoods" class="icons"><i class="fa fa-google-plus" style="font-size:30px;color:green;"></i></a></li>
-          <li><a href="https://www.instagram.com/happeafoods" class="icons"><i class="fa fa-instagram" style="font-size:30px;color:purple;"></i></a></li>
-          <li><a href="https://www.pintrest.com/happeafoods" class="icons"><i class="fa fa-pintrest" style="font-size:30px;color:black;"></i></a></li>
-          <li><a href="https://www.youtube.com.com/happeafoods" class="icons"><i class="fa fa-youtube" style="font-size:30px;color:red;"></i></a></li>
-        </ul>
-      </div>
-      <!-- end social container -->
-      <!-- start subscribe container 4th -->
-      <div class="f_subscribe">
-        <form action="">
-          <p>Subscribe to our newsletter</p>
-          <input type="text" name="email" placeholder="Email Address" />
-          <input type="submit" name="subscribe" value="Subscribe" />
-        </form>
-      </div>
-      <!-- end subscribe container -->
-      <!-- start address container 5th -->
-      <div class="f_address">
-        <p>407 Evergreen Rd. | Roseville, CA 90673<br>
-          +44 345 678 903<br>
-          info@happeafoods.com | www.happeafoods.com</p>
-      </div>
+      <div class="main_content">
+        <!-- start copyright container  left-->
+        <div class="f_copyright">
+          <p>&copy; 2021, Hap Pea Foods</p>
+          <p>Website created by David Boss, Mallory Dodds, and Suzy Kaufman</p>
+        </div>
+        <!-- end copyright container -->
+        <!-- start link container 2nd -->
+        <div class="f_link">
+          <ul>
+            <li class="current"><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'donations:donations' %}">Donate</a></li>
+            <li><a href="{% url 'about' %}">About Us</a></li>
+            <li><a href="{% url 'volunteer' %}">Volunteer</a></li>
+            <li><a href="{% url 'partners' %}">Partners</a></li>
+            <li><a href="{% url 'stories:stories' %}">Stories</a></li>
+            <li><a href="{% url 'accounts:register' %}">Register</a></li>
+            <li><a href="{% url 'find_help' %}">Find Help</a></li>
+          </ul>
+        </div>
+        <!-- end link container -->
+        <!-- start social container 3rd -->
+        <div class="f_social">
+          <ul>
+            <li><a href="https://www.facebook.com/happeafoods" class="icons"><i class="fa fa-facebook" style="font-size:30px;color:blue;"></i></a></li>
+            <li><a href="https://www.twitter.com/happeafoods" class="icons"><i class="fa fa-twitter" style="font-size:30px;color:lightblue;"></i></a></li>
+            <li><a href="https://www.plus.google.com/happeafoods" class="icons"><i class="fa fa-google-plus" style="font-size:30px;color:green;"></i></a></li>
+            <li><a href="https://www.instagram.com/happeafoods" class="icons"><i class="fa fa-instagram" style="font-size:30px;color:purple;"></i></a></li>
+            <li><a href="https://www.pintrest.com/happeafoods" class="icons"><i class="fa fa-pinterest" style="font-size:30px;color:black;"></i></a></li>
+            <li><a href="https://www.youtube.com.com/happeafoods" class="icons"><i class="fa fa-youtube" style="font-size:30px;color:red;"></i></a></li>
+          </ul>
+        </div>
+        <!-- end social container -->
+        <!-- start subscribe container 4th -->
+        <div class="f_subscribe">
+          <form action="">
+            <p>Subscribe to our newsletter</p>
+            <input type="text" name="email" placeholder="Email Address" />
+            <input type="submit" name="subscribe" value="Subscribe" />
+          </form>
+        </div>
+        <!-- end subscribe container -->
+        <!-- start address container 5th -->
+        <div class="f_address">
+          <h2>Address</h2>
+          <ul>
+            <li><i class="fa fa-map-marker"></i>407 Evergreen Rd. | Roseville, CA 90673</li>
+            <li><i class="fa fa-phone"></i>(987) 654-3210</li>
+            <li><i class="fa fa-envelope"></i>info@happeafoods.com</li>
+          </ul>
+       </div>
+
+
       <!-- end address container -->
     </footer>
     <!-- End Footer -->

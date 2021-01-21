@@ -104,33 +104,100 @@ footer {   /* overall footer styles */
   background: #084F6C; /* blueish */
   color: #FBFBFF; /* whitish */
   margin-top: 20px;
+  box-sizing: border-box;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+.main_content {
+  display: flex;
 }
 
 .f_copyright {
-
+flex-basis: 20%;
+padding-top: 10px;
 }
 
-.f_links {
+.f_link {
+  flex-basis: 10%;
+  padding-top: 10px;
+  font-size: 18px;
+}
 
+.f_link a:visited {
+  color: #20BF55;
+}
+
+.f_link a:hover {
+  color: #BBBDBA;
 }
 
 .f_social {
+    flex-basis: 30%;
+    padding-top:10px;
+}
 
+.f_social a {
+  padding: 10px;
+}
+
+.f_social li {
+  display: inline-block;
 }
 
 .f_subscribe {
-
+  flex-basis: 30%;
+  padding-top: 10px;
+  font-size: 18px;
 }
 
 .f_address {
+  flex-basis: 25%;
+}
 
+.f_address i {
+  font-size: 18px;
+  padding: 10px;
 }
 
 
 /* --------------------  CSS for other pages starts here ------------------- */
 
 /* css for homepage */
+.row1, .row2, .row3, .row4{
+  box-sizing: border-box;
+  display: flex;
+}
+.image-col {
+  flex-basis: 10%;
+  padding-top: 10px;
+}
 
+.text {
+  padding-top: 10px;
+  padding-left: 100px;
+}
+
+.l_container {
+  box-sizing: border-box;
+  display: flex;
+}
+
+.column {
+  display: flex;
+}
+
+.leftblock {
+  flex-basis: 250%;
+  padding-top: 10px;
+}
+
+.calendar {
+  padding-top: 10px;
+  padding-left: 100px;
+}
 
 
 /* stories_list css */
