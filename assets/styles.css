@@ -42,24 +42,25 @@ body {
 }
 /* start nav_container */
 .main_nav {
-  overflow: hidden;
+  overflow: auto;
   width: 100%;
   background-color: #084F6C; /* blueish */
-  float:left;
 }
 
 .main_nav li {
-  float: left;
   display: inline;
+  text-align: center;
 }
 
 .main_nav a {
   float: left;
   display: block;
   color:#FBFBFF; /* whitish */
+  font-size: 17px;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  width: 11%;
 }
 
 /* Change color on hover */
@@ -198,13 +199,14 @@ footer {   /* overall footer styles */
 /* site-form css */
 .site-form {
   margin-top: 60px;
-  border: 1px solid #20BF55; /* greenish */
-  padding: 20px;
+  border: 3px solid #20BF55; /* greenish */
+  padding: 30px;
+  border-radius: 4px;
 }
 
 .site-form input, .site-form textarea {
   display: block;
-  margin: 20px 0 0 0;
+  margin: 20px 0 20px 0;
   padding: 10px;
 }
 
@@ -242,6 +244,12 @@ a.highlight {
   border-radius: 4px;
   margin: 10px 0;
 }
+
+.site-form input[type=submit]:hover {
+  color: #FBFBFF;
+  cursor: pointer;
+}
+
 
 /* Partners page CSS */
 

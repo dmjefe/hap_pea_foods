@@ -33,6 +33,31 @@
     </div>
     <!-- End head_container  -->
 
+    <!-- Start login logout links -->
+    <nav class="login_nav">
+      <h1>
+      <ul>
+        <li class="register_form">
+          <form class="register_link" action="{% url 'accounts:register' %}" method="post">
+            {% csrf_token %}
+            <button type="submit" name="register">Register</button>
+          </form>
+        <li class="login_form">
+          <form class="login_link" action="{% url 'accounts:login' %}" method="post">
+            {% csrf_token %}
+            <button type="submit" name="login">Login</button>
+          </form>
+        </li>
+        <li class="logout_form">
+          <form class="logout_link" action="{% url 'accounts:logout' %}" method="post">
+            {% csrf_token %}
+            <button type="submit" name="logout">Logout</button>
+          </form>
+        </li>
+      </ul>
+      </h1>
+    </nav>
+    <!-- End login logout links -->
     <!-- Start nav_container -->
     <div class="nav_container">
       <!-- Start main navigation -->
@@ -50,31 +75,6 @@
         </h1>
       </nav>
       <!-- End main navigation -->
-      <!-- Start login logout links -->
-      <nav class="login_nav">
-        <h1>
-        <ul>
-          <li class="register_form">
-            <form class="register_link" action="{% url 'accounts:register' %}" method="post">
-              {% csrf_token %}
-              <button type="submit" name="register">Register</button>
-            </form>
-          <li class="login_form">
-            <form class="login_link" action="{% url 'accounts:login' %}" method="post">
-              {% csrf_token %}
-              <button type="submit" name="login">Login</button>
-            </form>
-          </li>
-          <li class="logout_form">
-            <form class="logout_link" action="{% url 'accounts:logout' %}" method="post">
-              {% csrf_token %}
-              <button type="submit" name="logout">Logout</button>
-            </form>
-          </li>
-        </ul>
-        </h1>
-      </nav>
-      <!-- End login logout links -->
     </div>
     <div class="clear"></div>
     <!-- End nav_container -->
