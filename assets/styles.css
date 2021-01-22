@@ -71,19 +71,20 @@ body {
 /* login logout links */
 .login_nav {
   float: right;
+  display: flex;
+  justify-content: space-between;
 }
 
 .login_nav li {
   display: inline-block;
-  margin-left: 5px;
-  margin-right: 20px;
+
 }
 
 .login_nav button {
   background: #084F6C; /* blueish */
-  color: #BBB; /* greyish */
+  color:#FBFBFF; /* whitish */
   cursor: pointer;
-  border-radius: 25px;
+  border-radius: 5px;
 }
 
 /* Wrapper */
