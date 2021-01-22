@@ -42,25 +42,22 @@ body {
 }
 /* start nav_container */
 .main_nav {
+  text-align: center;
   overflow: auto;
   width: 100%;
   background-color: #084F6C; /* blueish */
 }
 
 .main_nav li {
-  display: inline;
-  text-align: center;
+  display: inline-block;
 }
 
 .main_nav a {
-  float: left;
-  display: block;
   color:#FBFBFF; /* whitish */
-  font-size: 17px;
-  text-align: center;
-  padding: 14px 16px;
+  float: left;
   text-decoration: none;
-  width: 11%;
+  padding: 5px;
+  text-align: center;
 }
 
 /* Change color on hover */
@@ -382,7 +379,8 @@ padding-top: 10px;
 /* site-form css */
 .site-form {
   margin-top: 60px;
-  border: 3px solid #20BF55; /* greenish */
+  border: 10px solid #20BF55; /* greenish */
+  border-style: ridge;
   padding: 30px;
   border-radius: 4px;
 }
