@@ -1,6 +1,7 @@
 {% extends 'base_layout.html '%}
 {% block title %}Hap Pea Foods | Donate{% endblock %}
 {% block content %}
+{% load static %}
 <script type='text/javascript'>
 function updateElementIndex(el, prefix, ndx) {
     var id_regex = new RegExp('(' + prefix + '-\\d+)');
@@ -59,6 +60,11 @@ $(document).on('click', '.remove-form-row', function(e){
     return false;
 });
 </script>
+
+
+<div class="d_img">
+  <img src="{% static '004-donation.png' %}" alt="">
+</div>
 
 <h1><center>Donation Page for Hap-Pea Foods</center></h1><br/>
 <p>Welcome to our donation page.</p>

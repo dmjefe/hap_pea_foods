@@ -175,6 +175,11 @@ footer ul {
   padding-top: 10px;
 }
 
+.image-col img {
+  height: 100px;
+  width: 100px;
+}
+
 .text {
   padding-top: 10px;
   padding-left: 100px;
@@ -199,7 +204,7 @@ footer ul {
   padding-left: 100px;
 }
 
-/* Image slider home page */
+/* image slider home page */
 
 .slide_body {
   margin: 0;
@@ -315,7 +320,7 @@ footer ul {
   background: #20BF55;
 }
 
-/* stories_list css */
+/* Stories_list css */
 
 .createstory button {
   background-color: #4CAF50; /* Green */
@@ -357,7 +362,7 @@ footer ul {
   color: #FBFBFF; /* whitish */
 }
 
-/* story-details css */
+/* Story-details css */
 .story-detail .story {
   padding: 0;
 }
@@ -376,7 +381,7 @@ footer ul {
   text-align: center;
 }
 
-/* stories_create css */
+/* Stories_create css */
 
 /* site-form css */
 .site-form {
@@ -481,9 +486,44 @@ a.highlight {
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
-
 }
 
 .v_options a {
   font-size: 26px;
+}
+
+/* Donations page CSS */
+
+.d_img img {
+  height: 200px;
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+/* About page CSS */
+
+/* User Portal page CSS */
+.up_head h1{
+  text-align: center;
+}
+
+.portal ul {
+  list-style-type: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+.portal li {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  padding: 30px;
+  margin: 30px;
+  border: 2px solid #20BF55;
+  text-align: center;
 }
