@@ -3,10 +3,11 @@
 {% block content %}
   <div class="main">
 
-    <h1><center>User Portal</center></h1><br/>
+    <h1><center>{{ user.username }}'s User Portal</center></h1><br/>
     <div class="portal">
       <ul>
-        <li><a href="#">User Profile</a></li>
+        <a href="">Donate</a>
+        <li><a href="{% url 'accounts:profile' %}">User Profile</a></li>
         <li><a href="#">My Calendar</a></li>
         <li><a href="#">Volunteer</a></li>
         <li><a href="#">Create Event</a></li>

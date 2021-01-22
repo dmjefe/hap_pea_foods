@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, logout
-from .forms import UserRegisterForm
+from accounts.forms import *
 
 
 # Create your views here.
@@ -13,7 +13,7 @@ def register_view(request):
             user = form.get_user()
             login(request, user)
                 #loguser in
-                #return redirect ('home')
+            return redirect ('portal')
     else:
         form = UserRegisterForm()
     return render(request, 'accounts/register.html',{'form':form})
@@ -37,3 +37,7 @@ def logout_view(request):
     if request.method=='POST':
         logout(request)
         return redirect('logoutlanding')
+
+
+def profile_view(request):
+    return redirect('accounts/profile.html')
