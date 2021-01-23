@@ -1,5 +1,5 @@
 {% extends 'base_layout.html '%}
-{% block title %}Hap Pea Foods | Logged Out{% endblock %}
+{% block title %}Hap-Pea Foods | Logged Out{% endblock %}
 {% block content %}
 
   <a href=""><img src="{% assests/logo.png %}" alt="logo"></a><br>
@@ -15,13 +15,13 @@
       <input type="hidden" name="next" value="{{request.GET.next}}">
     {% endif %}
     <input type="submit" value="Login">
-    <p>By continuing, you agree to Hap Pea Foods <a href="terms">Terms and Conditions</a> and <a href="privacy">Privacy Notice.</a></p>
+    <p>By continuing, you agree to Hap-Pea Foods <a href="terms">Terms and Conditions</a> and <a href="privacy">Privacy Notice.</a></p>
   </form>
 
   <br>
   <hr>
 
-  <h4>New To Hap Pea Foods?</h4>
+  <h4>New To Hap-Pea Foods?</h4>
   <form class="site-form" action="accounts/signup" method="post">
     {% csrf_token %}
     {{form}}
@@ -31,7 +31,7 @@
   <br>
   <hr>
 
-  <p>&copy; 2021, Hap Pea Foods</p>
+  <p>&copy; 2021, Hap-Pea Foods</p>
 
 
 {% endblock %}
