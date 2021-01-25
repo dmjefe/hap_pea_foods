@@ -31,7 +31,7 @@ urlpatterns = [
     url('stories/', include('stories.urls')),
     url('volunteer/', views.volunteer, name="volunteer"),
     url('portal/', views.portal, name="portal"),
-    url('logoutlanding/', views.portal, name="logoutlanding"),
+    url('logoutlanding/', views.loutoutlanding, name="logoutlanding"),
     url('', views.homepage, name="home"),
 ]
 
