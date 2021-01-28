@@ -56,7 +56,9 @@ body {
   color:#FBFBFF; /* whitish */
   float: left;
   text-decoration: none;
-  padding: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 160px;
   text-align: center;
 }
 
@@ -74,7 +76,15 @@ body {
 
 .login_nav li {
   display: inline-block;
+  padding: 10px;
+}
 
+.login_nav button {
+  font-size: 18px;
+}
+
+.login_nav a {
+  padding: 10px;
 }
 
 .login_nav button {
@@ -204,19 +214,38 @@ footer ul {
 
 /* slider */
 .slider {
-  width: 90%;
-  height: 400px;
-  background: url('/static/assets/box.jpg');
-  margin: 100px auto;
-  animation: slide 20s infinite;
+  overflow: hidden;
 }
 
-@keyframes slide {
-  0%{background: url('/static/assets/prepare.jpg');}
-  25%{background: url('/static/assets/giving.jpg');}
-  50%{background: url('/static/assets/handout.jpg');}
-  100%{background: url('/static/assets/kid.jpg');}
+.slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  top: 15px;
+  left: 0;
+  animation: 20s slider infinite;
 }
+
+.slider figure img {
+    float: left;
+    width: 20%;
+    height: 600px;
+    object-fit: fill;
+}
+
+@keyframes slider {
+  0% { left: 0; }
+  20%{ left:0; }
+  25% { left: -100%; }
+  45% { left: -100%; }
+  50% { left: -200%; }
+  70% { left: -200%; }
+  75% { left: -300%; }
+  95% { left: -300%; }
+  100% { left: -400%; }
+
+}
+
 /* Stories_list css */
 
 .createstory button {
@@ -280,13 +309,19 @@ footer ul {
 
 /* Stories_create css */
 
-/* site-form css */
+/* site-form css All Forms*/
 .site-form {
-  margin-top: 60px;
+  margin: 15px 30%;
   border: 10px solid #20BF55; /* greenish */
   border-style: ridge;
   padding: 30px;
   border-radius: 4px;
+}
+
+.site-form h4 {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-align: center;
 }
 
 .site-form input, .site-form textarea {
@@ -309,6 +344,11 @@ a.highlight {
   display: block;
 }
 
+.errorlist {
+  display: none;
+  padding: 0;
+}
+
 .errorlist li {
   padding: 10px;
   list-style-type: none;
@@ -317,17 +357,14 @@ a.highlight {
   margin: 10px 0;
 }
 
-.errorlist {
-  padding: 0;
-}
-
 .site-form input[type="submit"] {
   background: #20BF55; /* greenish */
   border: 0;
   color: #000;
   font-size: 1.2em;
   border-radius: 4px;
-  margin: 10px 0;
+  margin: 20px 0;
+  padding: 10px 30px;
 }
 
 .site-form input[type=submit]:hover {
