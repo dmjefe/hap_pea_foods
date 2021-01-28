@@ -3,8 +3,8 @@
 {% block content %}
 
   <div class="content-section">
-    <h1><center>New User Registration</center></h1>
     <form class="site-form" action="accounts/signup" method="post">
+      <h4>New User Registration</h4>
       <fieldset class="form-group">
           {% csrf_token %}
           {{form}}
@@ -12,10 +12,10 @@
       <div class="form-group">
         <input type="submit" value="Register">
       </div>
+      <p>By continuing, you agree to Hap-Pea Foods <a href="terms">Terms and Conditions</a> and <a href="privacy">Privacy Notice.</a></p>
+      <hr>
+        <p>&copy; 2021, Hap-Pea Foods</p>
     </form>
-    <div class="border-top pt-3">
-      <h3>Already Have An Account? <a href="login.html">Sign In</a></h3>
-    </div>
   </div>
 
 {% endblock %}
