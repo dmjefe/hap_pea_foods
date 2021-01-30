@@ -5,6 +5,8 @@ from django.db import models
 class Donation(models.Model):
     userName = models.CharField(max_length=25,)
     donationDate = models.DateField()
+    locationName = models.CharField(max_length=25,)
+
 
 class Item(models.Model):
     COUNT = 'ct'
