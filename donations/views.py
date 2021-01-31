@@ -4,6 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.forms import inlineformset_factory
 from .models import Item, Donation
 from django.urls import reverse
+from urllib.parse import urlencode
 from . import forms
 
 # Create your views here.
@@ -12,12 +13,16 @@ def donation_create(request):
     if request.method == 'POST':
         form = forms.CreateDonation(request.POST) #Use if no images on form
         if form.is_valid():
-            form.save()
-            #send the user to the items page for this donation
-            thisDonation = Donation.objects.all().last()
-            #num = thisDonation.pk
-            num = 3
-            return redirect('donations/items.html', "/3/",)
+            #form.save()
+            instance = form.save(commit=False)
+            instance.createdBy = request.user
+            instance.save()
+            pk = instance.pk
+            #return redirect('donations/items.html', pk = instance.objects.get(pk=pk))
+            #return redirect('donations/items.html', pk = Donation.objects.last(pk=pk))
+            #pk = instance.objects.get(pk=pk)
+            url = str(pk) + '/'
+            return redirect(url)
     else:
         form = forms.CreateDonation()
     return render(request, 'donations/donations.html', {'form':form})
