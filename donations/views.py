@@ -1,8 +1,9 @@
 from django.shortcuts import render, redirect
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.forms import inlineformset_factory
 from .models import Item, Donation
+from django.urls import reverse
 from . import forms
 
 # Create your views here.
@@ -12,7 +13,11 @@ def donation_create(request):
         form = forms.CreateDonation(request.POST) #Use if no images on form
         if form.is_valid():
             form.save()
-            #redirect('home')
+            #send the user to the items page for this donation
+            thisDonation = Donation.objects.all().last()
+            #num = thisDonation.pk
+            num = 3
+            return redirect('donations/items.html', "/3/",)
     else:
         form = forms.CreateDonation()
     return render(request, 'donations/donations.html', {'form':form})
