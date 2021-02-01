@@ -27,6 +27,7 @@ def donation_create(request):
         form = forms.CreateDonation()
     return render(request, 'donations/donations.html', {'form':form})
 
+@login_required(login_url="/accounts/login/")
 def add_items(request, donation_id):
     donation = Donation.objects.get(pk=donation_id)
     ItemFormset = inlineformset_factory(Donation, Item, fields=('itemName','number','typeOfMeasure',), extra=1,)
