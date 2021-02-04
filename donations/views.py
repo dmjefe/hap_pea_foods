@@ -6,7 +6,20 @@ from . import forms
 
 # Create your views here.
 def donations(request):
-    form = forms.CreateDonation()
+@login_required(login_url="/accounts/login/")
+def donation_create(request):
+    if request.method == 'POST':
+        form = forms.CreateDonation(request.POST) #Use if no images on form
+        if form.is_valid():
+            #form.save()
+            instance = form.save(commit=False)
+            instance.createdBy = request.user
+            instance.save()
+            pk = instance.pk
+            url = str(pk) + '/'
+            return redirect(url)
+    else:
+        form = forms.CreateDonation()
     return render(request, 'donations/donations.html', {'form':form})
 
     template_name = 'donation/donations.html'
