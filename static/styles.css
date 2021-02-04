@@ -1,0 +1,464 @@
+/*  CSS for base_layout */
+body {
+  background: #FBFBFF; /* whitish */
+  font-family: Arial;
+  padding: 10px;
+}
+
+/* start head_container */
+
+.logo {
+  float: left;
+  width: 20%;
+}
+
+.logo img {
+  width: auto;
+}
+
+.logo_head {
+  float: left;
+  width: 50%;
+  text-align: center;
+  font-style: bold;
+  font-size: 80px;
+  padding: 30px;
+}
+
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  height: 0px;
+}
+
+.social {
+  float: right;
+}
+
+.social .search_bar {
+  margin-top: 15px;
+}
+/* start nav_container */
+.main_nav {
+  text-align: center;
+  overflow: auto;
+  width: 100%;
+  background-color: #084F6C; /* blueish */
+}
+
+.main_nav li {
+  display: inline-block;
+}
+
+.main_nav a {
+  color:#FBFBFF; /* whitish */
+  float: left;
+  text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 160px;
+  text-align: center;
+}
+
+/* Change color on hover */
+.main_nav a:hover {
+  color: #20BF55; /* greenish */
+}
+
+/* login logout links */
+.login_nav {
+  float: right;
+  display: flex;
+  justify-content: space-between;
+}
+
+.login_nav li {
+  display: inline-block;
+  padding: 10px;
+}
+
+.login_nav button {
+  font-size: 18px;
+}
+
+.login_nav a {
+  padding: 10px;
+}
+
+.login_nav button {
+  background: #084F6C; /* blueish */
+  color:#FBFBFF; /* whitish */
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Wrapper */
+.wrapper_container {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.wrapper_container h1 {
+  text align: center;
+  margin: 100px auto;
+  font-size: 2.4em;
+}
+
+/* Footer container */
+footer {   /* overall footer styles */
+  padding: 20px;
+  background: #084F6C; /* blueish */
+  color: #FBFBFF; /* whitish */
+  margin-top: 20px;
+  box-sizing: border-box;
+}
+
+footer ul {
+  list-style-type: none;
+}
+
+.main_content {
+  display: flex;
+}
+
+.f_copyright {
+  flex-basis: 20%;
+  padding-top: 10px;
+}
+
+.f_link {
+  flex-basis: 10%;
+  padding-top: 10px;
+  font-size: 18px;
+}
+
+.f_link a:visited {
+  color: #20BF55;
+}
+
+.f_link a:hover {
+  color: #BBBDBA;
+}
+
+.f_social {
+    flex-basis: 30%;
+    padding-top:10px;
+}
+
+.f_social a {
+  padding: 10px;
+}
+
+.f_social li {
+  display: inline-block;
+}
+
+.f_subscribe {
+  flex-basis: 30%;
+  padding-top: 10px;
+  font-size: 18px;
+}
+
+.f_address {
+  flex-basis: 25%;
+}
+
+.f_address i {
+  font-size: 18px;
+  padding: 10px;
+}
+
+
+/* --------------------  CSS for other pages starts here ------------------- */
+
+/* Homepage CSS */
+.row1, .row2, .row3, .row4{
+  box-sizing: border-box;
+  display: flex;
+}
+.image-col {
+  flex-basis: 10%;
+  padding-top: 10px;
+}
+
+.image-col img {
+  height: 100px;
+  width: 100px;
+}
+
+.text {
+  padding-top: 10px;
+  padding-left: 100px;
+}
+
+.l_container {
+  box-sizing: border-box;
+  display: flex;
+}
+
+.column {
+  display: flex;
+}
+
+.leftblock {
+  flex-basis: 250%;
+  padding-top: 10px;
+}
+
+.calendar {
+  padding-top: 10px;
+  padding-left: 100px;
+}
+
+/* slider */
+.slider {
+  overflow: hidden;
+}
+
+.slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  top: 15px;
+  left: 0;
+  animation: 20s slider infinite;
+}
+
+.slider figure img {
+    float: left;
+    width: 20%;
+    height: 600px;
+    object-fit: fill;
+}
+
+@keyframes slider {
+  0% { left: 0; }
+  20%{ left:0; }
+  25% { left: -100%; }
+  45% { left: -100%; }
+  50% { left: -200%; }
+  70% { left: -200%; }
+  75% { left: -300%; }
+  95% { left: -300%; }
+  100% { left: -400%; }
+
+}
+
+/* Stories_list css */
+
+.createstory button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.stories {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+
+.story {
+  padding: 10px;
+  border: 1px solid #20BF55; /* greenish */
+  position: relative;
+  padding-bottom: 40px;
+}
+
+.story h2 {
+  font-size: 1.2em;
+}
+
+.story .author {
+  padding: 10px;
+  background: #20BF55; /* greenish */
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  color: #FBFBFF; /* whitish */
+}
+
+/* Story-details css */
+.story-detail .story {
+  padding: 0;
+}
+
+.story-detail .story img {
+  max-width: 100%;
+}
+
+.story-detail .story h1 {
+  text-align: center;
+  margin: 20px auto;
+  font-size: 2em;
+}
+
+.story-detail .story p {
+  text-align: center;
+}
+
+/* Stories_create css */
+
+/* site-form css All Forms*/
+.site-form {
+  margin: 15px 30%;
+  border: 10px solid #20BF55; /* greenish */
+  border-style: ridge;
+  padding: 30px;
+  border-radius: 4px;
+}
+
+.site-form h4 {
+  font-size: 2.5em;
+  font-weight: bold;
+  text-align: center;
+}
+
+.site-form input, .site-form textarea {
+  display: block;
+  margin: 20px 0 20px 0;
+  padding: 10px;
+}
+
+a.highlight {
+  border: 1px solid #20BF55;  /* greenish */
+  padding: 10px;
+  border-radius: 4px;
+  color: #20BF55;  /* greenish */
+}
+
+.helptext, .helptext ul {
+  margin: 0 auto 20px;
+  color: #000; /* black */
+  font-size: 0.9em;
+  display: block;
+}
+
+.errorlist {
+  display: none;
+  padding: 0;
+}
+
+.errorlist li {
+  padding: 10px;
+  list-style-type: none;
+  border: 1px solid #E32636; /* Alizarin Crimson */
+  color: #E32636; /* Alizarin Crimson */
+  margin: 10px 0;
+}
+
+.site-form input[type="submit"] {
+  background: #20BF55; /* greenish */
+  border: 0;
+  color: #000;
+  font-size: 1.2em;
+  border-radius: 4px;
+  margin: 20px 0;
+  padding: 10px 30px;
+}
+
+.site-form input[type=submit]:hover {
+  color: #FBFBFF;
+  cursor: pointer;
+}
+
+/* Partners page CSS */
+
+.portal img {
+  white-space: nowrap;
+  padding-left: 100px;
+  padding-bottom: 100px;
+}
+
+/* Volunteer page CSS */
+
+.v_head {
+  text-align: center;
+}
+
+.v_img_banner img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.v_options h3 {
+  color: #084F6C;
+  text-align: center;
+  font-size: 36px;
+}
+
+.v_options h4 {
+  padding: 30px;
+}
+
+.v_options ul {
+  list-style-type: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+.v_options li {
+  display: inline-block;
+}
+
+.v_options img {
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.v_options a {
+  font-size: 26px;
+}
+
+/* Donations page CSS */
+
+.d_img img {
+  height: 200px;
+  width: 200px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+
+/* About page CSS */
+
+/* User Portal page CSS */
+.up_head h1{
+  text-align: center;
+}
+
+.portal ul {
+  list-style-type: none;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+.portal li {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  padding: 30px;
+  margin: 30px;
+  border: 2px solid #20BF55;
+  text-align: center;
+}
