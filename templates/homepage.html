@@ -1,21 +1,51 @@
 {% extends 'base_layout.html '%}
-{% block title %} Hap-Pea Foods | Home {% endblock %}
+{% block title %}Hap Pea Foods | Home{% endblock %}
 {% block content %}
 {% load static %}
 
-  <!-- slider -->
-
-  <div class="slider">
-    <figure>
-      <img src="{% static 'handout.jpg' %}">
-      <img src="{% static 'prepare.jpg' %}">
-      <img src="{% static 'receive.jpg' %}">
-      <img src="{% static 'giving.jpg' %}">
-      <img src="{% static 'handout.jpg' %}">
-    </figure>
+  <!-- image slider -->
+  <div class="slide_body">
+    <!-- image slider starts -->
+    <div class="slider">
+      <div class="slides">
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <input type="radio" name="radio-btn" id="radio4">
+        <!-- radio buttons ends -->
+        <!-- slide images start -->
+        <div class="slide first">
+          <img src="{% static 'food1.jpg' %}" alt="">
+        </div>
+        <div class="slide">
+          <img src="{% static 'food2.jpg' %}" alt="">
+        </div>
+        <div class="slide">
+          <img src="{% static 'food3.jpg' %}" alt="">
+        </div>
+        <div class="slide">
+          <img src="{% static 'family.jpg' %}" alt="">
+        </div>
+        <!-- slider images end -->
+        <!-- automatic navigation starts -->
+        <div class="navigation-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
+        </div>
+        <!-- automatic navigation end -->
+        <!-- manual navigation starts  -->
+        <div class="navigation-manual">
+          <label for="radio1" class="manuel-btn"></label>
+          <label for="radio2" class="manuel-btn"></label>
+          <label for="radio3" class="manuel-btn"></label>
+          <label for="radio4" class="manuel-btn"></label>
+        </div>
+      </div>
+    </div>
   </div>
 
-  <!-- left container -->
   <div class="l_containter">
     <div class="column">
       <div class="leftblock">
@@ -25,40 +55,40 @@
 
         <p>Food banks in the U.S. are very diverse – from small operations serving people spread out across large rural areas to very large facilities that store and distribute many millions of pounds of food each year, and everything in between. A variety of factors impact how food banks work, from the size of the facility to the number of staff members.  But, one thing all food banks have in common is that they rely on donors and volunteers to carry out their day-to-day operations. </p>
 
-        <h1>How does the Hap-Pea Foods network of food banks work?</h1>
+        <h1>How does the Hap Pea Foods network of food banks work?</h1>
         <div class="row1">
           <div class="image-col">
-            <img src="{% static '005-food.png' %}" alt="">
+            <img src="{% static 'plate.png' %}" alt="plate">
           </div>
           <div class="text">
             <h3>Securing food</h3>
-            <p>Hap-Pea Foods secures donations from national food and grocery manufacturers, retailers, shippers, packers and growers and from government agencies and other organizations. We have staff that work closely with the partners to match excess food with the food banks that most need it.</p>
+            <p>Hap Pea Foods secures donations from national food and grocery manufacturers, retailers, shippers, packers and growers and from government agencies and other organizations. We have staff that work closely with the partners to match excess food with the food banks that most need it.</p>
           </div>
         </div>
 
         <div class="row2">
           <div class="image-col">
-            <img src="{% static '002-truck.png' %}" alt="">
+            <img src="{% static 'wheat.png' %}" alt="wheat">
           </div>
           <div class="text">
             <h3>Shipping and Storage</h3>
-            <p>The Hap-Pea Foods network of food banks receive and safely stores donated food and grocery products. Hap-Pea Foods supports member food banks with training, oversight and equipment grants to ensure perishable and non-perishable food is handled and stored properly.</p>
+            <p>The Hap Pea Foods network of food banks receive and safely stores donated food and grocery products. Feeding America supports member food banks with training, oversight and equipment grants to ensure perishable and non-perishable food is handled and stored properly.</p>
           </div>
         </div>
 
         <div class="row3">
           <div class="image-col">
-            <img src="{% static '001-supply-chain.png' %}" alt="">
+            <img src="{% static 'truck.png' %}" alt="truck">
           </div>
           <div class="text">
             <h3>Distributing Food</h3>
-            <p>The food banks distribute food and grocery items through food pantries and meal programs that serve families, children, seniors and individuals at risk of hunger. Last year alone, the Hap-Pea Foods network distributed more than 3.6 billion meals to people in need.</p>
+            <p>The food banks distribute food and grocery items through food pantries and meal programs that serve families, children, seniors and individuals at risk of hunger. Last year alone, the Feeding America network distributed more than 3.6 billion meals to people in need.</p>
           </div>
         </div>
 
         <div class="row4">
           <div class="image-col">
-            <img src="{% static '006-support.png' %}" alt="">
+            <img src="{% static 'arrow.png' %}" alt="arrow">
           </div>
           <div class="text">
             <h3>Supporting the people we serve</h3>
