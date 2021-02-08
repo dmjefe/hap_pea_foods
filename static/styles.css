@@ -64,14 +64,12 @@ nav h1 {
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0, 0.1);
 }
 
-
 .nav-links ul {
   padding: 0;
   margin: 0;
   float: right;
   margin-right: 20%;
 }
-
 
 .nav-links ul li {
   position: relative;
@@ -201,14 +199,24 @@ footer {
   width: 5%;
 }
 
-.foot-links ul {
+.foot-links ul, .foot-links-2 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
 
-.foot-links a {
+.foot-links li, .foot-links-2 li {
+  padding: 5px 0;
+}
+
+.foot-links a:link, .foot-links-2 a:link {
+  color: #fff;
+  width: 10%;
   font-size: 14px;
+}
+
+.foot-links a:visited, .foot-links-2 a:visited {
+  color: #fff;
 }
 
 .subscribe {
@@ -348,7 +356,7 @@ footer {
 /* Stories_list css */
 
 .createstory button {
-  background-color: #4CAF50; /* Green */
+  background-color: #00b33c; /* Green */
   border: none;
   color: white;
   padding: 15px 32px;
@@ -368,7 +376,7 @@ footer {
 
 .story {
   padding: 10px;
-  border: 1px solid #20BF55; /* greenish */
+  border: 2px solid #00b33c; /* greenish */
   position: relative;
   padding-bottom: 40px;
 }
@@ -379,7 +387,7 @@ footer {
 
 .story .author {
   padding: 10px;
-  background: #20BF55; /* greenish */
+  background: #00b33c; /* greenish */
   position: absolute;
   right: 0;
   bottom: 0;
@@ -411,7 +419,7 @@ footer {
 /* site-form css All Forms*/
 .site-form {
   margin: 15px 30%;
-  border: 10px solid #20BF55; /* greenish */
+  border: 10px solid #00b33c; /* greenish */
   border-style: ridge;
   padding: 30px;
   border-radius: 4px;
@@ -430,10 +438,10 @@ footer {
 }
 
 a.highlight {
-  border: 1px solid #20BF55;  /* greenish */
+  border: 1px solid #00b33c;  /* greenish */
   padding: 10px;
   border-radius: 4px;
-  color: #20BF55;  /* greenish */
+  color: #00b33c;  /* greenish */
 }
 
 .helptext, .helptext ul {
@@ -457,7 +465,7 @@ a.highlight {
 }
 
 .site-form input[type="submit"] {
-  background: #20BF55; /* greenish */
+  background: #00b33c; /* greenish */
   border: 0;
   color: #000;
   font-size: 1.2em;
@@ -538,26 +546,185 @@ a.highlight {
 }
 
 /* About page CSS */
+.about-page h1 {
+  text-align: center;
+}
+
+.about-page p {
+  font-size: 18px;
+  padding: 20px 0;
+}
+
 
 /* User Portal page CSS */
 .up_head h1{
   text-align: center;
 }
 
+.portal {
+  width: 95%;
+  overflow: hidden;
+  margin: 20px auto;
+  padding: 20px;
+  display: flex;
+}
+
+.portal p {
+  font-size: 16px;
+}
+
 .portal ul {
-  list-style-type: none;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 70%;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+  align-content: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portal ul li {
+  list-style: none;
+  width: 150px;
+  height: 150px;
+  margin: 40px;
+  border: 2px solid #3c7980;
 }
 
 .portal li {
-  display: inline-block;
-  width: 100px;
-  height: 100px;
-  padding: 30px;
-  margin: 30px;
-  border: 2px solid #20BF55;
+  padding: 20px;
+}
+
+.portal i {
+  padding: 20px;
+  font-size: 48px;
+}
+
+
+/* Contact Us page */
+
+.c-information {
   text-align: center;
+}
+
+.c-information h2 {
+  font-size: 24px;
+  padding-bottom: 10px;
+}
+
+.c-information i {
+  font-size: 28px;
+  padding: 0 10px;
+}
+
+.c-form-head {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 50px auto 20px;
+}
+
+.c-form-head  hr {
+  width: 300px;
+  height: 5px;
+  background-color: #3c7980;
+}
+
+.c-form-head  i {
+  font-size: 100px;
+  padding: 0 20px;
+}
+
+.contact_form {
+  margin: 0 30%;
+}
+
+.contact_form h3, h4{
+  text-align: center;
+}
+
+.contact_form h4{
+  padding: 20px 0;
+}
+
+/* non discrimination statement page */
+
+.nds h1 {
+  text-align: center;
+}
+
+.nds .nds-column-1 h4 {
+  padding-bottom: 10px;
+}
+
+.nds .nds-column-2 ul{
+  margin-left: 35%;
+}
+
+.nds .nds-column-2 ul li {
+  list-style: none;
+  font-size: 28px;
+}
+
+.nds .nds-column-2 ul {
+  padding: 20px 0;
+}
+
+.nds .nds-column-2 i {
+  font-size: 28px;
+  padding-right: 20px;
+}
+
+/* Facts and Media page */
+.facts h1 {
+  text-align: center;
+}
+
+.facts p {
+  font-size: 24px;
+  padding: 10px 0;
+}
+
+.facts a {
+  font-size: 24px;
+}
+
+.facts hr {
+  height: 5px;
+  margin: 20px 0;
+  background-color: #3c7980;
+}
+
+.facts .article-1 {
+  margin: 0 20%;
+}
+
+.facts .article-1 h2 {
+  font-size: 24px;
+  padding: 20px 0;
+}
+
+.facts .article-1 span {
+  color: #b3b3b3;
+  font-size: 24px;
+}
+
+.facts .article-1 p {
+  font-size: 18px;
+  padding: 10px 0;
+}
+
+.facts .article-1 a {
+  font-size: 18px;
+}
+
+/* My Calendar Page */
+
+.calendar {
+  text-align: center;
+}
+
+.calendar i {
+  font-size: 20rem;
+  padding-bottom: 20px; 
 }

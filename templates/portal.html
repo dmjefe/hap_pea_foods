@@ -1,22 +1,23 @@
 {% extends 'base_layout.html '%}
 {% block title %} Hap-Pea Foods | User Portal {% endblock %}
 {% block content %}
+{% load static %}
   <div class="main">
     <div class="up_head">
       <h1>{{ user.username }}'s User Portal</h1><br/>
     </div>
     <div class="portal">
       <ul>
-        <li><a href="{% url 'accounts:profile' %}">User Profile</a></li>
-        <li><a href="#">My Calendar</a></li>
-        <li><a href="#">Volunteer</a></li>
-        <li><a href="#">Create Event</a></li>
-        <li><a href="#">Search for Donations</a></li>
-        <li><a href="#">Donate Food</a></li>
-        <li><a href="#">Monitary Donation</a></li>
-        <li><a href="#">Survey</a></li>
-        <li><a href="#">Survey Results</a></li>
-        <li><a href="#">Organizations</a></li>
+        <li><p>User Profile</p><br/><a href="{% url 'accounts:profile' %}"><i class="far fa-address-card" style="color: #000000"></i></a></li>
+        <li><p>My Calendar</p><br/><a href="{% url 'mycalendar' %}"><i class="far fa-calendar-alt" style="color: #0066ff"></i></a></li>
+        <li><p>Volunteer</p><br/><a href="{% url 'volunteer' %}"><i class="fas fa-hands-helping" style="color: #fba589"></i></a></li>
+        <li><p>Create Event</p><br/><a href="{% url 'createevent' %}"><i class="far fa-calendar-plus" style="color: #9966ff"></i></a></li>
+        <li><p>Search for Donations</p><br/><a href="{% url 'find_help' %}"><i class="fas fa-search" style="color: #cc0000"></i></a></li>
+        <li><p>Donate Food</p><br/><a href="{% url 'donations:donations' %}"><i class="fas fa-utensils" style="color: #b3b3b3"></i></a></li>
+        <li><p>Monitary Donation</p><br/><a href="{% url 'moneydonations' %}"><i class="fas fa-donate" style="color: #29a329"></i></a></li>
+        <li><p>Survey</p><br/><a href="{% url 'survey' %}"><i class="fas fa-poll" style="color: #ff9900"></i></a></li>
+        <li><p>Survey Results</p><br/><a href="{% url 'surveyresults' %}"><i class="far fa-list-alt" style="color: #669999"></i></a></li>
+        <li><p>Organizations</p><br/><a href="{% url 'organizations' %}"><i class="far fa-building" style="color: #804000"></i></a></li>
       </ul>
     </div>
   </div>

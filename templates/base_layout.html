@@ -44,16 +44,16 @@
             <li><a href="{% url 'donations:donations' %}">Donate <i class="fas fa-caret-down"></i></a>
               <ul>
                 <li><a href="{% url 'moneydonations' %}">Donate Money</a></li>
-                <li><a href="#">Donate Food</a></li>
-                <li><a href="#">Volunteer</a></li>
+                <li><a href="{% url 'donations:donations' %}">Donate Food</a></li>
+                <li><a href="{% url 'volunteer' %}">Volunteer</a></li>
               </ul>
             </li>
             <li><a href="{% url 'find_help' %}">Find Help</a></li>
-            <li><a href="#">Facts and Media <i class="fas fa-caret-down"></i></a>
+            <li><a href="{% url 'facts' %}">Facts and Media <i class="fas fa-caret-down"></i></a>
               <ul>
-                <li><a href="#">Hunger in the US</a></li>
-                <li><a href="#">Stories</a></li>
-                <li><a href="#">Media</a></li>
+                <li><a href="{% url 'find_help' %}">Hunger in the US</a></li>
+                <li><a href="{% url 'stories:stories' %}">Stories</a></li>
+                <li><a href="{% url 'facts' %}">Media</a></li>
               </ul>
             </li>
             <li><a href="{% url 'contact' %}">Contact Us</a></li>
@@ -69,8 +69,10 @@
 
          <div class="system">
            <i class="far fa-user" style="color: black"></i>
-           <a href="register.html">Register</a>
-           <a href="login.html">Login</a>
+           <a href="{% url 'accounts:register' %}">Register</a>
+           {% csrf_token %}
+           <a href="{% url 'accounts:login' %}">Login</a>
+           {% csrf_token %}
          </div>
 
        </div>
@@ -112,24 +114,36 @@
 
               <div class="foot-links"> <!-- flex box 2 -->
                 <ul>
-                  <li><a href="#">Home</a></li>
-                  <li><a href="#">About</a></li>
-                  <li><a href="#">Partners</a></li>
-                  <li><a href="#">Stories</a></li>
-                  <li><a href="#">Volunteer</a></li>
-                  <li><a href="#">Find Help</a></li>
-                  <li><a href="#">Donate</a></li>
+                  <li><a href="{% url 'home' %}">Home</a></li>
+                  <li><a href="{% url 'about' %}">About</a></li>
+                  <li><a href="{% url 'partners' %}">Partners</a></li>
+                  <li><a href="{% url 'stories:stories' %}">Stories</a></li>
+                  <li><a href="{% url 'volunteer' %}">Volunteer</a></li>
+                  <li><a href="{% url 'find_help' %}">Find Help</a></li>
+                  <li><a href="{% url 'donations:donations' %}">Donate</a></li>
+                  <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                </ul>
+              </div>
+              <div class="foot-links-2"><!-- flex box 3 -->
+                <ul>
+                  <li><a href="{% url 'survey' %}">Survey</a></li>
+                  <li><a href="{% url 'organizations' %}">Organizations</a></li>
+                  <li><a href="{% url 'facts' %}">Facts and Media</a></li>
+                  <li><a href="{% url 'portal' %}">My Portal</a></li>
+                  <li><a href="{% url 'createevent' %}">Create an Event</a></li>
+                  <li><a href="{% url 'mycalendar' %}">My Calendar</a></li>
+                  <li><a href="{% url 'non_disc_stmt' %}">Non Discrimination Statement</a></li>
                 </ul>
               </div>
 
-              <div class="subscribe"> <!-- flex box 3 -->
+              <div class="subscribe"> <!-- flex box 4 -->
                 <form action="/action_page.php">
                   <input type="email" placeholder="Email..." name="email">
                   <button type="submit">Subscribe</button>
                 </form>
               </div>
 
-              <div class="contact">
+              <div class="contact"><!-- flex box 5 -->
                 <h2>Contact Us</h2>
                 <ul>
                   <li><i class="fa fa-map-marked-alt" style="color: black"></i><a href="https://maps.google.com">Google Maps</a></li>
@@ -142,7 +156,7 @@
 
             <div class="foot-columns">
               <div class="copyright">
-                <p>Copyright &copy; 2021 Website Created by David Boss, Suzanne Kaufman, and Mallory Dodds. All Rights Reserved.  <a href="#">Terms and Conditions</a><a href="#">Privacy Policy</a></p>
+                <p>Copyright &copy; 2021 Website Created by David Boss, Suzanne Kaufman, and Mallory Dodds. All Rights Reserved.  <a href="{% url 'terms_cond' %}">Terms and Conditions</a><a href="{% url 'privacy' %}">Privacy Policy</a></p>
               </div>
             </div>
 
