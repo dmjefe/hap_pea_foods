@@ -1,0 +1,17 @@
+
+{% extends 'base_layout.html '%}
+{% block title %} Hap-Pea Foods | Organziations {% endblock %}
+{% block content %}
+{% load static %}
+  <center><h1>Organizations</h1>
+
+
+  <p> Download this form: </p>
+  <a href="{% static 'organizationform.pdf' %}" download>
+    <img src="{% static 'form.jpg' %}" width="200px">
+  </a>
+  </center>
+
+
+
+{% endblock %}

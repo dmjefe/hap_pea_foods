@@ -29,3 +29,36 @@ def portal(request):
 
 def loutoutlanding(request):
     return render(request, 'logoutlanding.html')
+
+def contact(request):
+    return render(request, 'contact.html')
+
+def survey(request):
+    return render(request, 'survey.html')
+
+def surveyresults(request):
+    return render(request, 'surveyresults.html')
+
+def createevent(request):
+    return render(request, 'createevent.html')
+
+def facts(request):
+    return render(request, 'facts.html')
+
+def moneydonations(request):
+    return render(request, 'moneydonations.html')
+
+def mycalendar(request):
+    return render(request, 'mycalendar.html')
+
+def non_disc_stmt(request):
+    return render(request, 'non_disc_stmt.html')
+
+def organizations(request):
+    return render(request, 'organizations.html')
+
+def privacy(request):
+    return render(request, 'privacy.html')
+
+def terms_cond(request):
+    return render(request, 'terms_cond.html')

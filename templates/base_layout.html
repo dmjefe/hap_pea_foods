@@ -5,79 +5,80 @@
     <meta charset="utf-8">
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'styles.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
   </head>
   <body>
 
-    <!-- start head_container -->
-    <div class="head_container">
+    <header>
+     <div class="head-container">
+       <div class="sm">
+         <i class="fab fa-facebook-f" style="color: blue"></i>
+         <i class="fab fa-twitter" style="color: lightblue"></i>
+         <i class="fab fa-google-plus" style="color: green"></i>
+         <i class="fab fa-instagram" style="color: grey"></i>
+         <i class="fab fa-youtube" style="color: red"></i>
+       </div>
+     </div>
+   </header>
 
-      <div class="logo">
-        <a href="{% url 'home' %}"><img src="{% static 'logo.jpg' %}" height="100px" width="200px"></a>
-      </div>
+   <nav>
+     <div class="nav-container">
+       <div class="nav-columns">
 
-      <div class="logo_head">Hap-Pea Foods</div>
+         <div class="logo">
+           <img src="{% static 'logo3.jpg' %}" class="img-logo" alt="peas">
+           <h1><span class="logo-color">HAP-PEA</span> FOODS</h1>
+         </div>
 
-      <div class="social">
-        <a href="https://www.facebook.com/happeafoods" class="icons"><i class="fa fa-facebook" style="font-size:30px;color:blue;"></i></a>
-        <a href="https://www.twitter.com/happeafoods" class="icons"><i class="fa fa-twitter" style="font-size:30px;color:lightblue;"></i></a>
-        <a href="https://www.plus.google.com/happeafoods" class="icons"><i class="fa fa-google-plus" style="font-size:30px;color:green;"></i></a>
-        <a href="https://www.instagram.com/happeafoods" class="icons"><i class="fa fa-instagram" style="font-size:30px;color:purple;"></i></a>
-        <a href="https://www.pintrest.com/happeafoods" class="icons"><i class="fa fa-pinterest" style="font-size:30px;color:black;"></i></a>
-        <a href="https://www.youtube.com.com/happeafoods" class="icons"><i class="fa fa-youtube" style="font-size:30px;color:red;"></i></a>
-        <form class="search_bar" action="https://www.google.com">
-          <input type="text" placeholder="Search.." name="search">
-          <button type="submit"><i class="fa fa-search"></i></button>
-        </form>
-      </div>
-    </div>
-    <!-- End head_container  -->
+         <div class="nav-links">
+           <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'about' %}">About <i class="fas fa-caret-down"></i></a>
+              <ul>
+                <li><a href="{% url 'about' %}">About Us</a></li>
+                <li><a href="{% url 'partners' %}">Partners</a></li>
+              </ul>
+            </li>
+            <li><a href="{% url 'donations:donations' %}">Donate <i class="fas fa-caret-down"></i></a>
+              <ul>
+                <li><a href="{% url 'moneydonations' %}">Donate Money</a></li>
+                <li><a href="{% url 'donations:donations' %}">Donate Food</a></li>
+                <li><a href="{% url 'volunteer' %}">Volunteer</a></li>
+              </ul>
+            </li>
+            <li><a href="{% url 'find_help' %}">Find Help</a></li>
+            <li><a href="{% url 'facts' %}">Facts and Media <i class="fas fa-caret-down"></i></a>
+              <ul>
+                <li><a href="{% url 'find_help' %}">Hunger in the US</a></li>
+                <li><a href="{% url 'stories:stories' %}">Stories</a></li>
+                <li><a href="{% url 'facts' %}">Media</a></li>
+              </ul>
+            </li>
+            <li><a href="{% url 'contact' %}">Contact Us</a></li>
+            </ul>
+         </div>
 
-    <!-- Start login logout links -->
-    <nav class="login_nav">
-      <h1>
-      <ul>
-        <li class="register_form">
-          <form class="register_link" action="{% url 'accounts:register' %}" method="post">
-            {% csrf_token %}
-            <button type="submit" name="register">Register</button>
-          </form>
-        <li class="login_form">
-          <form class="login_link" action="{% url 'accounts:login' %}" method="post">
-            {% csrf_token %}
-            <button type="submit" name="login">Login</button>
-          </form>
-        </li>
-        <li class="logout_form">
-          <form class="logout_link" action="{% url 'accounts:logout' %}" method="post">
-            {% csrf_token %}
-            <button type="submit" name="logout">Logout</button>
-          </form>
-        </li>
-      </ul>
-      </h1>
-    </nav>
-    <!-- End login logout links -->
-    <!-- Start nav_container -->
-    <div class="nav_container">
-      <!-- Start main navigation -->
-      <nav class="main_nav">
-        <h1>
-        <ul>
-          <li class="current"><a href="{% url 'home' %}">Home</a></li>
-          <li><a href="{% url 'donations:donations' %}">Donate</a></li>
-          <li><a href="{% url 'about' %}">About Us</a></li>
-          <li><a href="{% url 'volunteer' %}">Volunteer</a></li>
-          <li><a href="{% url 'partners' %}">Partners</a></li>
-          <li><a href="{% url 'stories:stories' %}">Stories</a></li>
-          <li><a href="{% url 'find_help' %}">Find Help</a></li>
-        </ul>
-        </h1>
-      </nav>
-      <!-- End main navigation -->
-    </div>
-    <div class="clear"></div>
-    <!-- End nav_container -->
+         <div class="search">
+           <form action="/action_page.php">
+             <input type="text" placeholder="Search.." name="search">
+             <button type="submit"><i class="fa fa-search"></i></button>
+           </form>
+         </div>
+
+         <div class="system">
+           <i class="far fa-user" style="color: black"></i>
+           <a href="{% url 'accounts:register' %}">Register</a>
+           {% csrf_token %}
+           <a href="{% url 'accounts:login' %}">Login</a>
+           {% csrf_token %}
+         </div>
+
+       </div>
+
+     </div>
+   </nav>
 
     <!-- Start Wrapper -->
     <div class="wrapper_container">
@@ -93,66 +94,76 @@
     </div>
     <!-- End wrapper -->
 
-    <!-- Start Footer -->
     <footer>
-      <div class="main_content">
-        <!-- start copyright container  left-->
-        <div class="f_copyright">
-          <p>&copy; 2021, Hap-Pea Foods</p>
-          <p>Website created by David Boss, Mallory Dodds, and Suzy Kaufman</p>
-        </div>
-        <!-- end copyright container -->
-        <!-- start link container 2nd -->
-        <div class="f_link">
-          <ul>
-            <li class="current"><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="{% url 'donations:donations' %}">Donate</a></li>
-            <li><a href="{% url 'about' %}">About Us</a></li>
-            <li><a href="{% url 'volunteer' %}">Volunteer</a></li>
-            <li><a href="{% url 'partners' %}">Partners</a></li>
-            <li><a href="{% url 'stories:stories' %}">Stories</a></li>
-            <li><a href="{% url 'accounts:register' %}">Register</a></li>
-            <li><a href="{% url 'find_help' %}">Find Help</a></li>
-          </ul>
-        </div>
-        <!-- end link container -->
-        <!-- start social container 3rd -->
-        <div class="f_social">
-          <ul>
-            <li><a href="https://www.facebook.com/happeafoods" class="icons"><i class="fa fa-facebook" style="font-size:30px;color:blue;"></i></a></li>
-            <li><a href="https://www.twitter.com/happeafoods" class="icons"><i class="fa fa-twitter" style="font-size:30px;color:lightblue;"></i></a></li>
-            <li><a href="https://www.plus.google.com/happeafoods" class="icons"><i class="fa fa-google-plus" style="font-size:30px;color:green;"></i></a></li>
-            <li><a href="https://www.instagram.com/happeafoods" class="icons"><i class="fa fa-instagram" style="font-size:30px;color:purple;"></i></a></li>
-            <li><a href="https://www.pintrest.com/happeafoods" class="icons"><i class="fa fa-pinterest" style="font-size:30px;color:black;"></i></a></li>
-            <li><a href="https://www.youtube.com.com/happeafoods" class="icons"><i class="fa fa-youtube" style="font-size:30px;color:red;"></i></a></li>
-          </ul>
-        </div>
-        <!-- end social container -->
-        <!-- start subscribe container 4th -->
-        <div class="f_subscribe">
-          <form action="">
-            <p>Subscribe to our newsletter</p>
-            <input type="text" name="email" placeholder="Email Address" />
-            <input type="submit" name="subscribe" value="Subscribe" />
-          </form>
-        </div>
-        <!-- end subscribe container -->
-        <!-- start address container 5th -->
-        <div class="f_address">
-          <h2>Address</h2>
-          <ul>
-            <li><i class="fa fa-map-marker"></i>407 Evergreen Rd. | Roseville, CA 90673</li>
-            <li><i class="fa fa-phone"></i>(987) 654-3210</li>
-            <li><i class="fa fa-envelope"></i>info@happeafoods.com</li>
-          </ul>
-       </div>
+          <div class="foot-container">
 
+            <div class="foot-columns">
+              <div class="about"> <!-- flex box 1 -->
+                <div class="statement">
+                  <img src="{% static 'logo2.jpg' %}" class="img-logo" alt="peas">
+                  <p> Hap Pea Foods is dedicated to ending food insecurity. We work tiredlessly with companies around the states to make sure there is enough food on the table for every household.  We do right by people and the planet. Together, we drive meaningful change in communities around the world.</p>
+                </div>
+                <div class="sm">
+                  <i class="fab fa-facebook-f" style="color: blue"></i>
+                  <i class="fab fa-twitter" style="color: lightblue"></i>
+                  <i class="fab fa-google-plus" style="color: green"></i>
+                  <i class="fab fa-instagram" style="color: grey"></i>
+                  <i class="fab fa-youtube" style="color: red"></i>
+                </div>
+              </div>
 
-      <!-- end address container -->
-    </footer>
-    <!-- End Footer -->
+              <div class="foot-links"> <!-- flex box 2 -->
+                <ul>
+                  <li><a href="{% url 'home' %}">Home</a></li>
+                  <li><a href="{% url 'about' %}">About</a></li>
+                  <li><a href="{% url 'partners' %}">Partners</a></li>
+                  <li><a href="{% url 'stories:stories' %}">Stories</a></li>
+                  <li><a href="{% url 'volunteer' %}">Volunteer</a></li>
+                  <li><a href="{% url 'find_help' %}">Find Help</a></li>
+                  <li><a href="{% url 'donations:donations' %}">Donate</a></li>
+                  <li><a href="{% url 'contact' %}">Contact Us</a></li>
+                </ul>
+              </div>
+              <div class="foot-links-2"><!-- flex box 3 -->
+                <ul>
+                  <li><a href="{% url 'survey' %}">Survey</a></li>
+                  <li><a href="{% url 'organizations' %}">Organizations</a></li>
+                  <li><a href="{% url 'facts' %}">Facts and Media</a></li>
+                  <li><a href="{% url 'portal' %}">My Portal</a></li>
+                  <li><a href="{% url 'createevent' %}">Create an Event</a></li>
+                  <li><a href="{% url 'mycalendar' %}">My Calendar</a></li>
+                  <li><a href="{% url 'non_disc_stmt' %}">Non Discrimination Statement</a></li>
+                </ul>
+              </div>
 
-    <script type="text/javascript">
+              <div class="subscribe"> <!-- flex box 4 -->
+                <form action="/action_page.php">
+                  <input type="email" placeholder="Email..." name="email">
+                  <button type="submit">Subscribe</button>
+                </form>
+              </div>
+
+              <div class="contact"><!-- flex box 5 -->
+                <h2>Contact Us</h2>
+                <ul>
+                  <li><i class="fa fa-map-marked-alt" style="color: black"></i><a href="https://maps.google.com">Google Maps</a></li>
+                  <li><i class="fa fa-city" style="color: black"></i>1234 A Random Street, City, State, 00000</li>
+                  <li><i class="fa fa-phone" style="color: black"></i>(987) 654-3210</li>
+                  <li><i class="fa fa-envelope" style="color: black"></i> test@test.com</li>
+              </ul>
+              </div>
+            </div>
+
+            <div class="foot-columns">
+              <div class="copyright">
+                <p>Copyright &copy; 2021 Website Created by David Boss, Suzanne Kaufman, and Mallory Dodds. All Rights Reserved.  <a href="{% url 'terms_cond' %}">Terms and Conditions</a><a href="{% url 'privacy' %}">Privacy Policy</a></p>
+              </div>
+            </div>
+
+          </div>
+        </footer>
+
+    <script type="text/javascript"> /* scripts for slider */
       var counter = 1;
       setInterval(function(){
         document.getElementById('radio' + counter).checked = true;

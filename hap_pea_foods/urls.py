@@ -31,7 +31,22 @@ urlpatterns = [
     url('stories/', include('stories.urls')),
     url('volunteer/', views.volunteer, name="volunteer"),
     url('portal/', views.portal, name="portal"),
+<<<<<<< HEAD
     url('logoutlanding/', views.portal, name="logoutlanding"),
+=======
+    url('logoutlanding/', views.loutoutlanding, name="logoutlanding"),
+    url('contact/', views.contact, name="contact"),
+    url('survey/', views.survey, name="survey"),
+    url('surveyresults/', views.surveyresults, name="surveyresults"),
+    url('createevent/', views.createevent, name="createevent"),
+    url('moneydonations/', views.moneydonations, name="moneydonations"),
+    url('organizations/', views.organizations, name="organizations"),
+    url('mycalendar/', views.mycalendar, name="mycalendar"),
+    url('non_disc_stmt/', views.non_disc_stmt, name="non_disc_stmt"),
+    url('privacy/', views.privacy, name="privacy"),
+    url('facts/', views.facts, name="facts"),
+    url('terms_cond/', views.terms_cond, name="terms_cond"),
+>>>>>>> test
     url('', views.homepage, name="home"),
 ]
 
