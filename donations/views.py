@@ -18,6 +18,9 @@ def donation_create(request):
             instance.createdBy = request.user
             instance.save()
             pk = instance.pk
+            #return redirect('donations/items.html', pk = instance.objects.get(pk=pk))
+            #return redirect('donations/items.html', pk = Donation.objects.last(pk=pk))
+            #pk = instance.objects.get(pk=pk)
             url = str(pk) + '/'
             return redirect(url)
     else:
