@@ -41,3 +41,11 @@ def add_items(request, donation_id):
     formset = ItemFormset(instance=donation)
 
     return render(request, 'donations/items.html', {'formset' : formset})
+
+
+def donations_list(request):
+    donation = Donation.objects.all().order_by('donationDate')
+    return render(request, 'donations/donations_list.html', {'donation':donation})
+    #donation = Donation.objects.get(claimed)
+    #if donation.claimed == False :
+        #return render(request, 'donations/donations_list.html', {'donation':donation})
