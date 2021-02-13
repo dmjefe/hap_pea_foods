@@ -33,3 +33,25 @@ class Item(models.Model):
     number = models.SmallIntegerField()
     typeOfMeasure = models.CharField(max_length=5, choices=TYPE_OF_MEASURE_CHOICES, default=COUNT)
     donation = models.ForeignKey(Donation, on_delete=models.CASCADE)
+
+class Organization(models.Model):
+    orgName = models.CharField(max_length=25,)
+    address = models.CharField(max_length=25,)
+    city = models.CharField(max_length=25,)
+    state = models.CharField(max_length=25,)
+    zip = models.CharField(max_length=25,)
+    email = models.CharField(max_length=25,)
+    website = models.CharField(max_length=25,)
+    FOOD_BANK = 'Food Bank'
+    GROCERY_STORE = 'Grocery Store'
+    RESTAURANT = 'Restaurant'
+    DISTRIBUTION_CENTER = 'Distribution Center'
+    OTHER = 'Other'
+    TYPE_OF_ORG = (
+        (FOOD_BANK, 'Food Bank'),
+        (GROCERY_STORE, 'Grocery Store'),
+        (RESTAURANT, 'Restaurant'),
+        (DISTRIBUTION_CENTER, 'Distribution Center'),
+        (OTHER, 'Other'),
+    )
+    typeOfOrg = models.CharField(max_length=25, choices=TYPE_OF_ORG, default=FOOD_BANK)

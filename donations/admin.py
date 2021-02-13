@@ -1,6 +1,7 @@
 from django.contrib import admin
-from .models import Donation, Item
+from .models import Donation, Item, Organization
 
 # Register your models here.
 admin.site.register(Donation)
 admin.site.register(Item)
+admin.site.register(Organization)
