@@ -3,17 +3,7 @@
 
 {% block content %}
   <h1>Donations</h1>
-
-<!--  <div class="stories">
-    {% for donation in donation %}
-      <div class= "donations_list">
-        <p>{{donation.userName}}</p>
-        <p>{{donation.donationDate}}</p>
-        <p> {{donation.locationName}}</p>
-      </div>
-    {% endfor %}
-  </div>
--->
+  
     <form method="get">
       {{ filter.form.as_p }}
       <button type="submit">Search</button>
