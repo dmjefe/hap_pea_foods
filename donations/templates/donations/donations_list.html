@@ -20,7 +20,11 @@
     </form>
     <ul>
     {% for donation in filter.qs %}
-      <li>{{ donation.createdBy }} - {{ donation.locationName }} - {{donation.claimed}} - {{donation.pk}}</li>
+      <hr>
+      <p>Donated by: {{ donation.createdBy }}</p>
+      <p>Location: {{ donation.locationName }}</p>
+      <p>Donation is claimed: {{donation.claimed}}</p>
+      <p>Donation ID: {{donation.pk}}</p>
     {% endfor %}
     </ul>
 
