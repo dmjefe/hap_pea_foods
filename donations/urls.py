@@ -7,8 +7,9 @@ app_name = 'donations'
 urlpatterns = [
 
     url(r'^$', views.donation_create, name="donations"),
-    url(r'^(?P<donation_id>\d+)/$', views.add_items, name="items"),
-    url('donations_list/', views.donations_list, name="donations_list"),
+    url(r'^(?P<donation_id>\d+)/$', views.add_items, name="items"),\
+    url(r'^search/$', views.search, name='search'),
+    #url('donations_list', views.donations_list, name="donations_list"),
     #url('items/', views.add_items, name="items"),
 
 ]

@@ -1,8 +1,10 @@
+from django.views import generic
 from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.forms import inlineformset_factory
 from .models import Item, Donation
+from .filters import DonationFilter
 from django.urls import reverse
 from urllib.parse import urlencode
 from . import forms
@@ -43,9 +45,11 @@ def add_items(request, donation_id):
     return render(request, 'donations/items.html', {'formset' : formset})
 
 
-def donations_list(request):
-    donation = Donation.objects.all().order_by('donationDate')
-    return render(request, 'donations/donations_list.html', {'donation':donation})
-    #donation = Donation.objects.get(claimed)
-    #if donation.claimed == False :
-        #return render(request, 'donations/donations_list.html', {'donation':donation})
+#def donations_list(request):
+    #donation = Donation.objects.all().order_by('donationDate')
+    #return render(request, 'donations/donations_list.html', {'donation':donation})
+
+def search(request):
+    donation_list = Donation.objects.all()
+    donation_filter = DonationFilter(request.GET, queryset=donation_list)
+    return render(request, 'donations/donations_list.html', {'filter': donation_filter})
