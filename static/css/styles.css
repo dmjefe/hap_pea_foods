@@ -6,7 +6,7 @@
 
 /* Header Container */
 header {
-  background: #000;
+  background: #fff;
 }
 
 .head-container {
@@ -23,14 +23,11 @@ header {
  /* Nav Container */
 
 nav {
-  background: #000;/*#5DAAB2;*/
-  padding: 10px 0px;
+  background: #5DAAB2;/*#5DAAB2;*/
+  width: 100%;
+  height: auto;
 }
 
-.nav-container {
-  width: 95%;
-  margin: 0 auto;
-}
 
 .nav-columns {
   display: flex;
@@ -67,12 +64,11 @@ nav h1 {
 .nav-links ul {
   padding: 0;
   margin: 0;
-  float: right;
-  margin-right: 20%;
+  float: center;
 }
 
 .nav-links ul li {
-  position: relative;
+  line-height: 80px;
   display: inline-block;
   list-style: none;
 }
@@ -92,7 +88,6 @@ nav h1 {
 
 .nav-links ul ul {
   position: absolute;
-  top: 60px;
   display: none;
 }
 
@@ -114,7 +109,7 @@ nav h1 {
 }
 
 .search {
-  width: 15%;
+  width: 20%;
 }
 
 .search button:hover {
@@ -138,7 +133,7 @@ nav h1 {
 }
 
 .system i {
-  padding-right: 5px;
+
   font-size: 18px;
 }
 
@@ -146,7 +141,7 @@ nav h1 {
   color: #000;
   text-align: center;
   margin: 0 1px;
-  padding: 5px 10px;
+  padding: 5px 5px;
   text-decoration: none;
   font-size: 16px;
   background: #fff;
