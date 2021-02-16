@@ -68,18 +68,16 @@ nav h1 {
 }
 
 .nav-links ul li {
-  line-height: 80px;
+  line-height: 50px;
   display: inline-block;
-  list-style: none;
 }
 
 .nav-links ul li a {
   display: block;
-  color: #fff;;
+  color: #fff;
   padding: 0 15px;
   text-decoration: none;
-  font-size: 20px;
-  line-height: 60px;
+  font-size: 18px;
 }
 
 .nav-links ul li a:hover {
@@ -89,6 +87,7 @@ nav h1 {
 .nav-links ul ul {
   position: absolute;
   display: none;
+  z-index: 1;
 }
 
 .nav-links ul li:hover > ul {
@@ -100,7 +99,8 @@ nav h1 {
   float: none;
   display: list-item;
   position: relative;
-  background: #008080;
+  background: #5DAAB2;
+
 }
 
 .nav-links a:active {
