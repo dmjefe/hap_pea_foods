@@ -6,7 +6,7 @@
 
 /* Header Container */
 header {
-  background: #fff;
+  background: #000;
 }
 
 .head-container {
@@ -23,7 +23,7 @@ header {
  /* Nav Container */
 
 nav {
-  background: #5DAAB2;
+  background: #000;/*#5DAAB2;*/
   padding: 10px 0px;
 }
 
