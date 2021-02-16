@@ -23,14 +23,16 @@ header {
  /* Nav Container */
 
 nav {
+<<<<<<< HEAD
   background: #5DAAB2;
   padding: 10px 0px;
+=======
+  background: #5DAAB2;/*#5DAAB2;*/
+  width: 100%;
+  height: auto;
+>>>>>>> 13460c628c9899ce9a4c1de9eb33a4b9c7f1a502
 }
 
-.nav-container {
-  width: 95%;
-  margin: 0 auto;
-}
 
 .nav-columns {
   display: flex;
@@ -67,23 +69,20 @@ nav h1 {
 .nav-links ul {
   padding: 0;
   margin: 0;
-  float: right;
-  margin-right: 20%;
+  float: center;
 }
 
 .nav-links ul li {
-  position: relative;
+  line-height: 50px;
   display: inline-block;
-  list-style: none;
 }
 
 .nav-links ul li a {
   display: block;
-  color: #fff;;
+  color: #fff;
   padding: 0 15px;
   text-decoration: none;
-  font-size: 20px;
-  line-height: 60px;
+  font-size: 18px;
 }
 
 .nav-links ul li a:hover {
@@ -92,8 +91,8 @@ nav h1 {
 
 .nav-links ul ul {
   position: absolute;
-  top: 60px;
   display: none;
+  z-index: 1;
 }
 
 .nav-links ul li:hover > ul {
@@ -105,7 +104,8 @@ nav h1 {
   float: none;
   display: list-item;
   position: relative;
-  background: #008080;
+  background: #5DAAB2;
+
 }
 
 .nav-links a:active {
@@ -114,7 +114,7 @@ nav h1 {
 }
 
 .search {
-  width: 15%;
+  width: 20%;
 }
 
 .search button:hover {
@@ -138,7 +138,7 @@ nav h1 {
 }
 
 .system i {
-  padding-right: 5px;
+
   font-size: 18px;
 }
 
@@ -146,7 +146,7 @@ nav h1 {
   color: #000;
   text-align: center;
   margin: 0 1px;
-  padding: 5px 10px;
+  padding: 5px 5px;
   text-decoration: none;
   font-size: 16px;
   background: #fff;
