@@ -23,16 +23,11 @@ header {
  /* Nav Container */
 
 nav {
-<<<<<<< HEAD
   background: #5DAAB2;
   padding: 10px 0px;
-=======
-  background: #5DAAB2;/*#5DAAB2;*/
   width: 100%;
   height: auto;
->>>>>>> 13460c628c9899ce9a4c1de9eb33a4b9c7f1a502
 }
-
 
 .nav-columns {
   display: flex;
@@ -105,7 +100,6 @@ nav h1 {
   display: list-item;
   position: relative;
   background: #5DAAB2;
-
 }
 
 .nav-links a:active {
@@ -115,6 +109,7 @@ nav h1 {
 
 .search {
   width: 20%;
+  margin-right: 20px;
 }
 
 .search button:hover {
@@ -138,8 +133,8 @@ nav h1 {
 }
 
 .system i {
-
   font-size: 18px;
+  padding-right: 5px;
 }
 
 .system a {
@@ -285,6 +280,7 @@ footer {
   box-sizing: border-box;
   display: flex;
 }
+
 .image-col {
   flex-basis: 10%;
   padding-top: 10px;
@@ -314,9 +310,23 @@ footer {
   padding-top: 10px;
 }
 
-.calendar {
+.home-calendar {
   padding-top: 10px;
   padding-left: 100px;
+}
+
+.home-calendar i {
+  font-size: 32px;
+  padding: 0 20px;
+}
+
+.home-calendar .event {
+  padding-bottom: 20px;
+}
+
+.home-calendar h3 {
+  font-size: 18px;
+  padding-bottom: 10px;
 }
 
 /* slider */
