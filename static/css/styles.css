@@ -728,6 +728,29 @@ a.highlight {
   font-size: 18px;
 }
 
+.facts .article-2 {
+  margin: 0 20%;
+}
+
+.facts .article-2 h2 {
+  font-size: 24px;
+  padding: 20px 0;
+}
+
+.facts .article-2 span {
+  color: #b3b3b3;
+  font-size: 24px;
+}
+
+.facts .article-2 p {
+  font-size: 18px;
+  padding: 10px 0;
+}
+
+.facts .article_2 a {
+  font-size: 18px;
+}
+
 /* My Calendar Page */
 
 .calendar {
