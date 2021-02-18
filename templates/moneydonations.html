@@ -1,7 +1,47 @@
 
 {% extends 'base_layout.html '%}
+{% load static %}
 {% block title %} Hap-Pea Foods | Donate Money {% endblock %}
 {% block content %}
-<h1>Donate Money</h1>
+  <div class="wrapper_pay">
+    <div class="payment">
+      <div class="payment-logo">
+        <p>HPF</p>
+      </div>
+      <h2>Donate Money</h2>
+
+      <div class="payment_form">
+        <div class="card space icon-relative">
+          <label class="label">Name On Card:</label>
+          <input type="text" class="input" name="card_holder" placeholder="Name Here">
+          <i class="fas fa-user"></i>
+        </div>
+
+        <div class="card space icon-relative">
+          <label class="label">Card Number:</label>
+          <input type="text" class="input" name="card_number" placeholder="Card Number">
+          <i class="far fa-credit-card"></i>
+        </div>
+
+        <div class="card-grp space">
+          <div class="card-item icon-relative">
+            <label class="label">Exp. Date:</label>
+            <input type="text" class="input" name="exp_date" placeholder="00/00">
+            <i class="far fa-calendar-alt"></i>
+          </div>
+
+          <div class="card-item icon-relative">
+            <label class="label">CVC:</label>
+            <input type="text" class="input" name="cvc" placeholder="000">
+            <i class="fas fa-lock"></i>
+          </div>
+        </div>
+
+        <div class="btn">Pay</div>
+      </div>
+
+    </div>
+  </div>
+
 
 {% endblock %}
