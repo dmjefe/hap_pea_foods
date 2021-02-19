@@ -3,7 +3,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.forms import inlineformset_factory
-from .models import Item, Donation
+from .models import Item, Donation, ClaimedDonation
 from .filters import DonationFilter
 from django.urls import reverse
 from urllib.parse import urlencode
@@ -45,11 +45,20 @@ def add_items(request, donation_id):
     return render(request, 'donations/items.html', {'formset' : formset})
 
 
-#def donations_list(request):
-    #donation = Donation.objects.all().order_by('donationDate')
-    #return render(request, 'donations/donations_list.html', {'donation':donation})
-
 def search(request):
-    donation_list = Donation.objects.all()
-    donation_filter = DonationFilter(request.GET, queryset=donation_list)
-    return render(request, 'donations/donations_list.html', {'filter': donation_filter})
+    #display only unclaimed donations.
+    if request.method == 'POST':
+        form = forms.ClaimedDonation(request.POST) #Use if no images on form
+        if form.is_valid():
+            instance = form.save(commit=False)
+            instance.contact = request.user
+            instance.save()
+            pk = instance.pk
+            #Should probably redirect to a "success" page or something.
+            return redirect('home')
+    else:
+        inner_qs = ClaimedDonation.objects.all()
+        donation_list = Donation.objects.filter(claimeddonation = None)
+        donation_filter = DonationFilter(request.GET, queryset=donation_list)
+        form = forms.ClaimedDonation()
+        return render(request, 'donations/donations_list.html', {'filter': donation_filter, 'form':form})
