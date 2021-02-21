@@ -13,5 +13,15 @@ def volunteer(request):
     return render(request, 'events/volunteer.html',)
 
 def create_event(request):
-    form = forms.CreateEvent()
+    if request.method == 'POST':
+        form = forms.CreateEvent(request.POST)
+        if form.is_valid():
+            instance = form.save(commit=False)
+            instance.createdBy = request.user
+            instance.save()
+            pk = instance.pk
+            url = str(pk) + '/'
+            return redirect(url)
+    else:
+        form = forms.CreateEvent()
     return render(request, 'events/create_event.html', {'form':form})

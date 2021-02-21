@@ -6,5 +6,10 @@
   <div class="v_head">
     <h1>Create Event</h1>
   </div>
-
+  <form class="site-form" method="post">
+      {% csrf_token %}
+      {{form}}
+    <input type="submit" value="Create Event">
+  </form>
+  <div class="clear">
 {% endblock %}
