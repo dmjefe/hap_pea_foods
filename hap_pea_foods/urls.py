@@ -29,6 +29,7 @@ urlpatterns = [
     url('partners/', views.partners, name="partners"),
     url('accounts/', include('accounts.urls')),
     url('stories/', include('stories.urls')),
+    url('events/', include('events.urls')),
     url('volunteer/', views.volunteer, name="volunteer"),
     url('portal/', views.portal, name="portal"),
     url('logoutlanding/', views.loutoutlanding, name="logoutlanding"),
