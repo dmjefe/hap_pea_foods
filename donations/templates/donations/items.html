@@ -1,19 +1,23 @@
 {% extends 'base_layout.html '%}
-{% block title %} Hap-Pea Foods | Donate Items {% endblock %}
+{% block title %} Hap-Pea Foods | Add Items {% endblock %}
 {% block content %}
 {% load static %}
 
-<div class="d_img">
-  <img src="{% static '004-donation.png' %}">
-</div>
 
-<h1><center>Donation Items Page for Hap-Pea Foods</center></h1><br/>
+  <div class="add_item_container">
+    <div class="d_img">
+      <img src="{% static '004-canned-food.png' %}">
+    </div>
 
-  <form class="site-form" method="post">
-    {% csrf_token %}
-    {{ formset.as_p }}
-    <input type="submit" value="Save">
-  </form>
-<div class="clear">
+    <h1><center>Add Items To Donate</center></h1>
+
+    <form class="add_item_form" method="post">
+      {% csrf_token %}
+      {{ formset.as_p }}
+      <input type="submit" value="Save"><br/>
+      <button class="finished"><a href="{% url 'donations:search' %}" class="button">Finished</a></button>
+    </form>
+  </div>
+
 
 {% endblock %}

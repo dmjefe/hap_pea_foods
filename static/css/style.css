@@ -917,6 +917,63 @@ a.highlight {
   font-size: 36px;
 }
 
+/* Add Items Page */
+
+.add_item_container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.add_item_form {
+  margin: 15px 30%;
+  border: 10px solid #FF704D; /* grapefruit */
+  border-style: ridge;
+  padding: 30px;
+  border-radius: 4px;
+}
+
+.add_item_form input, .add_item_form select, .add_item_form textarea {
+  display: block;
+  margin: 5%;
+  padding: 5px;
+}
+
+.add_item_form input[type="submit"] {
+  background: #FF471a; /* r-orange */
+  border: 0;
+  color: #000;
+  font-size: 1.2em;
+  border-radius: 4px;
+  align-items: center;
+  margin: 5% auto;
+  padding: 10px 30px;
+}
+
+.add_item_form input[type=submit]:hover {
+  color: #FFF;
+  cursor: pointer;
+}
+
+.finished {
+  background: #FF471a; /* r-orange */
+  border: 0;
+  color: #000;
+  font-size: 1.2em;
+  border-radius: 4px;
+  align-items: center;
+  margin: 5% auto;
+  padding: 10px 30px;
+}
+
+.finished:hover {
+  color: #FFF;
+  cursor: pointer;
+}
+
+.finished a {
+  text-decoration: none;
+}
+
 /* Donation Items Page */
 
 .d-container {
@@ -951,7 +1008,7 @@ a.highlight {
 
 .search-form input, .search-form select, .search-form textarea {
   display: block;
-  margin: 20px;
+  margin: 5%;
   padding: 5px;
 }
 
@@ -962,7 +1019,7 @@ a.highlight {
   font-size: 1.2em;
   border-radius: 4px;
   align-items: center;
-  margin: 20px auto;
+  margin: 5% auto;
   padding: 10px 30px;
 }
 
@@ -980,7 +1037,7 @@ a.highlight {
 
 .claims-form input, .claims-form select, .claims-form textarea {
   display: block;
-  margin: 20px;
+  margin: 5%;
   padding: 5px;
 }
 
@@ -991,7 +1048,7 @@ a.highlight {
   font-size: 1.2em;
   border-radius: 4px;
   align-items: center;
-  margin: 20px auto;
+  margin: 5% auto;
   padding: 10px 30px;
 }
 

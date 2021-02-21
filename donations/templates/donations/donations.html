@@ -1,13 +1,13 @@
 {% extends 'base_layout.html '%}
-{% block title %} Hap-Pea Foods | Donate {% endblock %}
+{% block title %} Hap-Pea Foods | Create Donation {% endblock %}
 {% block content %}
 {% load static %}
 
 <div class="d_img">
-  <img src="{% static '004-donation.png' %}">
+  <img src="{% static '004-canned-food.png' %}">
 </div>
 
-<h1><center>Donation Page for Hap-Pea Foods</center></h1><br/>
+<h1><center>Create A Donation</center></h1><br/>
 
   <form class="site-form" method="post">
     {% csrf_token %}
