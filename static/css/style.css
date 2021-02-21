@@ -6,7 +6,7 @@
 
 /* Header Container */
 header {
-  background: #fff;
+  background: #;
 }
 
 .head-container {
@@ -42,7 +42,7 @@ nav {
 }
 
 nav h1 {
-  color: #fff;
+  color: #FFF;
   font-size: 1rem;
   text-align: center;
 }
@@ -74,7 +74,7 @@ nav h1 {
 
 .nav-links ul li a {
   display: block;
-  color: #fff;
+  color: #FFF;
   padding: 0 15px;
   text-decoration: none;
   font-size: 18px;
@@ -104,7 +104,7 @@ nav h1 {
 
 .nav-links a:active {
   background-color: #c7c7c7;
-  color: #fff;
+  color: #FFF;
 }
 
 .search {
@@ -113,7 +113,7 @@ nav h1 {
 }
 
 .search button:hover {
-  background: #ccc;
+  background: #CCC;
 }
 
 .search input[type=text] {
@@ -144,7 +144,7 @@ nav h1 {
   padding: 5px 5px;
   text-decoration: none;
   font-size: 16px;
-  background: #fff;
+  background: #FFF;
   border-radius: 10px;
 }
 
@@ -205,13 +205,13 @@ footer {
 }
 
 .foot-links a:link, .foot-links-2 a:link {
-  color: #fff;
+  color: #FFF;
   width: 10%;
   font-size: 14px;
 }
 
 .foot-links a:visited, .foot-links-2 a:visited {
-  color: #fff;
+  color: #FFF;
 }
 
 .subscribe {
@@ -219,7 +219,7 @@ footer {
 }
 
 .subscribe button:hover {
-  background: #ccc;
+  background: #CCC;
 }
 
 .subscribe input[type=email] {
@@ -235,7 +235,7 @@ footer {
 }
 
 .contact h2 {
-  color: #fff;
+  color: #FFF;
   padding-bottom: 10px;
   font-size: 16px;
 }
@@ -366,9 +366,9 @@ footer {
 /* Stories_list css */
 
 .createstory button {
-  background-color: #00b33c; /* Green */
+  background-color: #00B33C; /* Green */
   border: none;
-  color: white;
+  color: #FFF;
   padding: 15px 32px;
   text-align: center;
   text-decoration: none;
@@ -386,7 +386,7 @@ footer {
 
 .story {
   padding: 10px;
-  border: 2px solid #00b33c; /* greenish */
+  border: 2px solid #00B33C; /* greenish */
   position: relative;
   padding-bottom: 40px;
 }
@@ -397,7 +397,7 @@ footer {
 
 .story .author {
   padding: 10px;
-  background: #00b33c; /* greenish */
+  background: #00B33C; /* greenish */
   position: absolute;
   right: 0;
   bottom: 0;
@@ -429,7 +429,7 @@ footer {
 /* site-form css All Forms*/
 .site-form {
   margin: 15px 30%;
-  border: 10px solid #00b33c; /* greenish */
+  border: 10px solid #00B33C; /* greenish */
   border-style: ridge;
   padding: 30px;
   border-radius: 4px;
@@ -448,10 +448,10 @@ footer {
 }
 
 a.highlight {
-  border: 1px solid #00b33c;  /* greenish */
+  border: 1px solid #00B33C;  /* greenish */
   padding: 10px;
   border-radius: 4px;
-  color: #00b33c;  /* greenish */
+  color: #00B33C;  /* greenish */
 }
 
 .helptext, .helptext ul {
@@ -475,7 +475,7 @@ a.highlight {
 }
 
 .site-form input[type="submit"] {
-  background: #00b33c; /* greenish */
+  background: #00B33C; /* greenish */
   border: 0;
   color: #000;
   font-size: 1.2em;
@@ -597,7 +597,7 @@ a.highlight {
   width: 150px;
   height: 150px;
   margin: 40px;
-  border: 2px solid #3c7980;
+  border: 2px solid #3C7980;
 }
 
 .portal li {
@@ -637,7 +637,7 @@ a.highlight {
 .c-form-head  hr {
   width: 300px;
   height: 5px;
-  background-color: #3c7980;
+  background-color: #3C7980;
 }
 
 .c-form-head  i {
@@ -702,7 +702,7 @@ a.highlight {
 .facts hr {
   height: 5px;
   margin: 20px 0;
-  background-color: #3c7980;
+  background-color: #3C7980;
 }
 
 .facts .article-1 {
@@ -715,7 +715,7 @@ a.highlight {
 }
 
 .facts .article-1 span {
-  color: #b3b3b3;
+  color: #B3B3B3;
   font-size: 24px;
 }
 
@@ -738,7 +738,7 @@ a.highlight {
 }
 
 .facts .article-2 span {
-  color: #b3b3b3;
+  color: #B3B3B3;
   font-size: 24px;
 }
 
@@ -766,7 +766,7 @@ a.highlight {
 
 
 .payment {
-  background: #fff;
+  background: #FFF;
   max-width: 400px;
   margin: 80px auto;
   height: auto;
@@ -794,7 +794,7 @@ a.highlight {
   padding: 13px 0 13px 60px;
   width: 83%;
   text-align: left;
-  border: 2px solid #dddddd;
+  border: 2px solid #DDDDDD;
   border-radius: 5px;
   letter-spacing: 1px;
   word-wrap: 3px;
@@ -832,10 +832,10 @@ a.highlight {
 
 .btn {
   margin-top: 40px;
-  background: #3c7980;
+  background: #3C7980;
   padding: 12px;
   text-align: center;
-  color: #fff;
+  color: #FFF;
   border-radius: 5px;
   cursor: pointer;
 }
@@ -847,7 +847,7 @@ a.highlight {
   transform: translateX(-50%);
   width: 100px;
   height: 100px;
-  background: #fff;
+  background: #FFF;
   border-radius: 50%;
   box-shadow: 0 0 5px;
   text-align: center;
@@ -861,12 +861,114 @@ a.highlight {
   left: 5px;
   width: 90px;
   height: 90px;
-  background: #3c7980;
+  background: #3C7980;
   border-radius: 50%;
 }
 
 .payment-logo p {
-  color: #fff;
+  color: #FFF;
   position: relative;
   font-size: 36px;
+}
+
+/* Donation Items Page */
+
+.d-container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.d-h1 {
+  text-align: center;
+}
+
+.d-row {
+  display: flex;
+  border: 2px solid blue;
+  justify-content: space-between;
+}
+
+.d-col {
+  border: 2px solid red;
+  padding: 20px;
+
+}
+
+.d-title {
+  font-size: 24px;
+  text-align: center;
+}
+
+.search-form {
+  border: 10px solid #ff704d; /* grapefruit */
+  border-style: ridge;
+  border-radius: 4px;
+  padding: 20px;
+}
+
+.search-form input, .search-form select, .search-form textarea {
+  display: block;
+  margin: 20px;
+  padding: 5px;
+}
+
+.search-form button[type="submit"] {
+  background: #FF471a; /* r-orange */
+  border: 0;
+  color: #000;
+  font-size: 1.2em;
+  border-radius: 4px;
+  margin: 20px auto;
+  padding: 10px 30px;
+}
+
+.search-form button[type=submit]:hover {
+  color: #FFF;
+  cursor: pointer;
+}
+
+.claims-form {
+  border: 10px solid #ff704d; /* grapefruit */
+  border-style: ridge;
+  border-radius: 4px;
+  padding: 20px;
+}
+
+.claims-form input, .claims-form select, .claims-form textarea {
+  display: block;
+  margin: 20px;
+  padding: 5px;
+}
+
+.claims-form input[type="submit"] {
+  background: #FF471a; /* r-orange */
+  border: 0;
+  color: #000;
+  font-size: 1.2em;
+  border-radius: 4px;
+  align-items: center;
+  margin: 20px auto;
+  padding: 10px 30px;
+}
+
+.claims-form input[type=submit]:hover {
+  color: #FBFBFF;
+  cursor: pointer;
+}
+
+.d-list span {
+  font-weight: bold;
+  color: #3C7980;
+  padding-right: 15px;
+}
+
+.filter {
+  border: 10px solid #ff704d; /* grapefruit */
+  border-style: ridge;
+  border-radius: 4px;
+}
+
+.d-list {
+  padding: 0;
+  margin: 0;
 }

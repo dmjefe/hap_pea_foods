@@ -2,29 +2,39 @@
 {% block title %} Hap-Pea Foods | Available Donations {% endblock %}
 
 {% block content %}
-  <h1>Donations</h1>
 
-      <div class="column">
-        <form method="get">
+  <div class="d-container">
+    <h1 class="d-h1">Search Donations</h1>
+    <div class="d-row">
+      <div class="d-col">
+        <h2 class="d-title">Search</h2>
+        <form class="search-form" method="get">
           {{ filter.form.as_p }}
           <button type="submit">Search</button>
         </form>
-        <ul>
-        {% for donation in filter.qs %}
-          <hr>
-          <p>Donated by: {{ donation.createdBy }}</p>
-          <p>Location: {{ donation.locationName }}</p>
-          <p>Donation is claimed: {{donation.claimed}}</p>
-          <p>Donation ID: {{donation.pk}}</p>
-        {% endfor %}
-        </ul>
+      </div>
+      <div class="d-col">
+        <h2 class="d-title">Claim Donations</h2>
+        <form class="claims-form" method="post">
+          {% csrf_token %}
+          {{form}}
+        <input type="submit" value="Claim Donation">
+      </div>
+      <div class="d-col">
+        <div class="filter">
+          <ul class="d-list">
+          {% for donation in filter.qs %}
+            <hr>
+            <p><span>Donated by:</span> {{ donation.createdBy }}</p>
+            <p><span>Location:</span> {{ donation.locationName }}</p>
+            <p><span>Donation is claimed:</span> {{donation.claimed}}</p>
+            <p><span>Donation ID:</span> {{donation.pk}}</p>
+          {% endfor %}
+          </ul>
+        </div>
+      </div>
     </div>
+  </div>
 
-    <div class="column">
-      <form class="site-form" method="post">
-        {% csrf_token %}
-        {{form}}
-      <input type="submit" value="Claim Donation">
-    </div>
 
 {% endblock %}
