@@ -37,8 +37,11 @@
       <li><img src="{% static '002-online-donation.png' %}" alt=""><br><h4>Donate</h4></li>
     </ul>
 
-    <a href="">Volunteer Match</a> |
-    <a href="">New Volunteer Applicants </a> |
-    <a href="">Donate Now</a> |
+    <div class="v_links">
+      <a href="">Volunteer Match</a> |
+      <a href="">New Volunteer Applicants </a> |
+      <a href="{% url 'donations:donations' %}">Donate Now</a>
+    </div>
+
   </div>
 {% endblock %}

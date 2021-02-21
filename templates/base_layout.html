@@ -35,15 +35,16 @@
          <div class="nav-links">
            <ul>
             <li><a href="{% url 'home' %}">Home</a></li>
-            <li><a href="{% url 'about' %}">About <i class="fas fa-caret-down"></i></a>
+            <li><a href="">About <i class="fas fa-caret-down"></i></a>
               <ul>
                 <li><a href="{% url 'about' %}">About Us</a></li>
                 <li><a href="{% url 'partners' %}">Partners</a></li>
               </ul>
             </li>
-            <li><a href="{% url 'donations:donations' %}">Donate <i class="fas fa-caret-down"></i></a>
+            <li><a href="">Donate <i class="fas fa-caret-down"></i></a>
               <ul>
                 <li><a href="{% url 'moneydonations' %}">Donate Money</a></li>
+                <li><a href="{% url 'donations:search' %}">Search Donations</a></li>
                 <li><a href="{% url 'donations:donations' %}">Donate Food</a></li>
                 <li><a href="{% url 'volunteer' %}">Volunteer</a></li>
               </ul>
@@ -51,7 +52,7 @@
             <li><a href="{% url 'find_help' %}">Find Help</a></li>
             <li><a href="{% url 'facts' %}">Facts and Media <i class="fas fa-caret-down"></i></a>
               <ul>
-                <li><a href="{% url 'find_help' %}">Hunger in the US</a></li>
+                <li><a href="">Hunger in the US</a></li>
                 <li><a href="{% url 'stories:stories' %}">Stories</a></li>
                 <li><a href="{% url 'facts' %}">Media</a></li>
               </ul>
