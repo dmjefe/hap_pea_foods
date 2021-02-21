@@ -1,5 +1,7 @@
 * {
   margin: 0;
+  padding:0;
+  outline: none;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 18px;
 }
@@ -20,25 +22,24 @@ header {
   padding: 10px 10px;
 }
 
- /* Nav Container */
-
-nav {
-  background: #5DAAB2;
-  padding: 10px 0px;
-  width: 100%;
+img {
   height: auto;
-}
-
-.nav-columns {
-  display: flex;
-  margin: 1em 0;
-  justify-content: space-between;
-  align-items: center;
 }
 
 .img-logo {
   height: 40px;
   padding: 0 10px;
+}
+
+ /* Nav Container */
+
+nav {
+  background: #5DAAB2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 100px;
 }
 
 nav h1 {
@@ -56,96 +57,92 @@ nav h1 {
   width: 10%;
 }
 
-.nav-links {
-  width: 70%;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0, 0.1);
-}
-
-.nav-links ul {
-  padding: 0;
-  margin: 0;
-  float: center;
-}
-
-.nav-links ul li {
-  line-height: 50px;
-  display: inline-block;
-}
-
-.nav-links ul li a {
-  display: block;
-  color: #FFF;
-  padding: 0 15px;
+a {
   text-decoration: none;
-  font-size: 18px;
 }
 
-.nav-links ul li a:hover {
-  background: #008080;
-}
-
-.nav-links ul ul {
-  position: absolute;
-  display: none;
-  z-index: 1;
-}
-
-.nav-links ul li:hover > ul {
-  display: block;
-}
-
-.nav-links ul ul li {
-  width: 200px;
-  float: none;
-  display: list-item;
-  list-style-type: none;
-  position: relative;
+ul {
   background: #5DAAB2;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
 }
 
-.nav-links a:active {
-  background-color: #c7c7c7;
-  color: #FFF;
+li {
+  color: #fff;
+  background: #5DAAB2;
+  display: block;
+  float: left;
+  padding: 1rem;
+  position: relative;
+  text-decoration: none;
+  transition-duration: 0.5s;
+}
+
+li a {
+  color: #fff;
+}
+
+li:hover,
+li:focus-within {
+  background: #458a5e;
+  cursor: pointer;
+}
+
+li:focus-within a {
+  outline: none;
+}
+
+ul li ul {
+  background: #FFF;
+  visibility: hidden;
+  opacity: 0;
+  min-width: 5rem;
+  position: absolute;
+  z-index: 9999;
+  transition: all 0.5s ease;
+  margin-top: 1rem;
+  left: 0;
+  display: none;
+}
+
+ul li:hover > ul,
+ul li:focus-within > ul,
+ul li ul:hover,
+ul li ul:focus {
+  visibility: visible;
+  opacity: 1;
+  display: block
+}
+
+ul li ul li {
+  clear: both;
+  width: 100%;
 }
 
 .search {
   width: 20%;
   margin-right: 20px;
-}
-
-.search button:hover {
-  background: #CCC;
-}
-
-.search input[type=text] {
-  font-size: 16px;
-}
-
-.search button[type=submit] {
-  font-size: 16px;
-}
-
-.search i {
-  font-size: 14px;
+  padding: 10px;
 }
 
 .system {
-  width: 11%;
+  width: 13%;
+  float: right;
 }
 
 .system i {
   font-size: 18px;
-  padding-right: 5px;
+  padding: 5px;
 }
 
 .system a {
   color: #000;
   text-align: center;
-  margin: 0 1px;
-  padding: 5px 5px;
+  padding: 5px;
   text-decoration: none;
   font-size: 16px;
-  background: #FFF;
+  background: #5DAAB2;
   border-radius: 10px;
 }
 
@@ -917,63 +914,6 @@ a.highlight {
   font-size: 36px;
 }
 
-/* Add Items Page */
-
-.add_item_container {
-  width: 100%;
-  margin: 0 auto;
-}
-
-.add_item_form {
-  margin: 15px 30%;
-  border: 10px solid #FF704D; /* grapefruit */
-  border-style: ridge;
-  padding: 30px;
-  border-radius: 4px;
-}
-
-.add_item_form input, .add_item_form select, .add_item_form textarea {
-  display: block;
-  margin: 5%;
-  padding: 5px;
-}
-
-.add_item_form input[type="submit"] {
-  background: #FF471a; /* r-orange */
-  border: 0;
-  color: #000;
-  font-size: 1.2em;
-  border-radius: 4px;
-  align-items: center;
-  margin: 5% auto;
-  padding: 10px 30px;
-}
-
-.add_item_form input[type=submit]:hover {
-  color: #FFF;
-  cursor: pointer;
-}
-
-.finished {
-  background: #FF471a; /* r-orange */
-  border: 0;
-  color: #000;
-  font-size: 1.2em;
-  border-radius: 4px;
-  align-items: center;
-  margin: 5% auto;
-  padding: 10px 30px;
-}
-
-.finished:hover {
-  color: #FFF;
-  cursor: pointer;
-}
-
-.finished a {
-  text-decoration: none;
-}
-
 /* Donation Items Page */
 
 .d-container {
@@ -1008,7 +948,7 @@ a.highlight {
 
 .search-form input, .search-form select, .search-form textarea {
   display: block;
-  margin: 5%;
+  margin: 20px;
   padding: 5px;
 }
 
@@ -1019,7 +959,7 @@ a.highlight {
   font-size: 1.2em;
   border-radius: 4px;
   align-items: center;
-  margin: 5% auto;
+  margin: 20px auto;
   padding: 10px 30px;
 }
 
@@ -1037,7 +977,7 @@ a.highlight {
 
 .claims-form input, .claims-form select, .claims-form textarea {
   display: block;
-  margin: 5%;
+  margin: 20px;
   padding: 5px;
 }
 
@@ -1048,7 +988,7 @@ a.highlight {
   font-size: 1.2em;
   border-radius: 4px;
   align-items: center;
-  margin: 5% auto;
+  margin: 20px auto;
   padding: 10px 30px;
 }
 
