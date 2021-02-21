@@ -57,18 +57,18 @@ nav h1 {
   width: 10%;
 }
 
-a {
+nav a {
   text-decoration: none;
 }
 
-ul {
+nav ul {
   background: #5DAAB2;
   list-style: none;
   margin: 0;
   padding-left: 0;
 }
 
-li {
+nav li {
   color: #fff;
   background: #5DAAB2;
   display: block;
@@ -79,21 +79,21 @@ li {
   transition-duration: 0.5s;
 }
 
-li a {
+nav li a {
   color: #fff;
 }
 
-li:hover,
-li:focus-within {
+nav li:hover,
+nav li:focus-within {
   background: #458a5e;
   cursor: pointer;
 }
 
-li:focus-within a {
+nav li:focus-within a {
   outline: none;
 }
 
-ul li ul {
+nav ul li ul {
   background: #FFF;
   visibility: hidden;
   opacity: 0;
@@ -106,16 +106,16 @@ ul li ul {
   display: none;
 }
 
-ul li:hover > ul,
-ul li:focus-within > ul,
-ul li ul:hover,
-ul li ul:focus {
+nav ul li:hover > ul,
+nav ul li:focus-within > ul,
+nav ul li ul:hover,
+nav ul li ul:focus {
   visibility: visible;
   opacity: 1;
   display: block
 }
 
-ul li ul li {
+nav ul li ul li {
   clear: both;
   width: 100%;
 }
