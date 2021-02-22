@@ -6,6 +6,7 @@ app_name = 'events'
 
 urlpatterns = [
 
-    url(r'^$', views.volunteer, name='volunteer'),
-    url(r'^create_event/$', views.create_event, name='create_event'),
+    url(r'^$', views.create_event, name='create_event'),
+    url(r'volunteer/^$', views.volunteer, name='volunteer'),
+    url(r'^(?P<event_id>\d+)/$', views.add_positions, name="positions"),
 ]
