@@ -22,15 +22,6 @@ header {
   padding: 10px 10px;
 }
 
-img {
-  height: auto;
-}
-
-.img-logo {
-  height: 40px;
-  padding: 0 10px;
-}
-
  /* Nav Container */
 
 nav {
@@ -39,7 +30,7 @@ nav {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 0 100px;
+  padding: 0 20px;
 }
 
 nav h1 {
@@ -129,6 +120,8 @@ nav ul li ul li {
 .system {
   width: 13%;
   float: right;
+  padding-left: 2%;
+  margin-top: 3px;
 }
 
 .system i {
