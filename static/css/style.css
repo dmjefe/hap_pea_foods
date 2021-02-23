@@ -71,29 +71,13 @@ header {
     color: #333333;
     background-color: #5DAAB2;
 }
- /* Nav Container */
 
- /*.navbar-custom {
-     background-color: #5DAAB2;
- }
- .navbar {
-   min-height: 130px;
- }
-
- .navbar-brand {
-   padding: 0;
+.navbar-expand-md .navbar-nav .dropdown-menu .navlink {
+    position: absolute !important;
 }
-
-.navbar-custom .navbar-brand,
-.navbar-custom .navbar-text {
-    color: #FFF;
-}
-*/
-
 
 .system {
   width: 13%;
-  float: right;
   padding-left: 2%;
   margin-top: 3px;
 }

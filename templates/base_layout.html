@@ -4,43 +4,40 @@
   <head>
     <title>{% block title %}{% endblock %}</title>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    <link rel="shortcut icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </head>
 
   <body>
     <header>
      <div class="head-container">
        <div class="sm">
+         <i class="far fa-user" style="color: black"></i>
+         <a href="{% url 'accounts:register' %}">Register</a>
+         {% csrf_token %}
+         <a href="{% url 'accounts:login' %}">Login</a>
+         {% csrf_token %}
          <i class="fab fa-facebook-f" style="color: blue"></i>
          <i class="fab fa-twitter" style="color: lightblue"></i>
          <i class="fab fa-google-plus" style="color: green"></i>
          <i class="fab fa-instagram" style="color: grey"></i>
          <i class="fab fa-youtube" style="color: red"></i>
        </div>
-       <div class="system">
-         <i class="far fa-user" style="color: black"></i>
-         <a href="{% url 'accounts:register' %}">Register</a>
-         {% csrf_token %}
-         <a href="{% url 'accounts:login' %}">Login</a>
-         {% csrf_token %}
-       </div>
      </div>
     </header>
-
-    <nav class="navbar navbar-expand-sm navbar-custom">
-    <a href="/" class="navbar-brand"><img src="{% static 'logo2.jpg' %}" class = navimage alt=""></a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCustom">
+    <nav class="navbar navbar-expand-md navbar-custom justify-content-evenly">
+      <a href="/" class="navbar-brand"><img src="{% static 'logo2.jpg' %}" class = navimage alt=""></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCustom">
         <i class="fa fa-bars fa-lg py-1 text-white"></i>
-    </button>
-    <div class="navbar-collapse collapse px-3" id="navbarCustom">
-        <ul class="navbar-nav">
+      </button>
+      <div class="navbar-collapse collapse justify-content-center align-items-center w-100" id="navbarCustom">
+        <ul class="navbar-nav mx-auto text-center">
             <li class="nav-item">
                 <a class="nav-link" href="{% url 'home' %}">Home</a>
             </li>
