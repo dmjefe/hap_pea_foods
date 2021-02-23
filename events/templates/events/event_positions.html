@@ -1,0 +1,23 @@
+{% extends 'base_layout.html '%}
+{% block title %} Hap-Pea Foods | Volunteer {% endblock %}
+{% block content %}
+{% load static %}
+
+  <div class="v_head">
+    <h1>Search Events</h1>
+  </div>
+
+    <h1 class="d-h1">Search Available Volunteer Positions</h1>
+        <form class="search-form" method="get">
+          {{ filter.form.as_p }}
+          <button type="submit">Search</button>
+        </form>
+
+    {% for position in filter.qs %}
+      <hr>
+      <p><span>Position Title:</span> {{ position.positionTitle }}</p>
+      <p><span>Event ID:</span> {{ position.eventID }}</p>
+    {% endfor %}
+
+
+{% endblock %}

@@ -4,7 +4,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth.decorators import login_required
 from django.forms import inlineformset_factory
 from .models import Event, Position, ClaimedPosition
-#from .filters import DonationFilter
+from .filters import EventFilter, PositionFilter
 from django.urls import reverse
 from urllib.parse import urlencode
 from . import forms
@@ -39,3 +39,16 @@ def add_positions(request, event_id):
     formset = PositionFormset(instance=event)
 
     return render(request, 'events/add_positions.html', {'formset' : formset})
+
+def event_positions(request):
+    inner_qs = ClaimedPosition.objects.all()
+    #available_positions_list = Position.objects.exclude(eventID_id = inner_qs)
+    available_positions_list = Position.objects.exclude(eventID_id = None)
+    #available_positions_list = Position.objects.all()
+    position_filter = PositionFilter(request.GET, queryset=available_positions_list)
+    return render(request, 'events/event_positions.html', {'filter': position_filter})
+    #return render(request, 'events/event_positions.html')
+
+
+#all_persons = Person.objects.all().values_list('car__id', flat=True)
+#auto_without_pers = Automobile.objects.exclude(id__in=all_persons)
