@@ -2,19 +2,19 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <title>{% block title %}{% endblock %}</title>
-    <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
-
   </head>
-  <body>
 
+  <body>
     <header>
      <div class="head-container">
        <div class="sm">
@@ -34,47 +34,57 @@
      </div>
     </header>
 
-     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-       <a class="navbar-brand" href="#"> <img src="{% static 'logo2.jpg' %}" width="125" height="125" alt=""></a>
-       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-         <span class="navbar-toggler-icon"></span>
-       </button>
-       <ul>
-         <li><a href="{% url 'home' %}">Home</a></li>
-         <li><a href="">About <i class="fas fa-caret-down"></i></a>
-           <ul>
-             <li><a href="{% url 'about' %}">About Us</a></li>
-             <li><a href="{% url 'partners' %}">Partners</a></li>
-           </ul>
-            <li><a href="">Donate <i class="fas fa-caret-down"></i></a>
-              <ul>
-                <li><a href="{% url 'moneydonations' %}">Donate Money</a></li>
-                <li><a href="{% url 'donations:search' %}">Search Donations</a></li>
-                <li><a href="{% url 'donations:donations' %}">Donate Food</a></li>
-                <li><a href="{% url 'volunteer' %}">Volunteer</a></li>
-              </ul>
+    <nav class="navbar navbar-expand-sm navbar-custom">
+    <a href="/" class="navbar-brand"><img src="{% static 'logo2.jpg' %}" class = navimage alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCustom">
+        <i class="fa fa-bars fa-lg py-1 text-white"></i>
+    </button>
+    <div class="navbar-collapse collapse px-3" id="navbarCustom">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="{% url 'home' %}">Home</a>
             </li>
-            <li><a href="{% url 'find_help' %}">Find Help</a></li>
-            <li><a href="">Facts and Media <i class="fas fa-caret-down"></i></a>
-              <ul>
-                <li><a href="">Hunger in the US</a></li>
-                <li><a href="{% url 'stories:stories' %}">Stories</a></li>
-                <li><a href="{% url 'facts' %}">Media</a></li>
-              </ul>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle px-3" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  About
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{% url 'about' %}">About Us</a>
+                    <a class="dropdown-item" href="{% url 'partners' %}">Partners</a>
+                </div>
             </li>
-            <li><a href="{% url 'contact' %}">Contact Us</a></li>
-            </ul>
-       <form class="form-inline">
-         <script async src="https://cse.google.com/cse.js?cx=3555679745fbd16c3"></script>
-         <div class="gcse-search"></div>
-         <!--<form action="https://cse.google.com/cse?cx=3555679745fbd16c3">
-           <input type="text" placeholder="Search.." name="search">
-           <button type="submit"><i class="fa fa-search"></i></button>
-         </form>-->
-      </form>
-    </div>
-   </nav>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle px-3" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Donate
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{% url 'moneydonations' %}">Donate Money</a>
+                    <a class="dropdown-item" href="{% url 'donations:search' %}">Search Donations</a>
+                    <a class="dropdown-item" href="{% url 'donations:donations' %}">Donate Food</a>
+                    <a class="dropdown-item" href="{% url 'volunteer' %}">Volunteer</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link px-3" href="{% url 'find_help' %}">Find Help</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle px-3" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Facts and Media
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Hunger in the US</a>
+                    <a class="dropdown-item" href="{% url 'stories:stories' %}">Stories</a>
+                    <a class="dropdown-item" href="{% url 'facts' %}">Media</a>
+                </div>
+            </li>
 
+        </ul>
+        <form class="form-inline">
+           <script async src="https://cse.google.com/cse.js?cx=3555679745fbd16c3"></script>
+           <div class="gcse-search"></div>
+        </form>
+    </div>
+</nav>
     <!-- Start Wrapper -->
     <div class="wrapper_container">
       {% if messages %}
