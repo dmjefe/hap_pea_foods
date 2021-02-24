@@ -13,11 +13,19 @@
           <button type="submit">Search</button>
         </form>
 
-    {% for position in filter.qs %}
+      {% for position in filter.qs %}
+        <p><span>Position Title:</span> {{ position.positionTitle }}</p>
+        <p><span>Event ID:</span> {{ position.eventID }}</p>
+        <p><span>Position ID:</span> {{ position.id }}</p>
       <hr>
-      <p><span>Position Title:</span> {{ position.positionTitle }}</p>
-      <p><span>Event ID:</span> {{ position.eventID }}</p>
-    {% endfor %}
+      {% endfor %}
+
+      <h1 class="d-h1">Search Available Volunteer Positions</h1>
+          <form class="search-form" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <button type="submit">Take Position</button>
+          </form>
 
 
 {% endblock %}

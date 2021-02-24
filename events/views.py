@@ -41,13 +41,23 @@ def add_positions(request, event_id):
     return render(request, 'events/add_positions.html', {'formset' : formset})
 
 def event_positions(request):
-    inner_qs = ClaimedPosition.objects.all()
-    #available_positions_list = Position.objects.exclude(eventID_id = inner_qs)
-    available_positions_list = Position.objects.exclude(eventID_id = None)
-    #available_positions_list = Position.objects.all()
-    position_filter = PositionFilter(request.GET, queryset=available_positions_list)
-    return render(request, 'events/event_positions.html', {'filter': position_filter})
-    #return render(request, 'events/event_positions.html')
+    if request.method == 'POST':
+        form = forms.ClaimPosition(request.POST) #Use if no images on form
+        if form.is_valid():
+            instance = form.save(commit=False)
+            instance.userID = request.user
+            instance.save()
+            #pk = instance.pk
+            #Should probably redirect to a "success" page or something.
+            return redirect('home')
+    else:
+        inner_qs = ClaimedPosition.objects.all()
+        #available_positions_list = Position.objects.exclude(eventID_id = inner_qs)
+        available_positions_list = Position.objects.exclude(queryset = None)
+        position_filter = PositionFilter(request.GET, queryset=available_positions_list)
+        form = forms.ClaimPosition()
+        #return render(request, 'events/event_positions.html', {'filter': position_filter})
+        return render(request, 'events/event_positions.html', {'filter': position_filter, 'form': form})
 
 
 #all_persons = Person.objects.all().values_list('car__id', flat=True)

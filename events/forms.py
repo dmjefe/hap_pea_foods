@@ -8,3 +8,8 @@ class CreateEvent(forms.ModelForm):
         model = models.Event
         fields = ['eventTitle', 'eventDate', 'startTime', 'endTime', 'address', 'city',
         'state', 'zip', ]
+
+class ClaimPosition(forms.ModelForm):
+    class Meta:
+        model = models.ClaimedPosition
+        fields = ['positionID', 'id']
