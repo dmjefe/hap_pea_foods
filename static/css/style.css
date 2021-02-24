@@ -8,7 +8,7 @@
 
 /* Header Container */
 header {
-  background: #;
+  background: #FFF;
 }
 
 .head-container {
@@ -18,15 +18,17 @@ header {
   justify-content: flex-end;
 }
 
-
+.head-container a {
+  padding-left: 10px;
+}
 
 .sm i {
   padding: 10px 10px;
 }
 
 .navbar {
-    min-height: 130px;
-    background-color: #5DAAB2;
+  min-height: 130px;
+  background-color: #5DAAB2;
 }
 
 .navbar-brand {
@@ -74,27 +76,6 @@ header {
 
 .navbar-expand-md .navbar-nav .dropdown-menu .navlink {
     position: absolute !important;
-}
-
-.system {
-  width: 13%;
-  padding-left: 2%;
-  margin-top: 3px;
-}
-
-.system i {
-  font-size: 18px;
-  padding: 5px;
-}
-
-.system a {
-  color: #000;
-  text-align: center;
-  padding: 5px;
-  text-decoration: none;
-  font-size: 16px;
-  background: #5DAAB2;
-  border-radius: 10px;
 }
 
 /* Wrapper */
@@ -440,10 +421,15 @@ a.highlight {
 
 /* Partners page CSS */
 
-.portal img {
-  white-space: nowrap;
+.partners img {
   padding-left: 100px;
   padding-bottom: 100px;
+}
+
+.partner-main h1 {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
 }
 
 /* Volunteer page CSS */
@@ -758,7 +744,6 @@ a.highlight {
 
 /* Money Donation page */
 
-
 .payment {
   background: #FFF;
   max-width: 400px;
@@ -865,7 +850,7 @@ a.highlight {
   font-size: 36px;
 }
 
-+/* Add Items Page */
+/* Add Items Page */
 
 .add_item_container {
   width: 100%;
