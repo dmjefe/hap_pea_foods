@@ -52,13 +52,7 @@ def event_positions(request):
             return redirect('home')
     else:
         inner_qs = ClaimedPosition.objects.all()
-        #available_positions_list = Position.objects.exclude(eventID_id = inner_qs)
-        available_positions_list = Position.objects.exclude(queryset = None)
+        available_positions_list = Position.objects.exclude(id__in=inner_qs)
         position_filter = PositionFilter(request.GET, queryset=available_positions_list)
         form = forms.ClaimPosition()
-        #return render(request, 'events/event_positions.html', {'filter': position_filter})
         return render(request, 'events/event_positions.html', {'filter': position_filter, 'form': form})
-
-
-#all_persons = Person.objects.all().values_list('car__id', flat=True)
-#auto_without_pers = Automobile.objects.exclude(id__in=all_persons)

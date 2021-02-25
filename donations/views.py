@@ -57,7 +57,6 @@ def search(request):
             #Should probably redirect to a "success" page or something.
             return redirect('home')
     else:
-        inner_qs = ClaimedDonation.objects.all()
         donation_list = Donation.objects.filter(claimeddonation = None)
         donation_filter = DonationFilter(request.GET, queryset=donation_list)
         form = forms.ClaimedDonation()
