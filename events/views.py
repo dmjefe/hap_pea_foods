@@ -55,4 +55,5 @@ def event_positions(request):
         available_positions_list = Position.objects.exclude(id__in=inner_qs)
         position_filter = PositionFilter(request.GET, queryset=available_positions_list)
         form = forms.ClaimPosition()
+        form.positionID = position_filter
         return render(request, 'events/event_positions.html', {'filter': position_filter, 'form': form})
