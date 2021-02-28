@@ -47,8 +47,6 @@ def event_positions(request):
             instance = form.save(commit=False)
             instance.userID = request.user
             instance.save()
-            #pk = instance.pk
-            #Should probably redirect to a "success" page or something.
             return redirect('home')
     else:
         inner_qs = ClaimedPosition.objects.all()

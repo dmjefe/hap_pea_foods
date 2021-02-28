@@ -9,10 +9,10 @@ class CreateDonation(forms.ModelForm):
         fields = ['userName', 'locationName', 'donationDate' ]
 
 class ClaimedDonation(forms.ModelForm):
+    donation_list = Donation.objects.filter(claimeddonation = None)
+    donationClaimed = forms.ModelChoiceField(queryset=donation_list)
     class Meta:
         model = models.ClaimedDonation
-        donation_list = Donation.objects.filter(claimeddonation = None)
-        donationClaimed = forms.ModelMultipleChoiceField(queryset=donation_list)
         fields = ['donationClaimed', 'claimingOrg', 'pickupDate',]
 
         def __init__(self, *args, **kwargs):

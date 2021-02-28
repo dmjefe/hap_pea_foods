@@ -13,16 +13,12 @@ from . import forms
 @login_required(login_url="/accounts/login/")
 def donation_create(request):
     if request.method == 'POST':
-        form = forms.CreateDonation(request.POST) #Use if no images on form
+        form = forms.CreateDonation(request.POST)
         if form.is_valid():
-            #form.save()
             instance = form.save(commit=False)
             instance.createdBy = request.user
             instance.save()
             pk = instance.pk
-            #return redirect('donations/items.html', pk = instance.objects.get(pk=pk))
-            #return redirect('donations/items.html', pk = Donation.objects.last(pk=pk))
-            #pk = instance.objects.get(pk=pk)
             url = str(pk) + '/'
             return redirect(url)
     else:
@@ -48,7 +44,7 @@ def add_items(request, donation_id):
 def search(request):
     #display only unclaimed donations.
     if request.method == 'POST':
-        form = forms.ClaimedDonation(request.POST) #Use if no images on form
+        form = forms.ClaimedDonation(request.POST)
         if form.is_valid():
             instance = form.save(commit=False)
             instance.contact = request.user
