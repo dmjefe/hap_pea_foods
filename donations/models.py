@@ -33,6 +33,9 @@ class Donation(models.Model):
     createdBy = models.ForeignKey(User, default=None, on_delete=models.CASCADE)
     #claimed = models.BooleanField(default=False)
 
+    def __str__(self):
+        return 'Claimed by: {}'.format(self.userName)
+
 class ClaimedDonation(models.Model):
     donationClaimed = models.ForeignKey(Donation, default=None, on_delete=models.CASCADE)
     contact = models.ForeignKey(User, default=None, on_delete=models.CASCADE)

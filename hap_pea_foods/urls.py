@@ -21,6 +21,12 @@ from django.conf.urls.static import static
 from django.conf import settings
 from . import views
 
+
+#styling changes to ADMIN site
+admin.site.site_header = 'HAP-PEA FOODS' # changes blue banner
+admin.site.index_title = 'ADMIN DASHBOARD' # changels title under blue banner
+admin.site.site_title = 'Hap-Pea Foods Admin' # changes browser tab title
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     url('about/', views.about, name="about"),
