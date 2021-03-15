@@ -125,6 +125,9 @@ USE_TZ = True
 #STATIC_ROOT is new for the Heroku deployment
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
+#STATICFILES_STORAGE added for Heroku Deplpyment.
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
 STATIC_URL = '/static/'
 
 #STATICFILES_DIRS = (
