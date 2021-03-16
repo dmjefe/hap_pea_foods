@@ -25,7 +25,7 @@ SECRET_KEY = 'v)))=itm_ogjzo84br$kvm=w&au%9%t6og35cmeij@s7y#lp+4'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['happeafoods-test.herokuapp.com']
+ALLOWED_HOSTS = ['happeafoods-test.herokuapp.com',  '127.0.0.1' ]
 #ALLOWED_HOSTS = ['.localhost', '127.0.0.1', '[::1]']
 
 
