@@ -131,7 +131,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 #STATICFILES_STORAGE added for Heroku Deplpyment.
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-STATIC_URL = '/static/'
+
+STATIC_URL = 'https://happeafoodsmedia.s3-us-west-1.amazonaws.com/static/'
+
 
 #STATICFILES_DIRS = (
 #    os.path.join(BASE_DIR, 'static'),
