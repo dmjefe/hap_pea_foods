@@ -62,3 +62,6 @@ def privacy(request):
 
 def terms_cond(request):
     return render(request, 'terms_cond.html')
+
+def googleb992673f1334124f.html(request):
+    return render(request, 'googleb992673f1334124f.html')
