@@ -1,5 +1,7 @@
 from django.contrib import admin
-from .models import Donation, Item, Organization, ClaimedDonation
+from django_google_maps import widgets as map_widgets
+from django_google_maps import fields as map_fields
+from .models import Donation, Item, Organization, ClaimedDonation, Location
 
 # Register your models here.
 
@@ -29,10 +31,18 @@ class ClaimedDonationAdmin(admin.ModelAdmin):
     def get_name(self, obj):
         return obj.claimingOrg.orgName
     get_name.admin_order_field  = 'claimingOrg'  #Allows column order sorting
-    get_name.short_description = 'Organization Name'  #Renames column head
+    get_name.short_description = 'Organization Name'  #Renames column
+
+class LocationAdmin(admin.ModelAdmin):
+    formfield_overrides = {
+        map_fields.AddressField: {
+          'widget': map_widgets.GoogleMapsAddressWidget(attrs={'data-map-type': 'roadmap'})},
+    }
+
 
 
 admin.site.register(Donation, DonationAdmin)
 admin.site.register(Item, ItemAdmin)
 admin.site.register(Organization, OrganizationAdmin)
 admin.site.register(ClaimedDonation, ClaimedDonationAdmin)
+admin.site.register(Location, LocationAdmin)

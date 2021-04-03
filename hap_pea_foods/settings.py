@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_google_maps',
     'stories',
     'accounts',
     'donations',
@@ -142,3 +143,5 @@ STATIC_URL = 'https://happeafoodsmedia.s3-us-west-1.amazonaws.com/static/'
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+GOOGLE_MAPS_API_KEY = 'AIzaSyCPxWrUymIOfqDXHXPMDjLCQsKaYA8T88g'
