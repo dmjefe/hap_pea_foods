@@ -3,5 +3,9 @@
 {% block content %}
 <h1><center>Find Help Page</center></h1><br/>
 <p>Welcome to our help page.</p>
-<center><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d16061592.832445618!2d-106.15539654442719!3d40.72404939967755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1613458972561!5m2!1sen!2sus" width="900" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></center>
+<!-- <center><iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d16061592.832445618!2d-106.15539654442719!3d40.72404939967755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sus!4v1613458972561!5m2!1sen!2sus" width="900" height="600" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></-->
+{% load easy_maps_tags %}
+
+{% easy_map "West Entrance, 600 E Veterans Way, Tempe, AZ 85287" 300 400 %}
+
 {% endblock %}
