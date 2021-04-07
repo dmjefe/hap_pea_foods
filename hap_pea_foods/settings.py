@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'django_google_maps',
     'easy_maps',
+    'qr_code',
     'stories',
     'accounts',
     'donations',

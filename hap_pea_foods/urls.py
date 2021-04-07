@@ -50,6 +50,7 @@ urlpatterns = [
     url('privacy/', views.privacy, name="privacy"),
     url('facts/', views.facts, name="facts"),
     url('terms_cond/', views.terms_cond, name="terms_cond"),
+    #path('', include('qr_code.urls', namespace='qr_code')),
     url('', views.homepage, name="home"),
 ]
 
