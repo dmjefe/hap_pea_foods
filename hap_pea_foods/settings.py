@@ -23,6 +23,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'v)))=itm_ogjzo84br$kvm=w&au%9%t6og35cmeij@s7y#lp+4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+#DEBUG = True
+
 DEBUG = True
 
 ALLOWED_HOSTS = ['happeafoods-test.herokuapp.com',  '127.0.0.1' ]
@@ -38,6 +40,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_google_maps',
+    'easy_maps',
+    'qr_code',
     'stories',
     'accounts',
     'donations',
@@ -143,3 +148,7 @@ STATIC_URL = 'https://happeafoodsmedia.s3-us-west-1.amazonaws.com/static/'
 MEDIA_URL = '/media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+GOOGLE_MAPS_API_KEY = 'AIzaSyCPxWrUymIOfqDXHXPMDjLCQsKaYA8T88g'
+EASY_MAPS_GOOGLE_KEY = 'AIzaSyCPxWrUymIOfqDXHXPMDjLCQsKaYA8T88g'
+EASY_MAPS_CENTER = (33.42431902487269, -111.92808355340672)

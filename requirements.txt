@@ -2,3 +2,6 @@ django
 gunicorn
 django-heroku
 django-filter
+django-google-maps
+django-easy-maps
+django-qr-code
