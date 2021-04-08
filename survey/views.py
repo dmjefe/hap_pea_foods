@@ -3,6 +3,7 @@ from .models import Question, Answer, Choice
 from .forms import CreateQuestionForm, CreateChoiceForm
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 
 def survey_list_view(request): # list view
@@ -35,6 +36,7 @@ def answer_view(request, question_id):
     question = Question.objects.get(pk=question_id)
     return render(request, 'survey/answer.html', {'question':question})
 
+@login_required
 def results_view(request, question_id): # for admin only
     result = Question.objects.get(pk=question_id)
     return render(request, 'survey/results.html', {'result':result})

@@ -39,7 +39,6 @@ urlpatterns = [
     url('events/', include('events.urls')),
     url('volunteer/', views.volunteer, name="volunteer"),
     url('portal/', views.portal, name="portal"),
-    url('logoutlanding/', views.loutoutlanding, name="logoutlanding"),
     url('contact/', views.contact, name="contact"),
     url('createevent/', views.createevent, name="createevent"),
     url('moneydonations/', views.moneydonations, name="moneydonations"),

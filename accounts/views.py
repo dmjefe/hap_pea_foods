@@ -3,6 +3,7 @@ from django.contrib.auth.forms import AuthenticationForm
 from django.contrib.auth import login, logout
 from django.contrib.auth.decorators import login_required
 from accounts.forms import *
+from django.contrib import messages
 
 
 # Create your views here.
@@ -11,13 +12,12 @@ def register_view(request):
         form = UserRegisterForm(request.POST)
         if form.is_valid():
             form.save()
-            #user = form.get_user()
-            #login(request, user)
-                #loguser in
-            return redirect ('home')
+            username = form.cleaned_data.get('username')
+            messages.success(request, f'Your account has been created. Please log in!')
+            return redirect('accounts/login')
     else:
         form = UserRegisterForm()
-    return render(request, 'accounts/register.html',{'form':form})
+    return render(request, 'accounts/register.html', {'form':form})
 
 def login_view(request):
     if request.method == 'POST':
@@ -34,15 +34,11 @@ def login_view(request):
         form = AuthenticationForm()
     return render(request, 'accounts/login.html', {'form':form})
 
-def logout_view(request):
-    if request.method=='POST':
-        logout(request)
-        return redirect('logoutlanding')
 
-@login_required(login_url="/accounts/login/") #This view nees to be fixed, it's logging the user out
+@login_required
 def profile_view(request):
     if request.method == 'POST':
-        form = forms.ProfileForm(request.POST) #Use if no images on form
+        form = forms.ProfileForm(request.POST)
         if form.is_valid():
             form.save()
     else:

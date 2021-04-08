@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 
+
 class Question(models.Model):
     title = models.TextField(null=True, blank=True)
     created_by = models.ForeignKey(User, null=True, blank=True, on_delete=models.CASCADE)
@@ -15,10 +16,10 @@ class Question(models.Model):
 class Choice(models.Model):
     question = models.ForeignKey('survey.Question', null=True, blank=True, on_delete=models.CASCADE)
     text = models.TextField(null=True, blank=True)
-    
+
     def __str__(self):
         return self.text
-    
+
     @property
     def vote(self):
         return self.answer_set.count()
@@ -29,4 +30,3 @@ class Answer(models.Model):
 
     def __str__(self):
         return self.user.first_name + '-' + self.choice.text
-

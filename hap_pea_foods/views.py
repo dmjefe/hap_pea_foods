@@ -27,9 +27,6 @@ def volunteer(request):
 def portal(request):
     return render(request, 'portal.html')
 
-def loutoutlanding(request):
-    return render(request, 'logoutlanding.html')
-
 def contact(request):
     return render(request, 'contact.html')
 

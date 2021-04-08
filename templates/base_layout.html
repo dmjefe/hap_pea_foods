@@ -2,28 +2,42 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <title>{% block title %}{% endblock %}</title>
+
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="google-site-verification" content="IUpq5v_b5xf3uMM3y1vAXFEgzreyeoDetMuNzTU5InU" />
+    <!-- bootstrap 4.0 CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- Style CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://happeafoodsmedia.s3-us-west-1.amazonaws.com/static/happeamap.js"></script>
+
+    <title>{% block title %}home{% endblock %}</title>
   </head>
   <body>
     <header>
      <div class="head-container">
        <div class="sm">
-         <i class="far fa-user" style="color: black"></i>
-         <a href="{% url 'accounts:register' %}">Register</a>
-         {% csrf_token %}
-         <a href="{% url 'accounts:login' %}">Login</a>
-         {% csrf_token %}
+         <!-- Register login Portal logout Links -->
+         {% if user.is_authenticated %}
+           <h5>Welcome {{user.username}}</h5>
+           <i class="far fa-user" style="color: black"></i>
+           <a href="{% url 'portal' %}">My Portal</a>
+           <a href="{% url 'accounts:logout' %}">Logout</a>
+         {% else %}
+           <i class="far fa-user" style="color: black"></i>
+           <a href="{% url 'accounts:register' %}">Register</a>
+           <a href="{% url 'accounts:login' %}">Login</a>
+        {% endif %}
+
+          <!-- Social Media Links -->
          <i class="fab fa-facebook-f" style="color: blue"></i>
          <i class="fab fa-twitter" style="color: lightblue"></i>
          <i class="fab fa-google-plus" style="color: green"></i>
@@ -32,6 +46,7 @@
        </div>
      </div>
     </header>
+    <!-- Start NavBar -->
     <nav class="navbar navbar-expand-md navbar-custom justify-content-evenly">
       <a href="/" class="navbar-brand"><img src="{% static 'logo2.jpg' %}" class = navimage alt=""></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCustom">
@@ -64,6 +79,9 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link px-3" href="{% url 'find_help' %}">Find Help</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link px-3" href="{% url 'list' %}">Survey Questions</a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle px-3" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
