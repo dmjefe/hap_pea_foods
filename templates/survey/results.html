@@ -1,0 +1,35 @@
+{% extends 'base_layout.html' %}
+{% block title %}Results View{% endblock %}
+{% block content %}
+
+    <h1 class="text-center">This is the Results View</h1>
+
+    <div class="col-md-6 offset-md-3">
+        <div class="col-lg-12">
+
+            <h2>{{ question.title }}</h2>
+        </div>
+
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                {% for choice in result.choices %}
+                <div>
+                    {{ choice.text }} ({{ choice.votes }})&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+                </div>
+                {% empty %}
+                <p>Sorry, this question doesn't have any choices!</p>
+                {% endfor %}
+            </div>
+            <p>Question created by {{ question.created_by.first_name }}</p>
+
+            <hr />
+
+            <a href="{% url 'list' %}" class="btn btn-info">Return To List</a>
+        </form>
+
+
+    </div>
+
+{% endblock %}

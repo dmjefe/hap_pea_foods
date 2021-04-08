@@ -24,13 +24,14 @@ from . import views
 
 #styling changes to ADMIN site
 admin.site.site_header = 'HAP-PEA FOODS' # changes blue banner
-admin.site.index_title = 'ADMIN DASHBOARD' # changels title under blue banner
+admin.site.index_title = 'ADMIN DASHBOARD' # changes title under blue banner
 admin.site.site_title = 'Hap-Pea Foods Admin' # changes browser tab title
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     url('about/', views.about, name="about"),
     url('donate/', include('donations.urls')),
+    url('survey/', include('survey.urls')),
     url('find_help/', views.find_help, name="find_help"),
     url('partners/', views.partners, name="partners"),
     url('accounts/', include('accounts.urls')),
@@ -40,8 +41,6 @@ urlpatterns = [
     url('portal/', views.portal, name="portal"),
     url('logoutlanding/', views.loutoutlanding, name="logoutlanding"),
     url('contact/', views.contact, name="contact"),
-    url('survey/', views.survey, name="survey"),
-    url('surveyresults/', views.surveyresults, name="surveyresults"),
     url('createevent/', views.createevent, name="createevent"),
     url('moneydonations/', views.moneydonations, name="moneydonations"),
     url('organizations/', views.organizations, name="organizations"),

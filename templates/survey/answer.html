@@ -1,0 +1,41 @@
+{% extends 'base_layout.html' %}
+{% block title %}Answer View{% endblock %}
+{% block content %}
+
+    <h1 class="text-center">This is the Answer View</h1>
+
+    <div class="col-md-6 offset-md-3">
+        <div class="col-lg-12">
+
+            <h2>{{ question.title }}</h2>
+        </div>
+
+        <form method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                {% for choice in question.choices %}
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="survey" value="option" required>
+                        {{ choice.text }}
+                    </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </div>
+                {% empty %}
+                <p>Sorry, this question doesn't have any choices!</p>
+                <a href="{% url 'list' %}" class="btn btn-info">Return To List</a>
+
+            </div>
+            {% endfor %}
+            <p>Question created by {{ question.created_by.username }}</p>
+
+            <hr />
+            <button type="submit" class="btn btn-success">Submit</button>
+
+
+
+        </form>
+
+
+    </div>
+
+{% endblock %}

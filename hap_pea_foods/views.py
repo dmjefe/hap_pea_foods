@@ -33,12 +33,6 @@ def loutoutlanding(request):
 def contact(request):
     return render(request, 'contact.html')
 
-def survey(request):
-    return render(request, 'survey.html')
-
-def surveyresults(request):
-    return render(request, 'surveyresults.html')
-
 def createevent(request):
     return render(request, 'createevent.html')
 
