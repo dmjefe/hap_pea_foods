@@ -5,10 +5,10 @@ from .models import Question, Choice, Answer
 class QuestionAdmin(admin.ModelAdmin):
     pass
 
-@admin.register(Answer)
-class AnswerAdmin(admin.ModelAdmin):
-    pass
-
 @admin.register(Choice)
 class ChoiceAdmin(admin.ModelAdmin):
+    pass
+
+@admin.register(Answer)
+class AnswerAdmin(admin.ModelAdmin):
     pass

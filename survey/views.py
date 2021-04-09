@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from .models import Question, Answer, Choice
-from .forms import CreateQuestionForm, CreateChoiceForm
+from .forms import CreateQuestionForm, CreateChoiceForm, SelectChoiceForm
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -34,7 +34,11 @@ def question_choice_view(request):
 
 def answer_view(request, question_id):
     question = Question.objects.get(pk=question_id)
+    if request.method == "POST":
+        messages.success(request, f'Your choice was created succesfully!')
+        return redirect('list')
     return render(request, 'survey/answer.html', {'question':question})
+
 
 @login_required
 def results_view(request, question_id): # for admin only

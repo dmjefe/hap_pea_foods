@@ -16,7 +16,7 @@
                 {% for choice in question.choices %}
                 <div class="radio">
                     <label>
-                        <input type="radio" name="survey" value="option" required>
+                        <input type="radio" name="answer" value="{{choice_id}}">
                         {{ choice.text }}
                     </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </div>
@@ -26,15 +26,12 @@
 
             </div>
             {% endfor %}
-            <p>Question created by {{ question.created_by.username }}</p>
-
+          
             <hr />
             <button type="submit" class="btn btn-success">Submit</button>
 
-
-
         </form>
-
+        <p>Question created by {{ question.created_by.username }}</p>
 
     </div>
 

@@ -12,12 +12,13 @@
       {% else %}
       {% endif %}
         <br/><br/>
+        {% if questions %}
         <ul class="list-group">
             {% for question in questions %}
             <li class="list-group-item">
                 <strong> {{ question.title }} </strong>
                 <span class="float-right"> <!--  float-end -->
-                  {% if user.is_admin %}
+                  {% if user.is_superuser %}
                     <a href="{% url 'answer' question.id %}" class="btn btn-info btn-sm">Answer</a>
                     <a href="{% url 'results' question.id %}" class="btn btn-outline-primary btn-sm">View Results</a>
                   {% else %}
@@ -27,5 +28,8 @@
             </li>
             {% endfor %}
         </ul>
+        {% else %}
+          <p>There are currently no questions.</p>
+        {% endif %}
     </div>
 {% endblock %}

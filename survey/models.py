@@ -14,19 +14,16 @@ class Question(models.Model):
         return self.choice_set.all()
 
 class Choice(models.Model):
-    question = models.ForeignKey('survey.Question', null=True, blank=True, on_delete=models.CASCADE)
+    question = models.ForeignKey('survey.Question', on_delete=models.CASCADE)
     text = models.TextField(null=True, blank=True)
 
     def __str__(self):
         return self.text
 
     @property
-    def vote(self):
+    def votes(self):
         return self.answer_set.count()
 
 class Answer(models.Model):
-    user = models.ForeignKey(User, null=True, blank=True, on_delete=models.CASCADE)
-    choice = models.ForeignKey(Choice, null=True, blank=True, on_delete=models.CASCADE)
-
-    def __str__(self):
-        return self.user.first_name + '-' + self.choice.text
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    choice = models.ForeignKey(Choice, on_delete=models.CASCADE)

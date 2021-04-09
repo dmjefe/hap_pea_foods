@@ -14,15 +14,15 @@
             {% csrf_token %}
             <div class="form-group">
                 {% for choice in result.choices %}
-                <div>
-                    {{ choice.text }} ({{ choice.votes }})&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <div>
+                      Votes for "{{ choice.text }}": ({{ choice.votes }})
 
-                </div>
+                  </div>
                 {% empty %}
-                <p>Sorry, this question doesn't have any choices!</p>
+                  <p>Sorry, this question doesn't have any choices!</p>
                 {% endfor %}
             </div>
-            <p>Question created by {{ question.created_by.first_name }}</p>
+            <p>Question created by {{ question.created_by.username }}</p>
 
             <hr />
 
