@@ -240,6 +240,10 @@ footer {
   padding-top: 10px;
 }
 
+.event{
+  border: 1px solid #E32636; /* Alizarin Crimson */
+}
+
 .home-calendar {
   padding-top: 10px;
   padding-left: 100px;
