@@ -7,26 +7,40 @@
     <div class="col-md-6 offset-md-3">
         <div class="col-lg-12">
 
-            <h2>{{ question.title }}</h2>
+            <h2>{{ question.question }}</h2>
         </div>
 
         <form method="POST">
             {% csrf_token %}
             <div class="form-group">
-                {% for choice in question.choices %}
                 <div class="radio">
                     <label>
-                        <input type="radio" name="answer" value="{{choice_id}}">
-                        {{ choice.text }}
-                    </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <input type="radio" name="answer" value="option1">
+                        {{ question.option_one }}
+                    </label>
                 </div>
-                {% empty %}
-                <p>Sorry, this question doesn't have any choices!</p>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="answer" value="option2">
+                        {{ question.option_two }}
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="answer" value="option3">
+                        {{ question.option_three }}
+                    </label>
+                </div>
+                <div class="radio">
+                    <label>
+                        <input type="radio" name="answer" value="option4">
+                        {{ question.option_four }}
+                    </label>
+                </div>
                 <a href="{% url 'list' %}" class="btn btn-info">Return To List</a>
 
             </div>
-            {% endfor %}
-          
+
             <hr />
             <button type="submit" class="btn btn-success">Submit</button>
 

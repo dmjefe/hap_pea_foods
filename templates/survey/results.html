@@ -2,27 +2,31 @@
 {% block title %}Results View{% endblock %}
 {% block content %}
 
-    <h1 class="text-center">This is the Results View</h1>
+    <h1 class="text-center">Survey Responses</h1>
 
     <div class="col-md-6 offset-md-3">
         <div class="col-lg-12">
 
-            <h2>{{ question.title }}</h2>
+            <h2>Responses for the question: <br />"{{ result.question }}"</h2>
         </div>
 
         <form method="POST">
             {% csrf_token %}
             <div class="form-group">
-                {% for choice in result.choices %}
                   <div>
-                      Votes for "{{ choice.text }}": ({{ choice.votes }})
-
+                      Responses for "{{ result.option_one }}": ({{ result.option_one_count }})
                   </div>
-                {% empty %}
-                  <p>Sorry, this question doesn't have any choices!</p>
-                {% endfor %}
+                  <div>
+                      Responses for "{{ result.option_two }}": ({{ result.option_two_count }})
+                  </div>
+                  <div>
+                      Responses for "{{ result.option_three }}": ({{ result.option_three_count }})
+                  </div>
+                  <div>
+                      Responses for "{{ result.option_four }}": ({{ result.option_four_count }})
+                  </div>
             </div>
-            <p>Question created by {{ question.created_by.username }}</p>
+            <p>Total Responses:  {{ result.total }}</p>
 
             <hr />
 
