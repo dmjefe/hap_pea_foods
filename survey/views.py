@@ -41,6 +41,9 @@ def results_view(request, questionnaire_id): # for admin only
     result = Questionnaire.objects.get(pk=questionnaire_id)
     return render(request, 'survey/results.html', {'result':result})
 
+def qrCode(request): # list view
+    return render(request, 'survey/qrCode.html')
+
 #def survey_list_view(request): # list view
 #    questions = Question.objects.all()
 #    return render(request, 'survey/list.html', {'questions':questions})

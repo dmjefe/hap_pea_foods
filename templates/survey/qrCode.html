@@ -1,0 +1,14 @@
+{% extends 'base_layout.html' %}
+{% block title %}Survey QR Code{% endblock %}
+
+{% block content %}
+    <h1 class="text-center">Survey QR Code</h1>
+{% load qr_code %}
+
+<p class="text-center">Please use this QR Code to distribute the your survey.</p>
+
+<div class="text-center">
+{% qr_from_text "https://happeafoods-test.herokuapp.com/survey/list" size="L" %}
+</div>
+
+{% endblock %}
