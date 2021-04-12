@@ -12,7 +12,7 @@
 
         <form method="POST">
             {% csrf_token %}
-            <div class="form-group">
+            <div class="site-form">
                 <div class="radio">
                     <label>
                         <input type="radio" name="answer" value="option1">
@@ -37,15 +37,13 @@
                         {{ question.option_four }}
                     </label>
                 </div>
-                <a href="{% url 'list' %}" class="btn btn-info">Return To List</a>
+                <button type="submit" class="btn btn-success">Submit</button>
 
             </div>
 
             <hr />
-            <button type="submit" class="btn btn-success">Submit</button>
-
+            <a href="{% url 'list' %}" class="btn btn-info">Return To List</a>
         </form>
-        <p>Question created by {{ question.created_by.username }}</p>
 
     </div>
 

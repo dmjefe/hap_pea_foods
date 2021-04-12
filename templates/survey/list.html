@@ -1,11 +1,11 @@
 {% extends 'base_layout.html' %}
 {% block title %}List View{% endblock %}
 
-
 {% block content %}
     <h1 class="text-center">Survey Questions</h1>
     <!-- For some reason there is a ton of space between these two items -->
-    <div class="col-md-6 offset-md-3" style="border:solid 5px orange;">
+    <div class="col-md-6 offset-md-3">
+      <div class="site-form">
       {% if user.is_authenticated %}
         <center><a href="{% url 'create' %}" class="btn btn-info btn-sm">New Question</a>
         <a href="{% url 'choice' %}" class="btn btn-outline-primary btn-sm">Create Choices</a></center>
@@ -31,5 +31,6 @@
         {% else %}
           <p>There are currently no questions.</p>
         {% endif %}
+        </div>
     </div>
 {% endblock %}

@@ -1047,3 +1047,10 @@ body {
 #legend img {
   vertical-align: middle;
 }
+
+.form-group {
+  border: 10px solid #ff704d; /* grapefruit */
+  border-style: ridge;
+  border-radius: 4px;
+  padding: 20px;
+}
