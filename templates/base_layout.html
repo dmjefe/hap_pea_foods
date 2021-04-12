@@ -74,11 +74,20 @@
                     <a class="dropdown-item" href="{% url 'moneydonations' %}">Donate Money</a>
                     <a class="dropdown-item" href="{% url 'donations:search' %}">Search Donations</a>
                     <a class="dropdown-item" href="{% url 'donations:donations' %}">Donate Food</a>
-                    <a class="dropdown-item" href="{% url 'volunteer' %}">Volunteer</a>
+                    <a class="dropdown-item" href="{% url 'events:event_positions' %}">Volunteer</a>
                 </div>
             </li>
             <li class="nav-item">
                 <a class="nav-link px-3" href="{% url 'find_help' %}">Find Help</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle px-3" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Events
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="{% url 'events:create_event' %}">Create an Event</a>
+                    <a class="dropdown-item" href="{% url 'events:event_positions' %}">Volunteer for an Event</a>
+                </div>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle px-3" href="#" id="navbarDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

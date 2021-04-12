@@ -6,8 +6,8 @@ from .models import Event, Position, ClaimedPosition
 class CreateEvent(forms.ModelForm):
     class Meta:
         model = models.Event
-        fields = ['eventTitle', 'eventDate', 'startTime', 'endTime', 'address', 'city',
-        'state', 'zip', ]
+        fields ='__all__'
+        #fields = ['eventTitle', 'eventDate', 'startTime', 'endTime', 'address', 'city', 'state', 'zip', ]
 
 class ClaimPosition(forms.ModelForm):
     inner_qs = ClaimedPosition.objects.all()
