@@ -70,30 +70,17 @@
 
       <div class="home-calendar">
         <h1>Calendar<a href="https://www.timeanddate.com/calendar/"><i class="far fa-calendar-alt" style="color: black"></i></a></h1> <!-- Module insert here for calendar -->
-        <div class="event">
-          <h3>Food Drive</h3>
-          <p>Location: <a href="{% url 'find_help' %}">Arizona State University</a></p>
-          <p>Date and Time: 05/03/2021  12:00pm MST</p>
-          <p>Come and drop off donations of peanut butter, tuna, pasta, rice, cereal, and other non-perishable items to help provide meals for your neighbors in need.</p>
+
+        <div class="stories">
+          {% for event in event_list %}
+            <div class= "event">
+              <h2>{{event.eventTitle}}</</h2>
+              <p>{{event.eventDate}}</p>
+              <p> Start: {{event.startTime}} End: {{event.endTime}}</p>
+            </div>
+          {% endfor %}
         </div>
-        <div class="event">
-          <h3>Volunteer Signups</h3>
-          <p>Location: <a href="{% url 'find_help' %}">Salvation Army Food Distribution</a></p>
-          <p>Date and Time: 05/10/2021  12:00pm MST</p>
-          <p>Salvation Army Food Distrubution of Tempe, AZ is looking for volunteers! Sign up and learn how you can help your community fight hunger! </p>
-        </div>
-        <div class="event">
-          <h3>Event 3</h3>
-          <p>Location: Somewhere</p>
-          <p>Date and Time: 1/1/000  12:00pm est</p>
-          <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus enim euismod vehicula blandit. Aliquam ac sem nisi. Curabitur eget mi quis dui vulputate efficitur. Mauris mi justo, tincidunt aliquet dapibus vitae, tristique sit amet neque. Etiam bibendum eros nec elementum pharetra. Vestibulum eget mi vel velit ultricies ullamcorper. Ut congue at sem eu tincidunt. </p>
-        </div>
-        <div class="event">
-          <h3>Event 4</h3>
-          <p>Location: Somewhere</p>
-          <p>Date and Time: 1/1/000  12:00pm est</p>
-          <p>Description: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque finibus enim euismod vehicula blandit. Aliquam ac sem nisi. Curabitur eget mi quis dui vulputate efficitur. Mauris mi justo, tincidunt aliquet dapibus vitae, tristique sit amet neque. Etiam bibendum eros nec elementum pharetra. Vestibulum eget mi vel velit ultricies ullamcorper. Ut congue at sem eu tincidunt. </p>
-        </div>
+
       </div> <!-- end calendar -->
     </div> <!-- end column -->
   </div> <!-- end l_container -->
