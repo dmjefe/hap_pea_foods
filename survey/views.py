@@ -69,6 +69,7 @@ def question_choice_view(request):
     else:
         form = CreateChoiceForm()
     return render(request, 'survey/choice.html', {'form':form})
+
 #def answer_view(request, question_id):
 #    question = Question.objects.get(pk=question_id)
 #    if request.method == "POST":
