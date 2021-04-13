@@ -3,17 +3,14 @@
 {% block content %}
 {% load static %}
 
-<div class="d_img">
-  <img src="{% static '004-canned-food.png' %}">
-</div>
+<div class="d_img"><img src="{% static '004-canned-food.png' %}"></div>
 
-<h1><center>Create A Donation</center></h1><br/>
+<h1 class="text-center">Create A Donation</h1>
 
   <form class="site-form" method="post">
-    {% csrf_token %}
-    {{form}}
-  <input type="submit" value="Create Donation">
+      {% csrf_token %}
+      {{form}}
+    <input type="submit" value="Create Donation">
   </form>
-<div class="clear">
 
 {% endblock %}

@@ -526,47 +526,6 @@ a.highlight {
 
 
 /* User Portal page CSS */
-.up_head h1{
-  text-align: center;
-}
-
-.portal {
-  width: 95%;
-  overflow: hidden;
-  margin: 20px auto;
-  padding: 20px;
-  display: flex;
-}
-
-.portal p {
-  font-size: 16px;
-}
-
-.portal ul {
-  padding: 0px;
-  margin: 0px;
-  text-align: center;
-  align-content: center;
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.portal ul li {
-  list-style: none;
-  width: 150px;
-  height: 150px;
-  margin: 40px;
-  border: 2px solid #3C7980;
-}
-
-.portal li {
-  padding: 20px;
-}
-
-.portal i {
-  padding: 20px;
-  font-size: 48px;
-}
 
 
 /* Contact Us page */

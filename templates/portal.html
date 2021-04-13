@@ -8,47 +8,46 @@
 		<h1 class="text-center">{{ user }}'s Portal</h1>
 
 		<div class="row">
-			<div class="col">
-				<h3>My Profile</h3><br/>
-				<i class="far fa-user" style="color:#000"></i><br/><br/>
-				<p><a href="{% url 'accounts:profile' %}">View and Edit Profile<br/></a></p>
+			<div class="col" style="border:solid 2px #084f6c; margin:2%;">
+				<h3 class="text-center">My Profile</h3><br/>
+				<center><i class="far fa-user" style="color:#000; font-size:3rem;"></i><br/><br/>
+				<p><a href="{% url 'accounts:profile' %}">View and Edit Profile<br/></a></p></center>
 			</div>
-			<div class="col">
-				<h3>Donations</h3><br/>
-				<i class="fas fa-hands-helping" style="color:#bf8040"></i><br/><br/>
+			<div class="col" style="border:solid 2px #084f6c; margin:2%;">
+				<h3 class="text-center">Donations</h3><br/>
+				<center><i class="fas fa-hands-helping" style="color:#bf8040; font-size:3rem;"></i><br/><br/>
 				<p><a href="{% url 'donations:donations' %}">Add A Donation<br/>
-        <a href="{% url 'donations:search' %}">Search Donations<br/>
-				<a href="{% url 'moneydonations' %}">Make a Monetary Donatio<br/></p></a>
+        <a href="{% url 'donations:search' %}">Search Donations<br/></a></p></center>
 			</div>
-			<div class="col">
-				<h3>Survey Questions</h3><br/>
-				<i class="fas fa-poll" style="color:##66ccff"></i><br/><br/>
+			<div class="col" style="border:solid 2px #084f6c; margin:2%;">
+				<h3 class="text-center">Survey</h3><br/>
+				<center><i class="fas fa-poll" style="color:##66ccff; font-size:3rem;"></i><br/><br/>
 				<p><a href="{% url 'list' %}">View Questions<br/>
 				<a href="{% url 'create' %}">Add A Question<br/>
-				<a href="{% url 'choice' %}">Add Choices to Questions<br/></p></a>
+				<a href="{% url 'choice' %}">Add Choices to Questions<br/></a></p></center>
 			</div>
 		</div>
 
 		<div class="row">
-			<div class="col">
-				<h3>Events</h3><br/>
-				<i class="far fa-calendar-alt" style="color:#44ff33"></i><br/><br/>
+			<div class="col" style="border:solid 2px #084f6c; margin:2%;">
+				<h3 class="text-center">Events</h3><br/>
+				<center><i class="far fa-calendar-alt" style="color:#44ff33; font-size:3rem;"></i><br/><br/>
 				<p><a href="{% url 'events:create_event' %}">Create An Event<br/>
 				<a href="{% url 'events:event_positions' %}">Event Positions<br/>
-        <a href="{% url 'volunteer' %}">Volunteer for Event<br/></a>
+        <a href="{% url 'volunteer' %}">Volunteer for Event<br/></a></p></center>
 			</div>
-			<div class="col">
-				<h3>Stories</h3><br/>
-				<i class="fas fa-book-reader" style="color:#9933ff"></i><br/><br/>
+			<div class="col" style="border:solid 2px #084f6c; margin:2%;">
+				<h3 class="text-center">Stories</h3><br/>
+				<center><i class="fas fa-book-reader" style="color:#9933ff; font-size:3rem;"></i><br/><br/>
 				<p><a href="{% url 'stories:stories' %}">View Stories<br/>
-				<a href="{% url 'stories:create' %}">Create A Story<br/></a>
+				<a href="{% url 'stories:create' %}">Create A Story<br/></a></p></center>
 			</div>
-			<div class="col">
-				<h3>Policies</h3><br/>
-				<i class="far fa-file-alt" style="color:#7e7d75"></i><br/><br/>
+			<div class="col" style="border:solid 2px #084f6c; margin:2%;">
+				<h3 class="text-center">Policies</h3><br/>
+				<center><i class="far fa-file-alt" style="color:#7e7d75; font-size:3rem;"></i><br/><br/>
 				<p><a href="{% url 'privacy' %}">Privacy Statement<br/>
 				<a href="{% url 'terms_cond' %}">Terms and Conditions<br/>
-				<a href="{% url 'non_disc_stmt' %}">Non Discrimination Statement<br/></p></a>
+				<a href="{% url 'non_disc_stmt' %}">Non Discrimination Statement<br/></a></p></center>
 			</div>
 		</div>
 

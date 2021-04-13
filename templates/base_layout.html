@@ -11,7 +11,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <!-- Style CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <!-- Icon for page tab -->
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
+    <!-- font awesome stylesheet  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -71,7 +73,6 @@
                   Donate
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="{% url 'moneydonations' %}">Donate Money</a>
                     <a class="dropdown-item" href="{% url 'donations:search' %}">Search Donations</a>
                     <a class="dropdown-item" href="{% url 'donations:donations' %}">Donate Food</a>
                     <a class="dropdown-item" href="{% url 'events:event_positions' %}">Volunteer</a>
@@ -110,6 +111,7 @@
             </li>
 
         </ul>
+        <!-- Search Google Form -->
         <form class="form-inline">
            <script async src="https://cse.google.com/cse.js?cx=3555679745fbd16c3"></script>
            <div class="gcse-search"></div>
@@ -118,6 +120,7 @@
 </nav>
     <!-- Start Wrapper -->
     <div class="wrapper_container">
+      <!-- messages -->
       {% if messages %}
         {% for message in messages %}
         <div class="alert alert-{{ message.tags }}">
@@ -125,11 +128,15 @@
         </div>
         {% endfor %}
       {% endif %}
+
+      <!-- begin content for wrapper -->
       {% block content %}
+
       {% endblock %}
     </div>
     <!-- End wrapper -->
 
+    <!-- FOOTER -->
     <footer>
       <div class="foot-container">
 
@@ -154,21 +161,20 @@
               <li><a href="{% url 'about' %}">About</a></li>
               <li><a href="{% url 'partners' %}">Partners</a></li>
               <li><a href="{% url 'stories:stories' %}">Stories</a></li>
-              <li><a href="{% url 'volunteer' %}">Volunteer</a></li>
+              <li><a href="{% url 'facts' %}">Facts and Media</a></li>
               <li><a href="{% url 'find_help' %}">Find Help</a></li>
-              <li><a href="{% url 'donations:donations' %}">Donate</a></li>
-              <li><a href="{% url 'contact' %}">Contact Us</a></li>
             </ul>
           </div>
           <div class="foot-links-2"><!-- flex box 3 -->
             <ul>
-              <li><a href="{% url 'list' %}">List Survey Questions</a></li>
-              <li><a href="{% url 'organizations' %}">Organizations</a></li>
-              <li><a href="{% url 'facts' %}">Facts and Media</a></li>
               <li><a href="{% url 'portal' %}">My Portal</a></li>
-              <li><a href="{% url 'events:create_event' %}">Create an Event</a></li>
-              <li><a href="{% url 'mycalendar' %}">My Calendar</a></li>
-              <li><a href="{% url 'non_disc_stmt' %}">Non Discrimination Statement</a></li>
+              <li><a href="{% url 'list' %}">Survey Questions</a></li>
+              <li><a href="{% url 'volunteer' %}">Volunteer</a></li>
+              <li><a href="{% url 'events:create_event' %}">Create an Event</a></li>              
+              <li><a href="{% url 'donations:donations' %}">Donate</a></li>
+              <li><a href="{% url 'donations:search' %}">Search Donations</a></li>
+              <li><a href="{% url 'organizations' %}">Organizations</a></li>
+
             </ul>
           </div>
 
@@ -180,7 +186,7 @@
           </div>
 
           <div class="contact"><!-- flex box 5 -->
-            <h2>Contact Us</h2>
+            <h2><a href="{% url 'contact' %}">Contact Us</a></h2>
             <ul>
               <li><i class="fa fa-map-marked-alt" style="color: black"></i><a href="https://maps.google.com">Google Maps</a></li>
               <li><i class="fa fa-city" style="color: black"></i>1234 A Random Street, City, State, 00000</li>
@@ -192,7 +198,9 @@
 
         <div class="foot-columns">
           <div class="copyright">
-            <p>Copyright &copy; 2021 Website Created by David Boss, Suzanne Kaufman, and Mallory Dodds. All Rights Reserved.  <a href="{% url 'terms_cond' %}">Terms and Conditions</a><a href="{% url 'privacy' %}">Privacy Policy</a></p>
+            <p>Copyright &copy; 2021 Website Created by David Boss, Suzanne Kaufman, and Mallory Dodds. All Rights Reserved.
+              <br />
+              <a href="{% url 'terms_cond' %}">Terms and Conditions</a> | <a href="{% url 'privacy' %}">Privacy Policy</a> | <a href="{% url 'non_disc_stmt' %}">Non Discrimination Statement</a></p>
           </div>
         </div>
 
