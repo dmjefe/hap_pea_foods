@@ -1,9 +1,17 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from events.models import Event
+import datetime
 
 def homepage(request):
     #return HttpResponse('Homepage')
-    return render(request, 'homepage.html')
+    today = datetime.date.today()
+    event_list = []
+    raw_list = Event.objects.all().order_by('eventDate')
+    for event in raw_list:
+        if event.eventDate >= today:
+            event_list.append(event)
+    return render(request, 'homepage.html', {'event_list':event_list})
 
 def about(request):
     #return HttpResponse('About')
