@@ -21,7 +21,7 @@ def story_create(request):
         form = forms.CreateStory(request.POST) #Use if no images on form
         if form.is_valid():
             form.save()
-            #redirect('home')
+            return redirect("stories:stories")
     else:
         form = forms.CreateStory()
     return render(request, 'stories/story_create.html', {'form':form})
