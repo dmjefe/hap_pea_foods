@@ -2,17 +2,16 @@
 {% block title %}Results View{% endblock %}
 {% block content %}
 
-    <h1 class="text-center">Survey Responses</h1>
-
-    <div class="col-md-6 offset-md-3">
+    <div class="col-md-6 offset-md-3" style="padding: 5%;">
         <div class="col-lg-12">
 
-            <h2>Responses for the question: <br />"{{ result.question }}"</h2>
+            <h2 class="text-center">Responses for the question:<br /> <br />
+            "{{ result.question }}"</h2>
         </div>
 
         <form method="POST">
             {% csrf_token %}
-            <div class="form-group">
+            <div class="form-group" style="border: 10px solid #FF704D; border-style: ridge; padding: 15px;">
                   <div>
                       Responses for "{{ result.option_one }}": ({{ result.option_one_count }})
                   </div>

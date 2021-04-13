@@ -1,20 +1,53 @@
 {% extends 'base_layout.html' %}
-{% block title %}Create View{% endblock %}
+{% block title %} Hap-Pea Foods | New Question {% endblock %}
+{% load widget_tweaks %}
 
 
 {% block content %}
-<h3 class="text-center">Create a New Survey Question</h3>
-    <div class="col-md-6 offset-md-3">
+<h3 class="text-center" style="padding: 5%;">Create a New Survey Question</h3><br/>
+    <div class="col-md-6 offset-md-3" style="border: 10px solid #FF704D; border-style: ridge; padding: 2%;" >
         <form method="POST">
             {% csrf_token %}
 
-            {{ form.as_p }}
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="form-group">
+                  <label for="quesiton">Please enter in your question:</label>
+                  {% render_field form.question class="form-control" rows="2" %}
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label for="option1">Option 1</label>
+                  {% render_field form.option_one class="form-control" %}
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label for="option2">Option 2</label>
+                  {% render_field form.option_two class="form-control" %}
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label for="option3">Option 3</label>
+                  {% render_field form.option_three class="form-control" %}
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-group">
+                  <label for="option4">Option 4</label>
+                  {% render_field form.option_four class="form-control" %}
+                </div>
+              </div>
+            </div>
+
+
             <br/>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
         <br /><br />
         <a href="{% url 'portal' %}" class="btn btn-success">Return To Portal</a>
     </div>
-
 
 {% endblock %}

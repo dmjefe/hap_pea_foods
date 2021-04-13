@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'donations',
     'events',
     'survey',
+    'widget_tweaks',
 ]
 
 MIDDLEWARE = [

@@ -5,10 +5,9 @@
     <h1 class="text-center">Survey Questions</h1>
     <!-- For some reason there is a ton of space between these two items -->
     <div class="col-md-6 offset-md-3">
-      <div class="site-form">
+      <div class="container" style="border: 10px solid #FF704D; border-style: ridge; padding: 2%;">
       {% if user.is_authenticated %}
-        <center><a href="{% url 'create' %}" class="btn btn-info btn-sm">New Question</a>
-        <a href="{% url 'choice' %}" class="btn btn-outline-primary btn-sm">Create Choices</a></center>
+        <center><a href="{% url 'create' %}" class="btn btn-info btn-sm">Create A New Question</a></center>
       {% else %}
       {% endif %}
         <br/><br/>

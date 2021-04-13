@@ -11,6 +11,8 @@ def survey_create_view(request):
         form = QuestionnaireForm(request.POST)
         if form.is_valid():
             form.save()
+            messages.success(request, f'Your survey question was created succesfully!')
+            return redirect('list')
     else:
         form = QuestionnaireForm()
     return render(request, 'survey/create.html', {'form':form})
@@ -32,7 +34,7 @@ def answer_view(request, questionnaire_id):
         elif selected_option == "option4":
             question.option_four_count += 1
         question.save()
-        messages.success(request, f'Your choice was created succesfully!')
+        messages.success(request, f'Your answer was submitted succesfully!')
         return redirect('list')
     return render(request, 'survey/answer.html', {'question':question})
 
@@ -44,41 +46,13 @@ def results_view(request, questionnaire_id): # for admin only
 def qrCode(request): # list view
     return render(request, 'survey/qrCode.html')
 
-#def survey_list_view(request): # list view
-#    questions = Question.objects.all()
-#    return render(request, 'survey/list.html', {'questions':questions})
-
-#def survey_create_view(request):
-#    if request.method == 'POST':
-#        form = CreateQuestionForm(request.POST)
-#        if form.is_valid():
-#            form.save()
-#            messages.success(request, f'Your question was created succesfully!')
-#            return redirect('list')
-#    else:
-#        form = CreateQuestionForm()
-#    return render(request, 'survey/create.html', {'form':form})
-
-def question_choice_view(request):
-    if request.method == 'POST':
-        form = CreateChoiceForm(request.POST)
-        if form.is_valid():
-            form.save()
-            messages.success(request, f'Your choice was created succesfully!')
-            return redirect('list')
-    else:
-        form = CreateChoiceForm()
-    return render(request, 'survey/choice.html', {'form':form})
-
-#def answer_view(request, question_id):
-#    question = Question.objects.get(pk=question_id)
-#    if request.method == "POST":
-#        messages.success(request, f'Your choice was created succesfully!')
-#        return redirect('list')
-#    return render(request, 'survey/answer.html', {'question':question})
-
-
-#@login_required
-#def results_view(request, question_id): # for admin only
-#    result = Question.objects.get(pk=question_id)
-#    return render(request, 'survey/results.html', {'result':result})
+# def question_choice_view(request):
+#     if request.method == 'POST':
+#         form = CreateChoiceForm(request.POST)
+#         if form.is_valid():
+#             form.save()
+#             messages.success(request, f'Your choice was created succesfully!')
+#             return redirect('list')
+#     else:
+#         form = CreateChoiceForm()
+#     return render(request, 'survey/choice.html', {'form':form})

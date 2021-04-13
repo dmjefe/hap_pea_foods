@@ -2,12 +2,12 @@
 {% block title %}Answer View{% endblock %}
 {% block content %}
 
-    <h1 class="text-center">This is the Answer View</h1>
+    <h1 class="text-center">Please answer the following question</h1>
 
     <div class="col-md-6 offset-md-3">
         <div class="col-lg-12">
 
-            <h2>{{ question.question }}</h2>
+            <h2 class="text-center">{{ question.question }}</h2>
         </div>
 
         <form method="POST">
@@ -17,21 +17,15 @@
                     <label>
                         <input type="radio" name="answer" value="option1">
                         {{ question.option_one }}
-                    </label>
-                </div>
-                <div class="radio">
+                    </label> <br/>
                     <label>
                         <input type="radio" name="answer" value="option2">
                         {{ question.option_two }}
-                    </label>
-                </div>
-                <div class="radio">
+                    </label><br/>
                     <label>
                         <input type="radio" name="answer" value="option3">
                         {{ question.option_three }}
-                    </label>
-                </div>
-                <div class="radio">
+                    </label><br/>
                     <label>
                         <input type="radio" name="answer" value="option4">
                         {{ question.option_four }}

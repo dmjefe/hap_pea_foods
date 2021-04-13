@@ -5,3 +5,4 @@ django-filter
 django-google-maps
 django-easy-maps
 django-qr-code
+widget_tweaks
