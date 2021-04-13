@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from .models import Question, Answer, Choice, Questionnaire
-from .forms import CreateQuestionForm, CreateChoiceForm, SelectChoiceForm, QuestionnaireForm
+from .models import Questionnaire
+from .forms import QuestionnaireForm
 from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
@@ -45,14 +45,3 @@ def results_view(request, questionnaire_id): # for admin only
 
 def qrCode(request): # list view
     return render(request, 'survey/qrCode.html')
-
-# def question_choice_view(request):
-#     if request.method == 'POST':
-#         form = CreateChoiceForm(request.POST)
-#         if form.is_valid():
-#             form.save()
-#             messages.success(request, f'Your choice was created succesfully!')
-#             return redirect('list')
-#     else:
-#         form = CreateChoiceForm()
-#     return render(request, 'survey/choice.html', {'form':form})
