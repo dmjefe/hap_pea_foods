@@ -27,9 +27,9 @@ class Organization(models.Model):
     typeOfOrg = models.CharField(max_length=25, choices=TYPE_OF_ORG, default=FOOD_BANK)
 
 class Donation(models.Model):
-    userName = models.CharField(max_length=25,)
-    donationDate = models.DateField()
-    locationName = models.CharField(max_length=25,)
+    userName = models.CharField(max_length=25,verbose_name='Your User Name')
+    donationDate = models.DateField(verbose_name='Date of Donation')
+    locationName = models.CharField(max_length=25, verbose_name='Location of Donation')
     createdBy = models.ForeignKey(User, default=None, on_delete=models.CASCADE)
     #claimed = models.BooleanField(default=False)
 

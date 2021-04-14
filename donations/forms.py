@@ -8,6 +8,7 @@ class CreateDonation(forms.ModelForm):
         model = models.Donation
         fields = ['userName', 'locationName', 'donationDate' ]
 
+
 class ClaimedDonation(forms.ModelForm):
     donation_list = Donation.objects.filter(claimeddonation = None)
     donationClaimed = forms.ModelChoiceField(queryset=donation_list)
