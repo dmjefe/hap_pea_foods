@@ -4,10 +4,10 @@ from django.contrib.auth.models import User
 # Create your models here.
 
 class Event(models.Model):
-    eventTitle = models.CharField(max_length=25,)
-    eventDate = models.DateField()
-    startTime = models.TimeField()
-    endTime = models.TimeField()
+    eventTitle = models.CharField(max_length=25,verbose_name='Title of Event',)
+    eventDate = models.DateField(verbose_name='Date of Event',)
+    startTime = models.TimeField(verbose_name='Start Time')
+    endTime = models.TimeField(verbose_name='End Time')
     address = models.CharField(max_length=25,)
     city = models.CharField(max_length=25,)
     state = models.CharField(max_length=25,)
@@ -16,7 +16,7 @@ class Event(models.Model):
         return 'Title: {}, Date: {}'.format(self.eventTitle, self.eventDate)
 
 class Position(models.Model):
-    positionTitle = models.CharField(max_length=100)
+    positionTitle = models.CharField(max_length=100,verbose_name='Title of Position')
     eventID = models.ForeignKey(Event, default=None, on_delete=models.CASCADE)
     def __str__(self):
         return 'Position: {}, Event: {}'.format(self.positionTitle, self.eventID.eventTitle)
