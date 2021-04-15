@@ -15,7 +15,7 @@
       {% csrf_token %}
       {{ formset.as_p }}
       <input type="submit" value="Save"><br/>
-      <button class="finished"><a href="{% url 'donations:search' %}" class="button">Finished</a></button>
+      <button class="finished"><a href="{% url 'home' %}" class="button">Finished</a></button>
     </form>
   </div>
 

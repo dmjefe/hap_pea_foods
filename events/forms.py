@@ -11,8 +11,13 @@ class CreateEvent(forms.ModelForm):
 
 class ClaimPosition(forms.ModelForm):
     inner_qs = ClaimedPosition.objects.all()
-    available_positions_list = Position.objects.exclude(id__in=inner_qs)
+    #available_positions_list = Position.objects.exclude(id__in=inner_qs)
+    available_positions_list = Position.objects.exclude(claimedposition__in=inner_qs)
     positionID = forms.ModelChoiceField(queryset=available_positions_list)
     class Meta:
         model = models.ClaimedPosition
-        fields = ['positionID', 'id',]
+        fields = ['positionID']
+
+        def __init__(self, *args, **kwargs):
+            super().__init__(*args, **kwargs)
+            self.queryset = ClaimPosition.objects.filter(Donation.objects.filter(claimeddonation = None))
