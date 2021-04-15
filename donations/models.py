@@ -26,6 +26,9 @@ class Organization(models.Model):
     )
     typeOfOrg = models.CharField(max_length=25, choices=TYPE_OF_ORG, default=FOOD_BANK)
 
+    def __str__(self):
+        return self.orgName
+
 class Donation(models.Model):
     userName = models.CharField(max_length=25,verbose_name='Your User Name')
     donationDate = models.DateField(verbose_name='Date of Donation')
@@ -34,11 +37,11 @@ class Donation(models.Model):
     #claimed = models.BooleanField(default=False)
 
     def __str__(self):
-        return 'Claimed by: {}'.format(self.userName)
+        return 'ID Number: {}'.format(self.id)
 
 class ClaimedDonation(models.Model):
     contact = models.ForeignKey(User, default=None, on_delete=models.CASCADE)
-    donationClaimed = models.ForeignKey(Donation, default=None, verbose_name='Donation to Claim', on_delete=models.CASCADE)
+    donationClaimed = models.ForeignKey(Donation, default=None, on_delete=models.CASCADE)
     #contact = models.ForeignKey(User, default=None, on_delete=models.CASCADE)
     claimingOrg = models.ForeignKey(Organization, default=None, verbose_name='Organization Name', on_delete=models.CASCADE)
     pickupDate = models.DateField(verbose_name='Date of Pickup')
