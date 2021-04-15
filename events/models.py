@@ -17,10 +17,10 @@ class Event(models.Model):
 
 class Position(models.Model):
     positionTitle = models.CharField(max_length=100,verbose_name='Title of Position')
-    eventID = models.ForeignKey(Event, default=None, on_delete=models.CASCADE)
+    eventID = models.ForeignKey(Event, default=None, verbose_name='Event',on_delete=models.CASCADE)
     def __str__(self):
         return 'Position: {}, Event: {}'.format(self.positionTitle, self.eventID.eventTitle)
 
 class ClaimedPosition(models.Model):
-    positionID = models.ForeignKey(Position, default=None, on_delete=models.CASCADE)
+    positionID = models.ForeignKey(Position, default=None, verbose_name='Position', on_delete=models.CASCADE)
     userID = models.ForeignKey(User, default=None, on_delete=models.CASCADE)

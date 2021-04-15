@@ -62,7 +62,7 @@ def event_positions(request):
             return redirect('home')
     else:
         inner_qs = ClaimedPosition.objects.all()
-        #available_positions_list = Position.objects.exclude(id__in=inner_qs)
+        #available_positions_list = Position.objects.exclude(id__in=inner_qs) # << I screwed this up right here, leaving it as a comment for posterity
         available_positions_list = Position.objects.exclude(claimedposition__in=inner_qs)
         position_filter = PositionFilter(request.GET, queryset=available_positions_list)
         form = forms.ClaimPosition()

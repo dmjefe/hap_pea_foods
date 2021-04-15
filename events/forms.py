@@ -13,7 +13,7 @@ class ClaimPosition(forms.ModelForm):
     inner_qs = ClaimedPosition.objects.all()
     #available_positions_list = Position.objects.exclude(id__in=inner_qs)
     available_positions_list = Position.objects.exclude(claimedposition__in=inner_qs)
-    positionID = forms.ModelChoiceField(queryset=available_positions_list)
+    positionID = forms.ModelChoiceField(queryset=available_positions_list, label="Position")
     class Meta:
         model = models.ClaimedPosition
         fields = ['positionID']

@@ -11,7 +11,7 @@ class CreateDonation(forms.ModelForm):
 
 class ClaimedDonation(forms.ModelForm):
     donation_list = Donation.objects.filter(claimeddonation = None)
-    donationClaimed = forms.ModelChoiceField(queryset=donation_list)
+    donationClaimed = forms.ModelChoiceField(queryset=donation_list, label="Donation")
     class Meta:
         model = models.ClaimedDonation
         fields = ['donationClaimed', 'claimingOrg', 'pickupDate',]

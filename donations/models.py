@@ -37,10 +37,11 @@ class Donation(models.Model):
         return 'Claimed by: {}'.format(self.userName)
 
 class ClaimedDonation(models.Model):
-    donationClaimed = models.ForeignKey(Donation, default=None, on_delete=models.CASCADE)
     contact = models.ForeignKey(User, default=None, on_delete=models.CASCADE)
-    claimingOrg = models.ForeignKey(Organization, default=None, on_delete=models.CASCADE)
-    pickupDate = models.DateField()
+    donationClaimed = models.ForeignKey(Donation, default=None, verbose_name='Donation to Claim', on_delete=models.CASCADE)
+    #contact = models.ForeignKey(User, default=None, on_delete=models.CASCADE)
+    claimingOrg = models.ForeignKey(Organization, default=None, verbose_name='Organization Name', on_delete=models.CASCADE)
+    pickupDate = models.DateField(verbose_name='Date of Pickup')
 
 
 class Item(models.Model):
