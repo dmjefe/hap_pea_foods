@@ -14,7 +14,7 @@ def register_view(request):
             form.save()
             username = form.cleaned_data.get('username')
             messages.success(request, f'Your account has been created. Please log in!')
-            return redirect('accounts/login')
+            return redirect('/accounts/login/')
     else:
         form = UserRegisterForm()
     return render(request, 'accounts/register.html', {'form':form})
@@ -23,7 +23,7 @@ def login_view(request):
     if request.method == 'POST':
         form = AuthenticationForm(data=request.POST)
         if form.is_valid():
-            #Loguser in
+            #Log user in
             user = form.get_user()
             login(request, user)
             if 'next' in request.POST:
@@ -35,7 +35,7 @@ def login_view(request):
     return render(request, 'accounts/login.html', {'form':form})
 
 
-@login_required
+@login_required(login_url="/accounts/login/")
 def profile_view(request):
     if request.method == 'POST':
         form = forms.ProfileForm(request.POST)

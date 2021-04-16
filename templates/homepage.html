@@ -5,7 +5,7 @@
 
   <!-- slider -->
 
-  <div class="slider">
+  <div class="slider container"> 
     <figure>
       <img src="{% static 'handout.jpg' %}">
       <img src="{% static 'prepare.jpg' %}">
@@ -69,12 +69,12 @@
       </div> <!-- end leftblock -->
 
       <div class="home-calendar">
-        <h1>Calendar<a href="https://www.timeanddate.com/calendar/"><i class="far fa-calendar-alt" style="color: black"></i></a></h1> <!-- Module insert here for calendar -->
+        <h1>Calendar of Events<a href="https://www.timeanddate.com/calendar/"><i class="far fa-calendar-alt" style="color: black"></i></a></h1> <!-- Module insert here for calendar -->
 
-        <div class="stories">
+        <div class="events-grid" style="margin-top: 20px; display: grid; grid-template-columns: 300px 300px; grid-gap: 20px;">
           {% for event in event_list %}
-            <div class= "event">
-              <h2>{{event.eventTitle}}</</h2>
+            <div class="event" style="border: 3px solid #E32636; padding: 3%;">
+              <h2 class="text-center">{{event.eventTitle}}</h2>
               <p>{{event.eventDate}}</p>
               <p> Start: {{event.startTime}} End: {{event.endTime}}</p>
             </div>

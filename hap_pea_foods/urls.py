@@ -35,6 +35,7 @@ urlpatterns = [
     url('find_help/', views.find_help, name="find_help"),
     url('partners/', views.partners, name="partners"),
     url('accounts/', include('accounts.urls')),
+    url(r'^accounts/', include('django.contrib.auth.urls')),
     url('stories/', include('stories.urls')),
     url('events/', include('events.urls')),
     url('volunteer/', views.volunteer, name="volunteer"),

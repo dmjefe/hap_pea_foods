@@ -1,21 +1,16 @@
 {% extends 'base_layout.html' %}
-{% block title %} Hap-Pea Foods | Add Items {% endblock %}
+{% block title %} Hap-Pea Foods | Volunteer Position {% endblock %}
 {% block content %}
 {% load static %}
 
-
-  <div class="add_item_container">
-    <div class="d_img">
-      <img src="{% static '004-canned-food.png' %}">
-    </div>
-
-    <h1><center>Add Vounteer Positions for this Event.</center></h1>
-
+<div class="container">
+    <h1 class="text-center">Add Vounteer Positions for this Event.</h1>
     <form class="add_item_form" method="post">
+
       {% csrf_token %}
       {{ formset.as_p }}
       <input type="submit" value="Save"><br/>
-      <button class="finished"><a href="{% url 'home' %}" class="button">Finished</a></button>
+      <button class="finished"><a href="{% url 'volunteer' %}" class="button">Finished</a></button>
     </form>
   </div>
 

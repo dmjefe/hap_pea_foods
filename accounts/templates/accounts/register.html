@@ -3,16 +3,19 @@
 {% block content %}
 
   <div class="content-section">
-    <form class="site-form" action="accounts/signup" method="post">
+    <form class="site-form" method="POST">
       <h4>New User Registration</h4>
       <fieldset class="form-group">
           {% csrf_token %}
           {{form}}
+          {% if request.GET.next %}
+            <input type="hidden" name="next" value="{{request.GET.next}}">
+          {% endif %}
       </fieldset>
       <div class="form-group">
         <input type="submit" value="Register">
       </div>
-      <p>By continuing, you agree to Hap-Pea Foods <a href="terms">Terms and Conditions</a> and <a href="privacy">Privacy Notice.</a></p>
+      <p>By continuing, you agree to Hap-Pea Foods <a href="{% url 'terms_cond' %}">Terms and Conditions</a> and <a href="{% url 'privacy' %}">Privacy Notice.</a></p>
       <hr>
         <p>&copy; 2021, Hap-Pea Foods</p>
     </form>

@@ -64,10 +64,10 @@ class Item(models.Model):
         (DOZEN, 'Dozen'),
         (CASE, 'Case'),
     )
-    itemName = models.CharField(max_length=100)
-    number = models.SmallIntegerField()
-    typeOfMeasure = models.CharField(max_length=5, choices=TYPE_OF_MEASURE_CHOICES, default=COUNT)
-    donation = models.ForeignKey(Donation, on_delete=models.CASCADE)
+    itemName = models.CharField(max_length=100, verbose_name='Item Name')
+    number = models.SmallIntegerField(verbose_name='Quantity')
+    typeOfMeasure = models.CharField(max_length=5, choices=TYPE_OF_MEASURE_CHOICES, default=COUNT, verbose_name='Type of Measure')
+    donation = models.ForeignKey(Donation, on_delete=models.CASCADE, verbose_name='Donation')
 
 class Location(models.Model):
     address = map_fields.AddressField(max_length=200)

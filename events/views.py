@@ -8,6 +8,7 @@ from .filters import EventFilter, PositionFilter
 from django.urls import reverse
 from urllib.parse import urlencode
 from . import forms
+from django.contrib import messages
 
 def volunteer(request):
     if request.method == 'POST':
@@ -35,6 +36,7 @@ def create_event(request):
             instance.save()
             pk = instance.pk
             url = str(pk) + '/'
+            messages.success(request, f'Your event has been created.')
             return redirect(url)
     else:
         form = forms.CreateEvent()

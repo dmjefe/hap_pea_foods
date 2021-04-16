@@ -75,7 +75,7 @@
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item" href="{% url 'donations:search' %}">Search Donations</a>
                     <a class="dropdown-item" href="{% url 'donations:donations' %}">Donate Food</a>
-                    <a class="dropdown-item" href="{% url 'events:event_positions' %}">Volunteer</a>
+                    <a class="dropdown-item" href="{% url 'volunteer' %}">Volunteer</a>
                 </div>
             </li>
             <li class="nav-item">
@@ -207,7 +207,8 @@
       </div>
     </footer>
 
-    <script type="text/javascript"> /* scripts for slider */
+    <!-- /* scripts for slider */ -->
+    <script type="text/javascript">
       var counter = 1;
       setInterval(function(){
         document.getElementById('radio' + counter).checked = true;

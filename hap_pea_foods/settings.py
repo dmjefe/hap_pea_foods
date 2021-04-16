@@ -153,3 +153,14 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 GOOGLE_MAPS_API_KEY = 'AIzaSyCPxWrUymIOfqDXHXPMDjLCQsKaYA8T88g'
 EASY_MAPS_GOOGLE_KEY = 'AIzaSyCPxWrUymIOfqDXHXPMDjLCQsKaYA8T88g'
 EASY_MAPS_CENTER = (33.42431902487269, -111.92808355340672)
+
+
+LOGIN_REDIRECT_URL = 'accounts/login'
+
+# password reset
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'happeafoodsasu@gmail.com'
+EMAIL_HOST_PASSWORD = 'lncp ztps gfyj kukq'

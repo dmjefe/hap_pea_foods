@@ -8,6 +8,7 @@ from .filters import DonationFilter
 from django.urls import reverse
 from urllib.parse import urlencode
 from . import forms
+from django.contrib import messages
 
 # Create your views here.
 @login_required(login_url="/accounts/login/")
@@ -35,6 +36,8 @@ def add_items(request, donation_id):
         if formset.is_valid():
             formset.save()
             #return redirect('items', donation_id=donation.pk)
+
+            messages.success(request, f'Your donation has been saved.')
 
     formset = ItemFormset(instance=donation)
 

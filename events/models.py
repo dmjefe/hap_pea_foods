@@ -6,8 +6,8 @@ from django.contrib.auth.models import User
 class Event(models.Model):
     eventTitle = models.CharField(max_length=25,verbose_name='Title of Event',)
     eventDate = models.DateField(verbose_name='Date of Event',)
-    startTime = models.TimeField(verbose_name='Start Time')
-    endTime = models.TimeField(verbose_name='End Time')
+    startTime = models.TimeField(verbose_name='Start Time (hh:mm)')
+    endTime = models.TimeField(verbose_name='End Time (hh:mm)')
     address = models.CharField(max_length=25,)
     city = models.CharField(max_length=25,)
     state = models.CharField(max_length=25,)
